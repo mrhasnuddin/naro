@@ -1,0 +1,26 @@
+[
+  {
+    "file": "metamask.svg",
+    "assetURL": "https://images.ctfassets.net/clixtyxoaeas/1ezuBGezqfIeifWdVtwU4c/d970d4cdf13b163efddddd5709164d2e/MetaMask-icon-Fox.svg",
+    "sourcePage": "https://metamask.io/assets",
+    "sha256": "5ddcb06dbeba86fc593af5d50032c6839088f3fb21c6e66514b8f16f210d8d0a"
+  },
+  {
+    "file": "trust-wallet.svg",
+    "assetURL": "https://trustwallet.com/icon.svg?d57da504207bc776",
+    "sourcePage": "https://trustwallet.com/press",
+    "sha256": "c3729a732e44aec8b096f4b888d211efe395566452e3eccc7c6743467158b148"
+  },
+  {
+    "file": "rabby.png",
+    "assetURL": "https://rabby.io/assets/images/favicon.png",
+    "sourcePage": "https://rabby.io/",
+    "sha256": "fe1bfe73c2d61a22475c7a4c25d04cfb8af7a5a0930710a960606c679cca51ec"
+  },
+  {
+    "file": "coinbase-wallet.png",
+    "assetURL": "https://wallet.coinbase.com/static-open-graph/v1/favicon.png",
+    "sourcePage": "https://wallet.coinbase.com/",
+    "sha256": "2ae922f51704468a8fc4f5aac853218ba97b3d1279cec36b80c82c54aee9b1fc"
+  }
+]

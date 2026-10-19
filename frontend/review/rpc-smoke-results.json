@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-19T14:47:30.677Z",
+  "endpoint": "https://bsc-testnet-dataseed.bnbchain.org",
+  "scope": "Public read-only diagnostics. Zero-address balance is not a user balance. No faucet claim, wallet authorization, signature or transaction.",
+  "results": [
+    {
+      "method": "eth_chainId",
+      "result": "0x61",
+      "elapsedMs": 738
+    },
+    {
+      "method": "eth_blockNumber",
+      "result": "0x8356ef7",
+      "elapsedMs": 651
+    },
+    {
+      "method": "eth_getBalance",
+      "result": "0x24cef4a0ba90fcb8536",
+      "elapsedMs": 647
+    }
+  ]
+}

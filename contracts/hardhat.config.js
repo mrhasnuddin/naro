@@ -1,0 +1,1 @@
+export default {networks:{default:{type:'edr-simulated',chainType:'l1',chainId:31337,loggingEnabled:false},bscTestSimulation:{type:'edr-simulated',chainType:'l1',chainId:97,loggingEnabled:false},unsupportedSimulation:{type:'edr-simulated',chainType:'l1',chainId:56,loggingEnabled:false}}};

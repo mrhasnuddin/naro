@@ -1,0 +1,142 @@
+[
+  {
+    "width": 320,
+    "lang": "en",
+    "route": "overview",
+    "heading": "Your NARO overview",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "en",
+    "route": "rewards",
+    "heading": "Your rewards",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "en",
+    "route": "community",
+    "heading": "Your community",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "en",
+    "route": "network",
+    "heading": "NARO network",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "en",
+    "route": "account",
+    "heading": "Your account",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "zh-Hans",
+    "route": "overview",
+    "heading": "我的 NARO 概览",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "zh-Hans",
+    "route": "rewards",
+    "heading": "我的奖励",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "zh-Hans",
+    "route": "community",
+    "heading": "我的社区",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "zh-Hans",
+    "route": "network",
+    "heading": "NARO 网络",
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "lang": "zh-Hans",
+    "route": "account",
+    "heading": "我的账户",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "route": "overview",
+    "heading": "Your NARO overview",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "route": "rewards",
+    "heading": "Your rewards",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "route": "community",
+    "heading": "Your community",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "route": "network",
+    "heading": "NARO network",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "en",
+    "route": "account",
+    "heading": "Your account",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "zh-Hans",
+    "route": "overview",
+    "heading": "我的 NARO 概览",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "zh-Hans",
+    "route": "rewards",
+    "heading": "我的奖励",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "zh-Hans",
+    "route": "community",
+    "heading": "我的社区",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "zh-Hans",
+    "route": "network",
+    "heading": "NARO 网络",
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "lang": "zh-Hans",
+    "route": "account",
+    "heading": "我的账户",
+    "overflow": false
+  }
+]

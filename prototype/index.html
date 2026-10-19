@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="NARO dApp interface prototype. Sample dashboard data with injected EVM wallet connection.">
+  <title>NARO | Overview prototype</title>
+  <link rel="icon" href="../design-system/assets/naro-logo.png">
+  <link rel="stylesheet" href="../design-system/tokens.css">
+  <link rel="stylesheet" href="../design-system/components.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" data-i18n="skip">Skip to content</a>
+  <div class="reviewbar" aria-label="Prototype review controls">
+    <div><strong data-i18n="review.title">Design preview</strong><span data-i18n="review.note">Sample dashboard data. Wallet connection is live.</span></div>
+    <label for="preview-state"><span data-i18n="review.state">Sample account</span><span class="naro-select-wrap"><select class="naro-select" id="preview-state"><option value="active" data-i18n="review.active">Active participant</option><option value="setup" data-i18n="review.setup">Setup incomplete</option><option value="public" data-i18n="review.public">Not connected</option></select></span></label>
+  </div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a href="#overview" class="brand" aria-label="NARO overview"><img src="../design-system/assets/naro-logo.png" alt="NARO" width="118" height="30"></a>
+      <p class="sidebar-caption" data-i18n="nav.workspace">Your NARO</p>
+      <nav id="desktop-nav" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom"><a href="#help" data-action="help"><span class="icon icon-help" aria-hidden="true"></span><span data-i18n="help.label">Help &amp; resources</span></a><a href="../design-system/preview.html"><span class="icon icon-style" aria-hidden="true"></span><span data-i18n="review.tokens">Design system</span></a><div class="sidebar-network"><span class="network-dot" aria-hidden="true"></span><span>BNB Smart Chain</span><span data-i18n="network.testnet">Testnet</span></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="mobile-brand"><a href="#overview" aria-label="NARO overview"><img src="../design-system/assets/naro-logo.png" width="92" height="24" alt="NARO"></a></div><div id="breadcrumb" class="breadcrumb">Overview</div><div class="header-actions"><span class="naro-badge naro-badge--info chain-label" data-i18n="header.chain">BSC Testnet</span><label class="sr-only" for="locale" data-i18n="language">Language</label><span class="naro-select-wrap"><select class="naro-select" id="locale" aria-label="Language"><option value="en">EN</option><option value="zh-Hans">中文</option></select></span><button id="wallet-button" class="naro-button naro-button--secondary naro-button--compact" type="button" data-action="wallet"><span class="icon icon-wallet" aria-hidden="true"></span><span id="wallet-label">Connect wallet</span></button></div></header>
+      <main id="main-content" class="page-content" tabindex="-1"></main>
+      <footer class="app-footer"><span data-i18n="footer.test">BNB Smart Chain testnet · Sample data</span><span data-i18n="footer.copy">NARO interface proposal</span></footer>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Main navigation"></nav>
+  <dialog id="app-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="naro-badge naro-badge--info" data-i18n="review.title">Design preview</span><button class="icon-button" type="button" data-action="close" aria-label="Close"><span class="icon icon-close" aria-hidden="true"></span></button></div><div id="dialog-content"></div></dialog>
+  <div id="status" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">Enable JavaScript to review this interactive prototype. Wallet connection requires JavaScript; transactions remain unavailable.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

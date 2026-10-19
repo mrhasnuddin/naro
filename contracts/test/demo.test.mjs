@@ -1,0 +1,53 @@
+import {test,before,beforeEach,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {JsonRpcProvider,ContractFactory,Contract,ZeroAddress,parseEther,keccak256,AbiCoder,toBeHex,id} from 'ethers';
+const provider=new JsonRpcProvider('http://127.0.0.1:8545',undefined,{cacheTimeout:-1});provider.pollingInterval=25;
+const systemArtifact=JSON.parse(await readFile(new URL('../artifacts/NaroDemo.json',import.meta.url),'utf8'));
+const tokenArtifact=JSON.parse(await readFile(new URL('../artifacts/DemoNaroToken.json',import.meta.url),'utf8'));
+let signers,addresses,system,token;
+before(async()=>{await provider.send('evm_setIntervalMining',[0]);assert.equal(BigInt(await provider.send('eth_chainId',[])),31337n);signers=await Promise.all(Array.from({length:8},(_,i)=>provider.getSigner(i)));addresses=await Promise.all(signers.map(s=>s.getAddress()));});
+beforeEach(async()=>{system=await new ContractFactory(systemArtifact.abi,systemArtifact.bytecode,signers[0]).deploy();await system.waitForDeployment();token=new Contract(await system.token(),tokenArtifact.abi,signers[0]);});
+after(async()=>{await provider.send('evm_setIntervalMining',[1000]);provider.destroy();});
+const tx=async promise=>(await promise).wait();
+const activate=async(i,inviter=ZeroAddress)=>tx(system.connect(signers[i]).activate(inviter));
+const advance=async seconds=>{await provider.send('evm_increaseTime',[seconds]);await provider.send('evm_mine',[]);};
+test('fixed token supply is entirely funded and root is active',async()=>{assert.equal(await token.symbol(),'dNARO');assert.equal(await token.decimals(),18n);assert.equal(await token.totalSupply(),parseEther('1000000'));assert.equal(await token.balanceOf(system.target),await token.totalSupply());assert.equal((await system.members(addresses[0])).active,true);assert.equal(await system.memberCount(),1n);});
+test('activation binds an active inviter and emits the relationship',async()=>{const receipt=await activate(1,addresses[0]);assert.equal((await system.members(addresses[1])).inviter,addresses[0]);assert.equal(await system.directCount(addresses[0]),1n);assert.equal(await system.memberCount(),2n);assert.ok(receipt.logs.some(log=>{try{return system.interface.parseLog(log)?.name==='Activated';}catch{return false;}}));});
+test('optional no-inviter activation is allowed',async()=>{await activate(1);assert.equal((await system.members(addresses[1])).inviter,ZeroAddress);});
+test('self inviter and inactive inviter are rejected without creating membership',async()=>{await assert.rejects(system.connect(signers[1]).activate.staticCall(addresses[1]));await assert.rejects(system.connect(signers[1]).activate.staticCall(addresses[2]));assert.equal((await system.members(addresses[1])).active,false);assert.equal(await system.memberCount(),1n);});
+test('an inviter cannot be changed and repeat activation cannot add referrals',async()=>{await activate(1,addresses[0]);await assert.rejects(system.connect(signers[1]).activate.staticCall(ZeroAddress));assert.equal(await system.directCount(addresses[0]),1n);assert.equal((await system.members(addresses[1])).inviter,addresses[0]);});
+test('inactive accounts cannot claim',async()=>{assert.equal(await system.claimable(addresses[1]),0n);await assert.rejects(system.connect(signers[1]).claim.staticCall());});
+test('active account receives exactly one fixed immediate reward',async()=>{await activate(1);assert.equal(await system.claimable(addresses[1]),parseEther('10'));const receipt=await tx(system.connect(signers[1]).claim());assert.equal(await token.balanceOf(addresses[1]),parseEther('10'));assert.equal((await system.members(addresses[1])).claimed,parseEther('10'));assert.equal(await system.totalClaimed(),parseEther('10'));assert.ok(receipt.logs.some(log=>{try{return system.interface.parseLog(log)?.name==='Claimed';}catch{return false;}}));});
+test('repeated claims revert during cooldown and succeed exactly at deadline',async()=>{await activate(1);await tx(system.connect(signers[1]).claim());const next=(await system.members(addresses[1])).nextClaimAt;await assert.rejects(system.connect(signers[1]).claim.staticCall());await provider.send('evm_setNextBlockTimestamp',[Number(next)-1]);await provider.send('evm_mine',[]);assert.equal(await system.claimable(addresses[1]),0n);await provider.send('evm_setNextBlockTimestamp',[Number(next)]);await provider.send('evm_mine',[]);assert.equal(await system.claimable(addresses[1]),parseEther('10'));await tx(system.connect(signers[1]).claim());assert.equal(await token.balanceOf(addresses[1]),parseEther('20'));});
+test('missed minutes do not accumulate rewards',async()=>{await activate(1);await advance(86400);assert.equal(await system.claimable(addresses[1]),parseEther('10'));await tx(system.connect(signers[1]).claim());assert.equal(await token.balanceOf(addresses[1]),parseEther('10'));});
+test('claim cannot take another participant reward or redirect its recipient',async()=>{await activate(1);await activate(2);await tx(system.connect(signers[1]).claim());assert.equal(await token.balanceOf(addresses[2]),0n);assert.equal((await system.members(addresses[2])).claimed,0n);});
+test('pool exhaustion leaves all claim state unchanged',async()=>{await activate(1);const layout=tokenArtifact.storageLayout.storage.find(item=>item.label==='_balances');assert.ok(layout);const key=keccak256(AbiCoder.defaultAbiCoder().encode(['address','uint256'],[system.target,BigInt(layout.slot)]));await provider.send('hardhat_setStorageAt',[token.target,key,toBeHex(0n,32)]);const before=await system.members(addresses[1]);assert.equal(await system.claimable(addresses[1]),0n);await assert.rejects(system.connect(signers[1]).claim.staticCall());assert.deepEqual(Array.from(await system.members(addresses[1])),Array.from(before));assert.equal(await system.totalClaimed(),0n);});
+test('pagination is bounded, ordered and safe at large offsets',async()=>{for(let i=1;i<=4;i++)await activate(i,addresses[0]);assert.deepEqual(Array.from(await system.referrals(addresses[0],1,2)),addresses.slice(2,4));assert.deepEqual(Array.from(await system.referrals(addresses[0],2n**255n,100)),[]);await assert.rejects(system.referrals(addresses[0],0,0));await assert.rejects(system.referrals(addresses[0],0,101));});
+test('native deposits, arbitrary withdrawal and later minting are unavailable',async()=>{await assert.rejects(signers[1].sendTransaction({to:system.target,value:1n}));await assert.rejects(signers[1].sendTransaction({to:system.target,data:id('withdraw()').slice(0,10)}));await assert.rejects(signers[1].sendTransaction({to:token.target,data:id('mint(address,uint256)').slice(0,10)+AbiCoder.defaultAbiCoder().encode(['address','uint256'],[addresses[1],1n]).slice(2)}));});
+test('users can transfer and burn their own demo tokens without an admin',async()=>{await tx(system.claim());await tx(token.transfer(addresses[1],parseEther('4')));await tx(token.connect(signers[1]).burn(parseEther('1')));assert.equal(await token.balanceOf(addresses[1]),parseEther('3'));assert.equal(await token.totalSupply(),parseEther('999999'));});
+test('seeded action sequence conserves supply and claimed accounting',async()=>{for(let i=1;i<=6;i++)await activate(i,addresses[0]);let seed=81337;for(let step=0;step<48;step++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;const who=seed%7;if(seed%3===0)await advance(seed%91);const available=await system.claimable(addresses[who]);if(available)await tx(system.connect(signers[who]).claim());else await assert.rejects(system.connect(signers[who]).claim.staticCall());let balances=await token.balanceOf(system.target),claimed=0n;for(let i=0;i<7;i++){balances+=await token.balanceOf(addresses[i]);claimed+=(await system.members(addresses[i])).claimed;}assert.equal(balances,await token.totalSupply());assert.equal(claimed,await system.totalClaimed());assert.ok(claimed<=parseEther('1000000'));}});
+
+test('intended custom errors are decoded, including the claim deadline',async()=>{
+ const rejects=async(promise,name)=>assert.rejects(promise,error=>system.interface.parseError(error.data)?.name===name);
+ await rejects(system.connect(signers[1]).claim.staticCall(),'NotActive');
+ await rejects(system.connect(signers[1]).activate.staticCall(addresses[1]),'InvalidInviter');
+ await activate(1,addresses[0]);
+ await rejects(system.connect(signers[1]).activate.staticCall(ZeroAddress),'AlreadyActive');
+ await tx(system.connect(signers[1]).claim());
+ const next=(await system.members(addresses[1])).nextClaimAt;
+ await assert.rejects(system.connect(signers[1]).claim.staticCall(),error=>{const parsed=system.interface.parseError(error.data);return parsed?.name==='ClaimNotReady'&&parsed.args[0]===next;});
+ await rejects(system.referrals(addresses[0],0,101),'InvalidPageSize');
+});
+test('mined failed claim with a partially funded pool rolls back counters and balances',async()=>{
+ await activate(1);
+ const layout=tokenArtifact.storageLayout.storage.find(item=>item.label==='_balances');
+ const key=keccak256(AbiCoder.defaultAbiCoder().encode(['address','uint256'],[system.target,BigInt(layout.slot)]));
+ await provider.send('hardhat_setStorageAt',[token.target,key,toBeHex(parseEther('5'),32)]);
+ const member=Array.from(await system.members(addresses[1]));
+ await assert.rejects(system.connect(signers[1]).claim.staticCall(),error=>system.interface.parseError(error.data)?.name==='PoolExhausted');
+ await provider.send('evm_setAutomine',[false]);
+ try{const pending=await system.connect(signers[1]).claim({gasLimit:200000});await provider.send('evm_mine',[]);await assert.rejects(pending.wait());const receipt=await provider.getTransactionReceipt(pending.hash);assert.equal(receipt.status,0);}finally{await provider.send('evm_setAutomine',[true]);}
+ assert.deepEqual(Array.from(await system.members(addresses[1])),member);
+ assert.equal(await token.balanceOf(system.target),parseEther('5'));assert.equal(await token.balanceOf(addresses[1]),0n);assert.equal(await system.totalClaimed(),0n);
+});

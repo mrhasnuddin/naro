@@ -1,0 +1,218 @@
+export const demoCopy = {
+  en: {
+    "demo.label": "Learning demo · no monetary value",
+    "demo.local": "Local demo · chain 31337",
+    "demo.testnet": "BNB testnet · learning demo",
+    "demo.intro":
+      "These are demo contracts with simplified rules. Tokens have no monetary value. Inviter links and transactions are public.",
+    "demo.notDeployed":
+      "The demo is not deployed on this network yet. Connect a funded test wallet to review deployment.",
+    "demo.deploy": "Review demo deployment",
+    "demo.deployTitle": "Deploy the learning demo",
+    "demo.deployNote":
+      "Creates the reward contract and its fixed-supply dNARO token. Your wallet becomes the first active participant. No mainnet deployment is supported.",
+    "demo.rules": "Demo rules",
+    "demo.rulesNote":
+      "Activation has no fee. Active participants can claim 10 dNARO once every 60 seconds, while the pool is funded. Missed minutes do not accumulate rewards. Invites do not earn referral payouts.",
+    "demo.activate": "Review demo activation",
+    "demo.activateTitle": "Activate your demo account",
+    "demo.inviter": "Inviter wallet address (optional)",
+    "demo.inviterHint":
+      "Use an already-active address, or leave blank for no inviter. The relationship is permanent after activation.",
+    "demo.inviterInvalid":
+      "Enter a valid EVM address, or leave this field blank.",
+    "demo.none": "No inviter",
+    "demo.activationFee": "Activation fee",
+    "demo.gasOnly": "0 · network gas only",
+    "demo.confirm": "Confirm in wallet",
+    "demo.reviewClaim": "Review demo claim",
+    "demo.claimTitle": "Claim demo rewards",
+    "demo.wait": "Next claim in {seconds}s",
+    "demo.eligible": "Ready to claim",
+    "demo.inactive": "Activate your demo account to claim rewards.",
+    "demo.poolEmpty": "The demo reward pool is exhausted.",
+    "demo.balance": "dNARO balance",
+    "demo.claimed": "Total claimed by this wallet",
+    "demo.pool": "Reward pool balance",
+    "demo.totalClaimed": "Rewards distributed",
+    "demo.members": "Active participants",
+    "demo.burned": "Tokens burned",
+    "demo.supply": "Current token supply",
+    "demo.refresh": "Refresh onchain data",
+    "demo.loading": "Reading demo contracts…",
+    "demo.error":
+      "Could not read the demo contracts. Check the selected network and deployment, then retry.",
+    "demo.review": "Review transaction",
+    "demo.sender": "Your wallet",
+    "demo.network": "Network",
+    "demo.reward": "Demo reward",
+    "demo.gas": "Estimated maximum network fee",
+    "demo.gasNote":
+      "Gas estimate includes a 20% limit buffer. Your wallet shows the final fee. No token approval is required.",
+    "demo.preparing": "Checking the contract and estimating gas…",
+    "demo.walletWait": "Review the transaction in your wallet.",
+    "demo.pending": "Transaction sent. Waiting for a confirmed receipt…",
+    "demo.confirmed": "Transaction confirmed.",
+    "demo.unknown":
+      "Confirmation is taking longer than expected. Check this transaction before submitting another.",
+    "demo.checkTx": "Check transaction",
+    "demo.txHash": "Transaction hash",
+    "demo.close": "Close",
+    "demo.address": "Contract address",
+    "demo.tokenAddress": "Demo token address",
+    "demo.invite": "Copy demo invite link",
+    "demo.copied": "Demo invitation copied.",
+    "demo.copyFallback": "Copy this demo invitation link:",
+    "demo.direct": "Direct members",
+    "demo.emptyMembers": "No direct members recorded for this wallet.",
+    "demo.listLimit": "Showing up to the first 20 direct members.",
+    "demo.history": "Confirmed demo claims",
+    "demo.emptyHistory": "No claims found in the recent block range.",
+    "demo.historyNote": "Latest 10 claims within the last 2,000 blocks.",
+    "demo.historyError":
+      "Recent claim history is unavailable. Balances and claim eligibility can still be read.",
+    "demo.block": "Block",
+    "demo.public": "Public demo network data",
+    "demo.localLink": "Open the local demo",
+    "demo.testnetLink": "Open BNB testnet demo",
+    "demo.switchNetwork": "Switch to {network}",
+    "demo.nativeBalance": "{symbol} balance",
+    "demo.deploymentSaved":
+      "Deployment saved in this browser. Export it to share the same contracts with others.",
+    "demo.export": "Export deployment",
+    "demo.publicRecord":
+      "Activation permanently records your wallet and inviter publicly.",
+    "demo.reviewInviter": "Inviter to be bound",
+    "demo.walletNote":
+      "Your wallet is connected. My wallet shows demo contract data; Sample dashboard shows example records.",
+    "demo.connectNote":
+      "Connect a wallet to activate a demo account, claim dNARO, and see its onchain records.",
+    "demo.error.Cancelled":
+      "Transaction cancelled or replaced in your wallet. Prepare the action again.",
+    "demo.error.rejected":
+      "The wallet request was declined. You can try again.",
+    "demo.error.funds":
+      "This wallet needs test gas tokens to complete the transaction.",
+    "demo.error.AlreadyActive":
+      "This account is already active. Refresh the onchain data.",
+    "demo.error.NotActive": "Activate this account before claiming.",
+    "demo.error.InvalidInviter":
+      "Choose a different, already-active inviter or leave the field blank.",
+    "demo.error.ClaimNotReady":
+      "The cooldown has not ended. Refresh and wait for the next claim.",
+    "demo.error.PoolExhausted":
+      "The reward pool does not have enough demo tokens.",
+    "demo.error.WrongWalletNetwork":
+      "Switch your wallet to the network shown in the transaction review.",
+    "demo.error.WalletChanged":
+      "The wallet or network changed. Close this review and prepare the action again.",
+    "demo.error.DeploymentMismatch":
+      "The deployed code does not match the recorded demo deployment. Check the network and deployment file.",
+    "demo.error.WrongRpcNetwork":
+      "The RPC endpoint reports a different network.",
+    "demo.error.NotDeployed":
+      "No demo deployment is configured for this network.",
+    "demo.error.failed":
+      "The transaction could not complete. Refresh the onchain data and try again.",
+  },
+  "zh-Hans": {
+    "demo.label": "学习演示 · 无货币价值",
+    "demo.local": "本地演示 · 链 31337",
+    "demo.testnet": "BNB 测试网 · 学习演示",
+    "demo.intro":
+      "这是使用简化规则的演示合约。代币无货币价值。邀请关系和交易均公开。",
+    "demo.notDeployed":
+      "此网络尚未部署演示合约。连接有测试 gas 代币的钱包后可查看部署详情。",
+    "demo.deploy": "查看演示部署",
+    "demo.deployTitle": "部署学习演示",
+    "demo.deployNote":
+      "创建奖励合约及固定供应量的 dNARO 代币。你的钱包将成为首位已激活参与者。不支持主网部署。",
+    "demo.rules": "演示规则",
+    "demo.rulesNote":
+      "激活无手续费。在奖励池有余额时，已激活参与者每 60 秒可领取 10 dNARO。错过的时间不累计奖励。邀请不产生推荐收益。",
+    "demo.activate": "查看演示激活",
+    "demo.activateTitle": "激活演示账户",
+    "demo.inviter": "邀请人钱包地址（可选）",
+    "demo.inviterHint":
+      "输入已激活地址，或留空表示无邀请人。激活后邀请关系永久固定。",
+    "demo.inviterInvalid": "请输入有效 EVM 地址，或留空。",
+    "demo.none": "无邀请人",
+    "demo.activationFee": "激活费",
+    "demo.gasOnly": "0 · 仅支付网络 gas",
+    "demo.confirm": "在钱包中确认",
+    "demo.reviewClaim": "查看演示领取",
+    "demo.claimTitle": "领取演示奖励",
+    "demo.wait": "距下次领取 {seconds} 秒",
+    "demo.eligible": "可领取",
+    "demo.inactive": "激活演示账户后即可领取奖励。",
+    "demo.poolEmpty": "演示奖励池已耗尽。",
+    "demo.balance": "dNARO 余额",
+    "demo.claimed": "此钱包累计领取",
+    "demo.pool": "奖励池余额",
+    "demo.totalClaimed": "已发放奖励",
+    "demo.members": "已激活参与者",
+    "demo.burned": "已销毁代币",
+    "demo.supply": "当前代币供应量",
+    "demo.refresh": "刷新链上数据",
+    "demo.loading": "正在读取演示合约…",
+    "demo.error": "无法读取演示合约。请检查所选网络和部署信息后重试。",
+    "demo.review": "查看交易",
+    "demo.sender": "你的钱包",
+    "demo.network": "网络",
+    "demo.reward": "演示奖励",
+    "demo.gas": "预计最高网络费用",
+    "demo.gasNote":
+      "gas 估算包含 20% 的限额缓冲。最终费用以钱包显示为准。无需代币授权。",
+    "demo.preparing": "正在检查合约并估算 gas…",
+    "demo.walletWait": "请在钱包中查看交易。",
+    "demo.pending": "交易已发送，正在等待确认回执…",
+    "demo.confirmed": "交易已确认。",
+    "demo.unknown": "确认时间超出预期。再次提交前请检查此交易。",
+    "demo.checkTx": "检查交易",
+    "demo.txHash": "交易哈希",
+    "demo.close": "关闭",
+    "demo.address": "合约地址",
+    "demo.tokenAddress": "演示代币地址",
+    "demo.invite": "复制演示邀请链接",
+    "demo.copied": "演示邀请链接已复制。",
+    "demo.copyFallback": "复制此演示邀请链接：",
+    "demo.direct": "直接成员",
+    "demo.emptyMembers": "此钱包暂无直接成员记录。",
+    "demo.listLimit": "最多显示前 20 位直接成员。",
+    "demo.history": "已确认的演示领取",
+    "demo.emptyHistory": "最近区块范围内未找到领取记录。",
+    "demo.historyNote": "最近 2,000 个区块内的最新 10 次领取。",
+    "demo.historyError": "暂时无法读取近期领取记录。仍可查看余额和领取资格。",
+    "demo.block": "区块",
+    "demo.public": "公开演示网络数据",
+    "demo.localLink": "打开本地演示",
+    "demo.testnetLink": "打开 BNB 测试网演示",
+    "demo.switchNetwork": "切换至 {network}",
+    "demo.nativeBalance": "{symbol} 余额",
+    "demo.deploymentSaved":
+      "部署信息已保存在此浏览器中。导出后可与其他人共享同一组合约。",
+    "demo.export": "导出部署信息",
+    "demo.publicRecord": "激活会永久公开记录你的钱包及邀请人。",
+    "demo.reviewInviter": "将绑定的邀请人",
+    "demo.error.rejected": "钱包请求已拒绝。你可以重试。",
+    "demo.error.funds": "此钱包需要测试 gas 代币才能完成交易。",
+    "demo.error.AlreadyActive": "此账户已激活。请刷新链上数据。",
+    "demo.error.NotActive": "请先激活此账户再领取。",
+    "demo.error.InvalidInviter": "请选择另一个已激活邀请人，或留空。",
+    "demo.error.ClaimNotReady": "冷却时间尚未结束。请刷新并等待下次领取。",
+    "demo.error.PoolExhausted": "奖励池没有足够的演示代币。",
+    "demo.error.WrongWalletNetwork": "请将钱包切换至交易预览中显示的网络。",
+    "demo.error.WalletChanged":
+      "钱包或网络已更改。请关闭此预览并重新准备操作。",
+    "demo.error.DeploymentMismatch":
+      "部署代码与记录的演示部署不符。请检查网络及部署文件。",
+    "demo.error.WrongRpcNetwork": "RPC 返回的网络与所选网络不同。",
+    "demo.error.NotDeployed": "此网络未配置演示部署。",
+    "demo.walletNote":
+      "钱包已连接。我的钱包显示演示合约数据；示例仪表盘显示示例记录。",
+    "demo.connectNote":
+      "连接钱包后即可激活演示账户、领取 dNARO 并查看链上记录。",
+    "demo.error.Cancelled": "交易已在钱包中取消或替换。请重新准备操作。",
+    "demo.error.failed": "交易未能完成。请刷新链上数据后重试。",
+  },
+};

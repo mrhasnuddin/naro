@@ -1,0 +1,109 @@
+{
+  "scope": "Built frontend tested with simulated EIP-6963 provider; live-rpc case performs real chain/balance reads for a public address without proving control. Final normal-app checks run without fixture provider.",
+  "checks": [
+    {
+      "test": "EIP-6963 discovery and connect",
+      "result": "pass"
+    },
+    {
+      "test": "1.25 tBNB simulated balance display",
+      "result": "pass"
+    },
+    {
+      "test": "Account change updates to 2.5 tBNB",
+      "result": "pass"
+    },
+    {
+      "test": "Wrong-network balance suppression and switch recovery",
+      "result": "pass"
+    },
+    {
+      "test": "Provider disconnect clears account and balance",
+      "result": "pass"
+    },
+    {
+      "test": "reject request recovery copy",
+      "result": "pass"
+    },
+    {
+      "test": "reject releases button lock",
+      "result": "pass"
+    },
+    {
+      "test": "pending request recovery copy",
+      "result": "pass"
+    },
+    {
+      "test": "pending releases button lock",
+      "result": "pass"
+    },
+    {
+      "test": "Unknown network adds and switches explicitly",
+      "result": "pass"
+    },
+    {
+      "test": "Balance reads only after testnet switch",
+      "result": "pass"
+    },
+    {
+      "test": "Balance failure shows retryable error",
+      "result": "pass"
+    },
+    {
+      "test": "Retry recovers balance",
+      "result": "pass"
+    },
+    {
+      "test": "Stale account response cannot overwrite current balance",
+      "result": "pass"
+    },
+    {
+      "test": "Pending balance shows loading status",
+      "result": "pass"
+    },
+    {
+      "test": "Stalled balance times out and enables retry",
+      "result": "pass"
+    },
+    {
+      "test": "Account screen explains declined network switch",
+      "result": "pass"
+    },
+    {
+      "test": "Manual network change clears obsolete switch error",
+      "result": "pass"
+    },
+    {
+      "test": "Forget connection removes address and balance",
+      "result": "pass"
+    },
+    {
+      "test": "Browser live RPC chain and balance render",
+      "result": "pass"
+    },
+    {
+      "test": "Connected wallet mobile layout fits",
+      "result": "pass"
+    },
+    {
+      "test": "Chinese connected balance stays visible",
+      "result": "pass"
+    },
+    {
+      "test": "Delayed connection shows waiting text and disables duplicate requests",
+      "result": "pass"
+    },
+    {
+      "test": "Delayed connection completes and reads balance",
+      "result": "pass"
+    },
+    {
+      "test": "Normal production app has no QA wallet",
+      "result": "pass"
+    },
+    {
+      "test": "Normal app restores focus after wallet dismissal",
+      "result": "pass"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>NARO | Interface foundations</title>
+  <link rel="stylesheet" href="./tokens.css">
+  <link rel="stylesheet" href="./components.css">
+  <link rel="stylesheet" href="./preview.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to foundations</a>
+  <header class="masthead">
+    <a href="#main" aria-label="NARO design system"><img src="./assets/naro-logo.png" width="102" height="26" alt="NARO"></a>
+    <span class="masthead-label">Interface foundations</span>
+    <span class="version">v1 proposal <span aria-hidden="true">/</span> Dark</span>
+  </header>
+  <main id="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <div><p class="section-label">NARO design system</p><h1 id="intro-title">Familiar identity.<br>Clearer decisions.</h1></div>
+      <div class="intro-note"><p>A shared visual language for rewards, community, and network activity.</p><p class="secondary">Existing brand colors. More readable hierarchy. Consistent interaction states.</p></div>
+    </section>
+    <nav class="section-nav" aria-label="Design system sections"><a href="#foundations">Foundations</a><a href="#components">Components</a><a href="#states">States</a><a href="#rules">Usage</a></nav>
+
+    <section id="foundations" aria-labelledby="foundation-title" class="section">
+      <div class="section-heading"><h2 id="foundation-title">Color, with a purpose.</h2><span class="secondary small">Mint leads. Green-tinted neutrals support.</span></div>
+      <div class="palette">
+        <div class="swatch swatch--brand"><span>Brand / Mint</span><strong class="naro-number">#01FEA3</strong><span>Primary action</span></div>
+        <div class="swatch swatch--canvas"><span>Canvas</span><strong class="naro-number">#080B0A</strong><span>Page background</span></div>
+        <div class="swatch swatch--surface"><span>Surface</span><strong class="naro-number">#0F1513</strong><span>Content panels</span></div>
+        <div class="swatch swatch--raised"><span>Raised</span><strong class="naro-number">#141C19</strong><span>Secondary surfaces</span></div>
+      </div>
+      <div class="text-colors"><span class="text-primary">Primary <code>#E8F0EC</code></span><span class="secondary">Secondary <code>#A9B7B0</code></span><span class="muted">Muted <code>#93A39B</code></span></div>
+
+      <div class="type-grid">
+        <div class="type-sample"><p class="section-label">Noto Sans SC / Interface</p><h3>Your NARO overview</h3><p>Review your position.<br>Know what happens next.</p><div class="type-meta"><span>16px body / 24px line</span><span>Regular · Medium · Semibold</span></div></div>
+        <div class="type-sample type-sample--numeric"><p class="section-label">Chakra Petch / Numbers</p><div class="naro-number type-amount">1,240.50</div><p class="secondary">Sample amount · NARO</p><div class="type-meta"><span>40px metric / 46px line</span><span>Tabular figures · 600 weight</span></div></div>
+      </div>
+    </section>
+
+    <section id="components" class="section" aria-labelledby="component-title">
+      <div class="section-heading"><h2 id="component-title">Controls that feel consistent.</h2><span class="secondary small">48px default / 12px radius</span></div>
+      <div class="component-grid">
+        <div class="naro-panel"><h3>Action hierarchy</h3><p class="secondary small">One primary action per task area.</p><div class="button-stack"><button class="naro-button naro-button--primary" type="button" data-demo-action="connect">Connect wallet</button><button class="naro-button naro-button--secondary" type="button" data-demo-action="review">Review rewards</button><button class="naro-button" type="button" disabled>Claim unavailable</button></div><p class="small muted">Specimen controls only. No wallet requests.</p></div>
+        <form class="naro-panel" id="invite-form" novalidate><h3>Input &amp; feedback</h3><div class="naro-field"><label for="invite-code">Invite code</label><input class="naro-input" id="invite-code" name="invite-code" type="text" placeholder="Enter invite code" maxlength="16" autocomplete="off" spellcheck="false" aria-describedby="invite-hint"><p class="naro-field__hint" id="invite-hint">Use 4–16 letters or digits.</p></div><button type="submit" class="naro-button naro-button--secondary">Check field</button><p class="small muted">Format demonstration only. No inviter verification or binding.</p></form>
+      </div>
+      <div class="naro-panel" style="margin-top:var(--naro-space-6)"><h3>Wallet selection</h3><p class="secondary small" style="margin-block:var(--naro-space-3)">A shared row for provider names, detection status, and a clear next action. Detected wallet icons come from the provider.</p><a class="naro-wallet-option" href="../prototype/"><span class="wallet-avatar" aria-hidden="true">N</span><span class="wallet-option-copy"><strong>Open wallet picker</strong><span>Try the EVM connection in the prototype</span></span><span aria-hidden="true">→</span></a></div>
+      <div class="geometry"><div><p class="section-label">Spacing</p><div class="spacing-list"><span><i style="width:var(--naro-space-1)"></i>4</span><span><i style="width:var(--naro-space-2)"></i>8</span><span><i style="width:var(--naro-space-4)"></i>16</span><span><i style="width:var(--naro-space-6)"></i>24</span><span><i style="width:var(--naro-space-8)"></i>32</span></div></div><div><p class="section-label">Corners</p><div class="radius-list"><span style="border-radius:var(--naro-radius-small)">8</span><span style="border-radius:var(--naro-radius-control)">12</span><span style="border-radius:var(--naro-radius-card)">16</span><span style="border-radius:var(--naro-radius-dialog)">24</span></div></div></div>
+    </section>
+
+    <section id="states" class="section" aria-labelledby="state-title">
+      <div class="section-heading"><h2 id="state-title">Status you can read.</h2><span class="secondary small">Label + color, every time</span></div>
+      <div class="status-grid"><div><span class="naro-badge naro-badge--info">Testnet</span><p>Informational context</p></div><div><span class="naro-badge naro-badge--warning">Pending</span><p>Needs attention or time</p></div><div><span class="naro-badge naro-badge--success">Confirmed</span><p>Verified completion</p></div><div><span class="naro-badge naro-badge--error">Failed</span><p>Recoverable problem</p></div></div>
+      <div class="claim-specimen naro-panel"><div><p class="section-label">Transaction state specimen</p><h3 id="claim-heading">Ready to review</h3><p id="claim-description" class="secondary">Review the amount and network before confirming.</p></div><div class="claim-controls"><label for="claim-state" class="small">Preview state</label><span class="naro-select-wrap"><select id="claim-state" class="naro-input naro-select"><option value="ready">Ready</option><option value="wallet">Wallet confirmation</option><option value="pending">Transaction pending</option><option value="confirmed">Confirmed</option><option value="error">Failed</option></select></span><button class="naro-button naro-button--primary" id="claim-button" type="button">Review claim</button></div></div>
+      <p id="demo-status" role="status" aria-live="polite" class="demo-status">Preview only. No network or wallet connection.</p>
+    </section>
+
+    <section id="rules" class="usage section" aria-labelledby="rules-title"><h2 id="rules-title">Made for the NARO dApp.</h2><div class="usage-grid"><p><strong>Brand</strong><span>Mint marks action. The mascot supports onboarding. Financial decisions stay easy to read.</span></p><p><strong>Hierarchy</strong><span>Balances use tabular numerals. Labels, timestamps, and explanations keep their own text levels.</span></p><p><strong>Access</strong><span>Visible focus, readable status colors, and reduced-motion support are part of the foundation.</span></p><p><strong>Layout</strong><span>A 4px rhythm, 16px mobile gutters, and wider desktop content replace the narrow app shell.</span></p></div></section>
+  </main>
+  <footer><span>NARO / Interface foundations</span><span>Design proposal · Sample data only</span></footer>
+  <script src="./preview.js" defer></script>
+</body>
+</html>

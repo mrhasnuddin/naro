@@ -1,0 +1,12 @@
+{
+  "31337": {
+    "chainId": 31337,
+    "address": "0x8f86403A4DE0BB5791fa46B8e795C547942fE4Cf",
+    "token": "0xf7b407BD806B9943C1b2281271B27DC3F3baE694",
+    "blockNumber": 201,
+    "transactionHash": "0x0a65cbdc79abf428013ed75de14a74e26eda5ec0dd33487752ce9c0a5816815c",
+    "systemCodeHash": "0xa2a71026aaa3a23d1093197014594bdc448ad1bd554411b90dd31408801ac40b",
+    "tokenCodeHash": "0x9afb41d7c429b86f4386c1a9e485a6f474bdab14124fa161915dd9ba41a6ba3b",
+    "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+  }
+}
