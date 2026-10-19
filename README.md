@@ -15,6 +15,8 @@ Hosting the frontend does not deploy smart contracts. No public BNB deployment i
 
 Square and landscape social thumbnails and Open Graph/X metadata are included. Builds use Vercel's production domain, or an explicit `VITE_SITE_URL` override. See [social sharing setup](docs/naro-social-sharing.md).
 
+If Vercel reports `npm ci` cannot find a lockfile, confirm Root Directory is blank or `./`. The committed install command is `cd frontend && npm ci --include=dev`, the build command is `cd frontend && npm run build`, and Output Directory is `frontend/dist`. Remove any dashboard overrides that still specify earlier commands. The frontend lockfile is committed; do not replace the clean install with an unlocked install to bypass the error.
+
 ## Create the shared BNB testnet demo
 
 1. Open the hosted website, connect a test wallet and switch to BNB testnet.
