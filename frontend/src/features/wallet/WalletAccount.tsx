@@ -71,6 +71,17 @@ export function WalletAccount({ openWallet }: { openWallet: () => void }) {
         </p>
       )}
       <div className="account-actions naro-actions">
+        {TESTNET.chainId === "0x61" && (
+          <a
+            className="text-link"
+            href="https://docs.bnbchain.org/bnb-smart-chain/developers/faucet/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("product.faucet")}
+            <Icon name="external" />
+          </a>
+        )}
         {chainId === TESTNET.chainId ? (
           <>
             <button

@@ -1,4 +1,4 @@
-import {isLocalDemo} from "../demo/network";
+import { isLocalDemo } from "../demo/network";
 import { useEffect, useRef, type ReactNode } from "react";
 import { Icon } from "./ui";
 import { useI18n } from "../context";
@@ -20,7 +20,10 @@ export function Modal({
     closeRef.current?.focus({ preventScroll: true });
     return () => {
       node.close();
-      (returnFocus?.isConnected?returnFocus:document.getElementById("wallet-button"))?.focus({ preventScroll: true });
+      (returnFocus?.isConnected
+        ? returnFocus
+        : document.getElementById("wallet-button")
+      )?.focus({ preventScroll: true });
     };
   }, [returnFocus]);
   return (
@@ -34,7 +37,9 @@ export function Modal({
       }}
     >
       <div className="dialog-top">
-        <span className="naro-badge naro-badge--info">{t(isLocalDemo?"demo.local":"demo.testnet")}</span>
+        <span className="naro-badge naro-badge--info">
+          {t(isLocalDemo ? "demo.local" : "demo.testnet")}
+        </span>
         <button
           ref={closeRef}
           className="icon-button"

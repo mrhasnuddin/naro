@@ -1,4 +1,4 @@
-import {demoCopy} from "./demo/copy.ts";
+import { demoCopy } from "./demo/copy.ts";
 import en from "../../prototype/locales/en.js";
 import zh from "../../prototype/locales/zh-Hans.js";
 export type Locale = "en" | "zh-Hans";

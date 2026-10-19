@@ -1,0 +1,242 @@
+[
+  {
+    "locale": "en",
+    "route": "overview",
+    "heading": "Overview",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "en",
+    "route": "rewards",
+    "heading": "Rewards",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "en",
+    "route": "community",
+    "heading": "Community",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "en",
+    "route": "network",
+    "heading": "Network",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "en",
+    "route": "account",
+    "heading": "Account",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "overview",
+    "heading": "概览",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "rewards",
+    "heading": "奖励",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "community",
+    "heading": "社区",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "network",
+    "heading": "网络",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "account",
+    "heading": "账户",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "locale": "en",
+    "route": "overview",
+    "heading": "Overview",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "en",
+    "route": "rewards",
+    "heading": "Rewards",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "en",
+    "route": "community",
+    "heading": "Community",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "en",
+    "route": "network",
+    "heading": "Network",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "en",
+    "route": "account",
+    "heading": "Account",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "overview",
+    "heading": "概览",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "rewards",
+    "heading": "奖励",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "community",
+    "heading": "社区",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "network",
+    "heading": "网络",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "account",
+    "heading": "账户",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "locale": "en",
+    "route": "overview",
+    "heading": "Overview",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "en",
+    "route": "rewards",
+    "heading": "Rewards",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "en",
+    "route": "community",
+    "heading": "Community",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "en",
+    "route": "network",
+    "heading": "Network",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "en",
+    "route": "account",
+    "heading": "Account",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "overview",
+    "heading": "概览",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "rewards",
+    "heading": "奖励",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "community",
+    "heading": "社区",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "network",
+    "heading": "网络",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "account",
+    "heading": "账户",
+    "instructionCopy": false,
+    "overflow": false,
+    "width": 1280
+  }
+]

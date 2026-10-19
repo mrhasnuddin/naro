@@ -33,3 +33,7 @@ The browser QA results are saved in `../review/wallet-qa-results.json`. All 26 r
 This fixture uses unlocked disposable development accounts, refuses chains other than 31337, limits writes to zero-value transactions to the configured demo contract or its exact creation bytecode, and does not expose private keys. The controls select Participant A, Participant B or the root inviter and can advance the local clock by 61 seconds. It is for a localhost development server only. Do not publish the workspace test directory as the production site; publish `frontend/dist/`.
 
 The older wallet-harness fixtures above simulate wallet behavior and reject writes. The local contract fixture executes actual local writes. See `../demo-verification.md` for the measured distinction.
+
+## Motion QA fixture
+
+`motion-harness.html` loads the production build with test-only context-loss/restoration controls. `?motion=no-webgl` simulates an unavailable GPU; `?motion=reduced` overrides the JavaScript reduced-motion query to test a still frame. The latter does not emulate browser CSS media preferences. These fixtures inject no wallet and are not included in the production entry graph.

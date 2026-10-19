@@ -25,20 +25,20 @@ def card(square):
     inset = size / 4
     footer = height - 72
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}">
-  <title>NARO | BNB testnet demo</title>
-  <desc>Your NARO, in one place. Wallet, rewards and community. Learning demo, no monetary value.</desc>
+  <title>NARO | BNB Testnet</title>
+  <desc>Your NARO, in one place. Wallet, rewards and community. BNB Testnet.</desc>
   <defs><style>@font-face{{font-family:Naro;src:url(data:font/woff2;base64,{font}) format('woff2');font-weight:100 900}}text{{font-family:Naro,sans-serif}}</style></defs>
   <rect width="1200" height="{height}" fill="{c['canvas']}"/>
   <path d="M0 0H1200" stroke="{c['brand']}" stroke-width="8"/>
   <image x="80" y="72" width="{logo_width}" height="{logo_width*120/472}" href="data:image/png;base64,{logo}"/>
-  <text x="80" y="{224 if square else 194}" font-size="18" letter-spacing="3" font-weight="600" fill="{c['brand']}">BNB TESTNET DEMO</text>
+  <text x="80" y="{224 if square else 194}" font-size="18" letter-spacing="3" font-weight="600" fill="{c['brand']}">BNB TESTNET</text>
   <text x="80" y="{title_y}" font-size="{title_size}" font-weight="600" letter-spacing="-3" fill="{c['strong']}">Your NARO,</text>
   <text x="80" y="{second_y}" font-size="{title_size}" font-weight="600" letter-spacing="-3" fill="{c['strong']}">in one place.</text>
   <text x="80" y="{description_y}" font-size="{28 if square else 24}" fill="{c['secondary']}">Your wallet, rewards and community.</text>
   <rect x="{x-28}" y="{y-28}" width="{size+56}" height="{size+56}" fill="none" stroke="{c['border-subtle']}"/>
   <path d="M{x} {y}h{size}v{size}h-{size}zM{x+inset} {y+inset}v{size/2}h{size/2}v-{size/2}z" fill="{c['brand']}" fill-rule="evenodd"/>
   <path d="M80 {footer-34}H1120" stroke="{c['border-control']}"/>
-  <text x="80" y="{footer}" font-size="18" fill="{c['secondary']}">Learning demo · No monetary value</text>
+  <text x="80" y="{footer}" font-size="18" fill="{c['secondary']}">BNB Smart Chain</text>
   <text x="1120" y="{footer}" text-anchor="end" font-size="18" fill="{c['brand']}">NARO</text>
 </svg>'''
     name = "naro-square" if square else "naro-landscape"

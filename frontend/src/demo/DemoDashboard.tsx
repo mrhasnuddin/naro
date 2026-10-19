@@ -9,6 +9,8 @@ import { formatRawAmount } from "../data/amounts";
 import { TARGET_NETWORK, isLocalDemo, chainId } from "./network";
 import { useDemoData } from "./useDemoData";
 import { waitFailure } from "./transactions";
+import { WelcomeHero } from "../components/WelcomeHero";
+import { NaroSculpture } from "../components/NaroSculpture";
 import {
   deployment,
   prepareAction,
@@ -193,7 +195,18 @@ export function DemoDashboard({
         disabled={busy || wallet.state.busy}
         onClick={() => void start("activate")}
       >
-        {t("demo.activate")}
+        {busy ? (
+          <>
+            <span className="button-spinner" aria-hidden="true" />
+            {t(
+              phase === "preparing"
+                ? "product.reviewing"
+                : "product.processing",
+            )}
+          </>
+        ) : (
+          t("demo.activate")
+        )}
       </button>
     ) : (
       <button
@@ -201,11 +214,22 @@ export function DemoDashboard({
         disabled={busy || !claimReady || wallet.state.busy}
         onClick={() => void start("claim")}
       >
-        {t("demo.reviewClaim")}
+        {busy ? (
+          <>
+            <span className="button-spinner" aria-hidden="true" />
+            {t(
+              phase === "preparing"
+                ? "product.reviewing"
+                : "product.processing",
+            )}
+          </>
+        ) : (
+          t("demo.reviewClaim")
+        )}
       </button>
     );
   const status = (
-    <div className="demo-tx-status" aria-live="polite">
+    <div className={`demo-tx-status tx-${phase}`} aria-live="polite">
       {phase !== "idle" && phase !== "error" && (
         <p>
           {t(
@@ -249,57 +273,136 @@ export function DemoDashboard({
   const config = deployment();
   return (
     <>
-      <div className="demo-banner">
-        <span className="naro-badge naro-badge--warning">
-          {t("demo.label")}
-        </span>
-        <p>{t("demo.intro")}</p>
-        <a
-          className="text-link"
-          href={`${location.pathname.includes("/tests/") ? location.pathname.replace(/\/tests\/.*$/, "/dist/") : location.pathname}?${isLocalDemo ? "" : "network=local"}#overview`}
-        >
-          {t(isLocalDemo ? "demo.testnetLink" : "demo.localLink")}
-          <Icon name="arrow" />
-        </a>
-      </div>
       {!quote && status}
-      {!config && view === "account" && (
-        <WalletAccount openWallet={openWallet} />
-      )}
       {!config ? (
-        <Panel title="demo.deployTitle" icon="info">
-          <p className="muted">{t("demo.notDeployed")}</p>
-          <p className="muted demo-spaced">{t("demo.deployNote")}</p>
-          <div className="account-actions naro-actions">
-            {!wallet.state.address ? (
-              <button
-                className="naro-button naro-button--primary"
-                onClick={openWallet}
+        <>
+          {view === "overview" && (
+            <WelcomeHero
+              openWallet={openWallet}
+              connected={!!wallet.state.address}
+            />
+          )}
+          {(view === "overview" || view === "rewards") && (
+            <div className="summary-grid product-metrics">
+              <Panel title="demo.balance" icon="holdings">
+                <p className="demo-metric naro-number">
+                  — <span className="unit">dNARO</span>
+                </p>
+              </Panel>
+              <Panel title="demo.claimed" icon="rewards">
+                <p className="demo-metric naro-number">
+                  — <span className="unit">dNARO</span>
+                </p>
+              </Panel>
+              <Panel title="demo.pool" icon="network">
+                <p className="demo-metric naro-number">
+                  — <span className="unit">dNARO</span>
+                </p>
+              </Panel>
+            </div>
+          )}
+          {view === "rewards" && (
+            <Panel title="demo.history" className="demo-spaced">
+              <p className="muted">{t("product.networkWaiting")}</p>
+            </Panel>
+          )}
+          {view === "community" && (
+            <Panel title="demo.direct" icon="community">
+              <p className="muted">{t("product.networkWaiting")}</p>
+              <div className="naro-actions demo-spaced">
+                {!wallet.state.address ? (
+                  <button
+                    className="naro-button naro-button--primary"
+                    onClick={openWallet}
+                  >
+                    {t("wallet.connect")}
+                  </button>
+                ) : (
+                  <a className="text-link" href="#account">
+                    {t("product.networkSetup")}
+                    <Icon name="arrow" />
+                  </a>
+                )}
+              </div>
+            </Panel>
+          )}
+          {view === "network" && (
+            <Panel title="demo.public" icon="network">
+              <dl className="account-list">
+                <div>
+                  <dt>{t("demo.network")}</dt>
+                  <dd>{TARGET_NETWORK.chainName}</dd>
+                </div>
+                <div>
+                  <dt>{t("product.poolStatus")}</dt>
+                  <dd>{t("product.awaiting")}</dd>
+                </div>
+              </dl>
+              <a
+                className="text-link demo-spaced"
+                href="https://docs.bnbchain.org/bnb-smart-chain/developers/faucet/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                {t("wallet.connect")}
-              </button>
-            ) : !correct ? (
-              <button
-                className="naro-button naro-button--primary"
-                onClick={() => void wallet.switchNetwork()}
-              >
-                {t("demo.switchNetwork", { network: TARGET_NETWORK.chainName })}
-              </button>
-            ) : (
-              <button
-                className="naro-button naro-button--primary"
-                disabled={busy}
-                onClick={() => void start("deploy")}
-              >
-                {t("demo.deploy")}
-              </button>
-            )}
-          </div>
-        </Panel>
+                {t("product.faucet")}
+                <Icon name="external" />
+              </a>
+            </Panel>
+          )}
+          {view === "account" && (
+            <>
+              <WalletAccount openWallet={openWallet} />
+              <details className="network-setup naro-panel demo-spaced">
+                <summary>{t("product.networkSetup")}</summary>
+                <p className="muted demo-spaced">{t("demo.deployNote")}</p>
+                <div className="account-actions naro-actions">
+                  {!isLocalDemo && (
+                    <a
+                      className="text-link"
+                      href="https://docs.bnbchain.org/bnb-smart-chain/developers/faucet/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t("product.faucet")}
+                      <Icon name="external" />
+                    </a>
+                  )}
+                  {!wallet.state.address ? (
+                    <button
+                      className="naro-button naro-button--primary"
+                      onClick={openWallet}
+                    >
+                      {t("wallet.connect")}
+                    </button>
+                  ) : !correct ? (
+                    <button
+                      className="naro-button naro-button--primary"
+                      disabled={wallet.state.busy}
+                      onClick={() => void wallet.switchNetwork()}
+                    >
+                      {t("demo.switchNetwork", {
+                        network: TARGET_NETWORK.chainName,
+                      })}
+                    </button>
+                  ) : (
+                    <button
+                      className="naro-button naro-button--primary"
+                      disabled={busy}
+                      onClick={() => void start("deploy")}
+                    >
+                      {busy ? t("product.reviewing") : t("demo.deploy")}
+                    </button>
+                  )}
+                </div>
+              </details>
+            </>
+          )}
+        </>
       ) : live.loading ? (
-        <Panel title="demo.loading">
-          <p role="status">{t("demo.loading")}</p>
-        </Panel>
+        <div className="loading-surface" role="status">
+          <span className="loading-orbit" aria-hidden="true" />
+          {t("demo.loading")}
+        </div>
       ) : live.error ? (
         <Panel title="demo.error" icon="info">
           <p className="wallet-error">{t(`demo.error.${live.error}` as Key)}</p>
@@ -311,67 +414,89 @@ export function DemoDashboard({
           </button>
         </Panel>
       ) : !wallet.state.address && view !== "network" ? (
-        <Panel title="wallet.title" icon="wallet">
-          <p className="muted">{t("demo.connectNote")}</p>
-          <div className="naro-actions demo-spaced">{primary()}</div>
-        </Panel>
+        <WelcomeHero openWallet={openWallet} />
       ) : data ? (
         <>
           {(view === "overview" || view === "rewards") && (
             <>
               <div className="overview-grid">
-                <section className="reward-hero">
-                  <div className="hero-top">
-                    <h2 className="section-label">{t("demo.reward")}</h2>
-                    <span
-                      className={`naro-badge naro-badge--${data.active ? "success" : "info"}`}
-                    >
-                      {data.active
-                        ? t(claimReady ? "demo.eligible" : "account.active")
-                        : t("account.pending")}
-                    </span>
-                  </div>
-                  <div className="hero-balance">
-                    <span className="naro-number">
-                      {amount(data.claimable)}
-                    </span>
-                    <span className="unit">dNARO</span>
-                  </div>
-                  <p className="hero-description">
-                    {!data.active
-                      ? t("demo.inactive")
-                      : data.pool < data.reward
-                        ? t("demo.poolEmpty")
-                        : !claimReady
-                          ? t("demo.wait", { seconds: wait })
-                          : t("demo.rulesNote")}
-                  </p>
-                  <div className="hero-actions naro-actions">{primary()}</div>
-                </section>
-                <Panel title="demo.rules" icon="info">
-                  <p className="muted">{t("demo.rulesNote")}</p>
-                  {!data.active && (
-                    <div className="naro-field demo-spaced">
-                      <label htmlFor="demo-inviter">{t("demo.inviter")}</label>
-                      <input
-                        id="demo-inviter"
-                        className="naro-input address"
-                        value={inviter}
-                        onChange={(event) => setInviter(event.target.value)}
-                        placeholder="0x…"
-                        aria-describedby="demo-inviter-hint"
-                        aria-invalid={!!inviter && !isAddress(inviter.trim())}
-                      />
-                      <p id="demo-inviter-hint" className="naro-field__hint">
-                        {inviter && !isAddress(inviter.trim())
-                          ? t("demo.inviterInvalid")
-                          : t("demo.inviterHint")}
-                      </p>
+                <section className="reward-hero portal-hero">
+                  <div className="reward-copy">
+                    <div className="hero-top">
+                      <h2 className="section-label">{t("demo.reward")}</h2>
+                      <span
+                        className={`naro-badge naro-badge--${data.active ? "success" : "info"}`}
+                      >
+                        {data.active
+                          ? t(claimReady ? "demo.eligible" : "account.active")
+                          : t("account.pending")}
+                      </span>
                     </div>
-                  )}
-                </Panel>
+                    <div className="hero-balance">
+                      <span className="naro-number">
+                        {amount(data.claimable)}
+                      </span>
+                      <span className="unit">dNARO</span>
+                    </div>
+                    <p className="hero-description">
+                      {!data.active
+                        ? t("demo.inactive")
+                        : data.pool < data.reward
+                          ? t("demo.poolEmpty")
+                          : !claimReady
+                            ? t("demo.wait", { seconds: wait })
+                            : t("product.claimNote")}
+                    </p>
+                    <div className="hero-actions naro-actions">
+                      {primary()}
+                      <a className="text-link" href="#rewards">
+                        {t("product.viewRewards")}
+                        <Icon name="arrow" />
+                      </a>
+                    </div>
+                    <div className="claim-meta">
+                      <span>
+                        10 dNARO{" "}
+                        <span className="muted">
+                          / {t("product.rewardRate")}
+                        </span>
+                      </span>
+                      <span>
+                        60s{" "}
+                        <span className="muted">/ {t("product.interval")}</span>
+                      </span>
+                    </div>
+                  </div>
+                  <NaroSculpture />
+                </section>
+                {!data.active && (
+                  <Panel title="demo.rules" icon="info">
+                    <p className="muted">{t("demo.rulesNote")}</p>
+                    {!data.active && (
+                      <div className="naro-field demo-spaced">
+                        <label htmlFor="demo-inviter">
+                          {t("demo.inviter")}
+                        </label>
+                        <input
+                          id="demo-inviter"
+                          className="naro-input address"
+                          value={inviter}
+                          onChange={(event) => setInviter(event.target.value)}
+                          placeholder="0x…"
+                          aria-describedby="demo-inviter-hint"
+                          aria-invalid={!!inviter && !isAddress(inviter.trim())}
+                        />
+                        <p id="demo-inviter-hint" className="naro-field__hint">
+                          {inviter && !isAddress(inviter.trim())
+                            ? t("demo.inviterInvalid")
+                            : t("demo.inviterHint")}
+                        </p>
+                      </div>
+                    )}
+                  </Panel>
+                )}
               </div>
-              <div className="summary-grid">
+              <div className="summary-grid product-metrics">
                 <Panel title="demo.balance" icon="holdings">
                   <p className="demo-metric naro-number">
                     {amount(data.balance)} <span className="unit">dNARO</span>
@@ -380,6 +505,11 @@ export function DemoDashboard({
                 <Panel title="demo.claimed" icon="rewards">
                   <p className="demo-metric naro-number">
                     {amount(data.claimed)} <span className="unit">dNARO</span>
+                  </p>
+                </Panel>
+                <Panel title="demo.pool" icon="network">
+                  <p className="demo-metric naro-number">
+                    {amount(data.pool)} <span className="unit">dNARO</span>
                   </p>
                 </Panel>
               </div>
@@ -527,11 +657,23 @@ export function DemoDashboard({
                 </dl>
                 <div className="account-actions naro-actions">
                   {primary()}
-                  <button className="text-button" onClick={exportDeployment}>
-                    {t("demo.export")}
-                  </button>
+                  <a
+                    className="text-link"
+                    href="https://www.bnbchain.org/en/testnet-faucet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t("product.faucet")}
+                    <Icon name="external" />
+                  </a>
                 </div>
               </Panel>
+              <details className="network-setup demo-spaced">
+                <summary>{t("product.networkSetup")}</summary>
+                <button className="text-button" onClick={exportDeployment}>
+                  {t("demo.export")}
+                </button>
+              </details>
             </>
           )}
           <div className="snapshot">

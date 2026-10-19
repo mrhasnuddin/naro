@@ -1,20 +1,15 @@
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
-import { useI18n, type Locale, type Key } from "./context";
+import { useI18n, type Locale } from "./context";
 import { Icon, Select } from "./components/ui";
 import { Modal } from "./components/Modal";
-import { Activation, Help } from "./components/Support";
+import { Help } from "./components/Support";
 import { WalletPicker } from "./features/wallet/WalletPicker";
-const DemoDashboard = lazy(() =>
-  import("./demo/DemoDashboard").then((module) => ({
-    default: module.DemoDashboard,
-  })),
-);
 import { isLocalDemo } from "./demo/network";
 import { useWallet, shortAddress } from "./features/wallet/store";
-import { Dashboard } from "./features/dashboard/Dashboard";
-import { snapshot, type AccountPreview, type DataMode } from "./data/dashboard";
-import { inviteCode } from "./data/amounts";
 import logo from "../../design-system/assets/naro-logo.png";
+const DemoDashboard = lazy(() =>
+  import("./demo/DemoDashboard").then((m) => ({ default: m.DemoDashboard })),
+);
 const views = [
   "overview",
   "rewards",
@@ -23,30 +18,22 @@ const views = [
   "account",
 ] as const;
 type View = (typeof views)[number];
-type DialogKind = "wallet" | "activation" | "help" | "copy";
 const isView = (value: string): value is View =>
   views.some((view) => view === value);
-const initialView = (): View =>
-  isView(location.hash.slice(1))
-    ? (location.hash.slice(1) as View)
-    : "overview";
 export function App() {
-  const { t, locale, setLocale } = useI18n();
-  const wallet = useWallet();
-  const [view, setView] = useState<View>(initialView),
-    [mode, setMode] = useState<DataMode>("wallet"),
-    [account, setAccount] = useState<AccountPreview>("active");
-  const [modal, setModal] = useState<DialogKind | null>(null),
-    [toast, setToast] = useState(""),
-    [copyLink, setCopyLink] = useState("");
+  const { t, locale, setLocale } = useI18n(),
+    wallet = useWallet();
+  const [view, setView] = useState<View>(() =>
+    isView(location.hash.slice(1))
+      ? (location.hash.slice(1) as View)
+      : "overview",
+  );
+  const [modal, setModal] = useState<"wallet" | "help" | null>(null),
+    [toast, setToast] = useState("");
   const returnFocus = useRef<HTMLElement | null>(null),
     main = useRef<HTMLElement>(null);
-  const [invitation] = useState(() => inviteCode(location.search));
-  const open = (kind: DialogKind) => {
-    returnFocus.current =
-      document.activeElement instanceof HTMLElement
-        ? document.activeElement
-        : null;
+  const open = (kind: "wallet" | "help") => {
+    returnFocus.current = document.activeElement as HTMLElement;
     setModal(kind);
   };
   useEffect(() => {
@@ -66,25 +53,10 @@ export function App() {
     document.title = `NARO | ${t(`nav.${view}`)}`;
   }, [view, locale, t]);
   useEffect(() => {
-    if (wallet.state.address) setMode("wallet");
-  }, [wallet.state.address]);
-  useEffect(() => {
     if (!toast) return;
-    const timer = setTimeout(() => setToast(""), 6000);
+    const timer = setTimeout(() => setToast(""), 4500);
     return () => clearTimeout(timer);
   }, [toast]);
-  const copyInvite = async () => {
-    const url = new URL(location.href);
-    url.search = "?invite=DEMONARO";
-    url.hash = "overview";
-    try {
-      await navigator.clipboard.writeText(url.href);
-      setToast(t("community.copied"));
-    } catch {
-      setCopyLink(url.href);
-      open("copy");
-    }
-  };
   const nav = views.map((target) => (
     <a
       key={target}
@@ -93,80 +65,15 @@ export function App() {
     >
       <Icon name={target} />
       <span>{t(`nav.${target}`)}</span>
+      <span className="nav-indicator" aria-hidden="true" />
     </a>
   ));
-  const titleKey: Key =
-    view === "overview"
-      ? "overview.title"
-      : view === "community"
-        ? "community.page.title"
-        : view === "network"
-          ? "network.page.title"
-          : `${view}.title`;
-  const descriptionKey: Key =
-    view === "overview"
-      ? "overview.description"
-      : view === "community"
-        ? "community.page.description"
-        : view === "network"
-          ? "network.page.description"
-          : `${view}.description`;
-  const stamp = new Intl.DateTimeFormat(locale, {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    hourCycle: "h23",
-    timeZone: "Asia/Kuala_Lumpur",
-  }).format(snapshot);
-  const walletAction = () => open("wallet");
-  const liveContent = (
-    <Suspense fallback={<p role="status">{t("demo.loading")}</p>}>
-      <DemoDashboard view={view} openWallet={walletAction} />
-    </Suspense>
-  );
   return (
     <>
       <a href="#main-content" className="skip-link">
         {t("skip")}
       </a>
-      <div className="reviewbar" aria-label={t("review.controls")}>
-        <div>
-          <strong>{t(isLocalDemo ? "demo.local" : "demo.testnet")}</strong>
-          <span>{t(mode === "sample" ? "app.sample" : "demo.label")}</span>
-        </div>
-        <div className="review-controls">
-          <label htmlFor="data-mode">
-            <span>{t("app.view")}</span>
-            <Select
-              id="data-mode"
-              label={t("app.view")}
-              value={mode}
-              onChange={(value) => setMode(value as DataMode)}
-            >
-              <option value="sample">{t("app.sample")}</option>
-              <option value="wallet">{t("app.wallet")}</option>
-            </Select>
-          </label>
-          {mode === "sample" && (
-            <label htmlFor="preview-state">
-              <span>{t("review.state")}</span>
-              <Select
-                id="preview-state"
-                label={t("review.state")}
-                value={account}
-                onChange={(value) => setAccount(value as AccountPreview)}
-              >
-                <option value="active">{t("review.active")}</option>
-                <option value="setup">{t("review.setup")}</option>
-                <option value="public">{t("review.public")}</option>
-              </Select>
-            </label>
-          )}
-        </div>
-      </div>
-      <div className="app-shell">
+      <div className="app-shell product-shell">
         <aside className="sidebar">
           <a
             className="brand"
@@ -192,8 +99,8 @@ export function App() {
             </a>
             <div className="sidebar-network">
               <span className="network-dot" aria-hidden="true" />
-              <span>{isLocalDemo ? "NARO Local Demo" : "BNB Smart Chain"}</span>
-              <span>{isLocalDemo ? "31337" : t("network.testnet")}</span>
+              <span>BNB Smart Chain</span>
+              <span>{t(isLocalDemo ? "demo.local" : "demo.testnet")}</span>
             </div>
           </div>
         </aside>
@@ -204,9 +111,14 @@ export function App() {
                 <img src={logo} alt="NARO" width="92" height="24" />
               </a>
             </div>
-            <div className="breadcrumb">{t(`nav.${view}`)}</div>
+            <div className="breadcrumb">
+              <span className="breadcrumb-root">NARO</span>
+              <span aria-hidden="true">/</span>
+              {t(`nav.${view}`)}
+            </div>
             <div className="header-actions">
               <span className="naro-badge naro-badge--info chain-label">
+                <span className="network-dot" aria-hidden="true" />
                 {t(isLocalDemo ? "demo.local" : "demo.testnet")}
               </span>
               <Select
@@ -227,8 +139,8 @@ export function App() {
               </Select>
               <button
                 id="wallet-button"
-                className="naro-button naro-button--secondary naro-button--compact"
-                onClick={walletAction}
+                className={`naro-button naro-button--compact ${wallet.state.address ? "naro-button--secondary" : "naro-button--primary"}`}
+                onClick={() => open("wallet")}
               >
                 <Icon name="wallet" />
                 <span>
@@ -247,56 +159,28 @@ export function App() {
           >
             <div className="page-heading">
               <div>
-                <h1>{t(titleKey)}</h1>
-                <p>{t(descriptionKey)}</p>
+                <p className="page-eyebrow">{t("product.workspace")}</p>
+                <h1>{t(`nav.${view}`)}</h1>
               </div>
-              <span className="sample-label">
-                <Icon name={mode === "sample" ? "sample" : "wallet"} />
-                {t(mode === "sample" ? "demo.only" : "app.wallet")}
+              <span className="workspace-status">
+                <span className="network-dot" aria-hidden="true" />
+                {t(isLocalDemo ? "demo.local" : "demo.testnet")}
               </span>
             </div>
-            {invitation && (
-              <div className="invitation-notice">
-                <strong>{t("app.inviteReceived")}</strong>
-                <p>{t("app.inviteReceivedNote", { code: invitation })}</p>
-                <button
-                  className="text-button"
-                  onClick={() => open("activation")}
-                >
-                  {t("hero.setup.action")}
-                </button>
-              </div>
-            )}
-            {mode === "sample" ? (
-              <Dashboard
-                view={view}
-                account={account}
-                openWallet={walletAction}
-                openActivation={() => open("activation")}
-                copyInvite={() => void copyInvite()}
-              />
-            ) : (
-              liveContent
-            )}
-            {mode === "sample" && (
-              <div className="snapshot">
-                <span>
-                  {t("snapshot.label")}{" "}
-                  <time dateTime={snapshot.toISOString()}>{stamp}</time>
-                </span>
-                <span>{t("snapshot.timezone")}</span>
-              </div>
-            )}
+            <Suspense
+              fallback={
+                <div className="loading-surface" role="status">
+                  {t("demo.loading")}
+                </div>
+              }
+            >
+              <DemoDashboard view={view} openWallet={() => open("wallet")} />
+            </Suspense>
           </main>
           <footer className="app-footer">
             <span>
-              {t(
-                mode === "sample"
-                  ? "footer.test"
-                  : isLocalDemo
-                    ? "demo.local"
-                    : "demo.testnet",
-              )}
+              © NARO <span aria-hidden="true">·</span>{" "}
+              {t(isLocalDemo ? "demo.local" : "demo.testnet")}
             </span>
             <button className="footer-help" onClick={() => open("help")}>
               {t("help.label")}
@@ -313,27 +197,7 @@ export function App() {
           returnFocus={returnFocus.current}
           onDismiss={() => setModal(null)}
         >
-          {modal === "wallet" ? (
-            <WalletPicker />
-          ) : modal === "activation" ? (
-            <Activation />
-          ) : modal === "help" ? (
-            <Help />
-          ) : (
-            <>
-              <h2 id="dialog-title">{t("copy.label")}</h2>
-              <p>{t("community.copyFallback")}</p>
-              <label className="naro-field">
-                {t("copy.label")}
-                <input
-                  className="naro-input"
-                  value={copyLink}
-                  readOnly
-                  onFocus={(event) => event.target.select()}
-                />
-              </label>
-            </>
-          )}
+          {modal === "wallet" ? <WalletPicker /> : <Help />}
         </Modal>
       )}
       {toast && (

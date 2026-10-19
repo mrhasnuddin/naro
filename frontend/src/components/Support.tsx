@@ -115,12 +115,6 @@ export function Help() {
           <Icon name="external" />
         </a>
       </div>
-      <h3>{t("help.languages")}</h3>
-      <p className="muted small">
-        English · 简体中文 · 繁體中文 · 한국어 · 日本語 · Tiếng Việt · हिन्दी ·
-        اردو · Bahasa Indonesia
-      </p>
-      <p className="muted small">{t("help.languageNote")}</p>
     </>
   );
 }

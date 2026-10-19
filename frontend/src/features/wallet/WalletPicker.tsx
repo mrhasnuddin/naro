@@ -136,10 +136,6 @@ export function WalletPicker() {
               ))}
             </ul>
           </section>
-          <div className="wallet-qr">
-            <strong>{t("wallet.qr")}</strong>
-            <p className="small muted">{t("wallet.qrNote")}</p>
-          </div>
         </>
       )}
       <p className="wallet-security small muted">{t("wallet.security")}</p>

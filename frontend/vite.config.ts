@@ -24,9 +24,9 @@ export default defineConfig(({ mode }) => {
       "Set VITE_SITE_URL to the public production URL, or enable Vercel System Environment Variables for social previews.",
     );
   }
-  const title = "NARO | BNB Testnet Demo";
+  const title = "NARO | Wallet, Rewards & Community";
   const description =
-    "Your wallet, rewards and community. Explore the NARO learning demo on BNB testnet. Demo tokens have no monetary value.";
+    "Connect your wallet, claim dNARO rewards and explore your community on BNB Testnet.";
   const image = (name: string) => `${site || "."}/social/naro-${name}.png`;
   const meta = (
     key: string,
@@ -55,7 +55,7 @@ export default defineConfig(({ mode }) => {
       meta("og:image:height", height),
       meta(
         "og:image:alt",
-        "NARO. Your NARO, in one place. BNB testnet learning demo; no monetary value.",
+        "NARO. Your wallet, rewards and community on BNB Testnet.",
       ),
     );
   }
@@ -66,7 +66,7 @@ export default defineConfig(({ mode }) => {
     meta("twitter:image", image("landscape"), true),
     meta(
       "twitter:image:alt",
-      "NARO BNB testnet learning demo. Your wallet, rewards and community.",
+      "NARO on BNB Testnet. Your wallet, rewards and community.",
       true,
     ),
   );

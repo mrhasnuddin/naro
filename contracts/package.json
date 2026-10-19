@@ -7,6 +7,8 @@
     "compile": "node scripts/compile.mjs",
     "node": "node scripts/local-node.mjs",
     "deploy:local": "node scripts/deploy-local.mjs",
+    "wallet:create": "node scripts/create-test-wallet.mjs",
+    "wallet:export": "node scripts/export-test-wallet.mjs",
     "test": "node --test --test-concurrency=1 test/*.test.mjs"
   },
   "dependencies": {

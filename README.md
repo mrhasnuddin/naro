@@ -13,6 +13,8 @@ Only `frontend/dist/` is published. The repository root is required at build tim
 
 Hosting the frontend does not deploy smart contracts. No public BNB deployment is configured yet. A visitor will see a deployment prompt until a shared chain-97 manifest is committed.
 
+The participant UI includes branded 3D, motion controls and a live-wallet flow. Local wallet creation/import instructions are in [test wallet handoff](docs/naro-test-wallet.md); product changes and current verification are in [product polish](docs/naro-product-polish.md).
+
 Square and landscape social thumbnails and Open Graph/X metadata are included. Builds use Vercel's production domain, or an explicit `VITE_SITE_URL` override. See [social sharing setup](docs/naro-social-sharing.md).
 
 If Vercel reports `npm ci` cannot find a lockfile, confirm Root Directory is blank or `./`. The committed install command is `cd frontend && npm ci --include=dev`, the build command is `cd frontend && npm run build`, and Output Directory is `frontend/dist`. Remove any dashboard overrides that still specify earlier commands. The frontend lockfile is committed; do not replace the clean install with an unlocked install to bypass the error.
@@ -21,7 +23,7 @@ If Vercel reports `npm ci` cannot find a lockfile, confirm Root Directory is bla
 
 1. Open the hosted website, connect a test wallet and switch to BNB testnet.
 2. Obtain tBNB through the [official BNB faucet instructions](https://docs.bnbchain.org/bnb-smart-chain/developers/faucet/).
-3. Choose **Review demo deployment**, review the network/gas, then confirm with your wallet. Never enter a private key in the website or Vercel settings.
+3. Open **Account → Network setup** and choose **Set up network**, review the network/gas, then confirm with your wallet. Never enter a private key in the website or Vercel settings.
 4. Once confirmed, open Account and choose **Export deployment**. This contains public addresses, hashes and deployment metadata, not secrets.
 5. Review the deployed contracts and verify source on the testnet explorer. Add the exported record under key `"97"` in `frontend/src/demo/deployments.json`, then commit and redeploy so visitors share that deployment.
 

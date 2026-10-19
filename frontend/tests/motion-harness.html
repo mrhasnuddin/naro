@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NARO motion QA</title></head>
+<body><div id="root"></div><details style="position:fixed;right:16px;bottom:90px;z-index:99;background:#141c19;color:#e8f0ec;padding:12px"><summary>Motion QA</summary><button id="lose">Lose WebGL context</button><button id="restore">Restore WebGL context</button><output id="motion-result"></output></details>
+<script type="module">
+// Test-only controls outside the production entry graph; no wallet is injected.
+const mode=new URLSearchParams(location.search).get('motion');
+if(mode==='reduced'){
+ const native=window.matchMedia.bind(window);
+ window.matchMedia=query=>{const media=native(query);if(query==='(prefers-reduced-motion: reduce)')Object.defineProperty(media,'matches',{value:true});return media;};
+}
+if(mode==='no-webgl'){
+ const native=HTMLCanvasElement.prototype.getContext;
+ HTMLCanvasElement.prototype.getContext=function(type,...args){return /webgl/.test(type)?null:native.call(this,type,...args);};
+}
+let extension;
+document.querySelector('#lose').addEventListener('click',()=>{extension=document.querySelector('.naro-sculpture canvas')?.getContext('webgl2')?.getExtension('WEBGL_lose_context');if(extension){extension.loseContext();document.querySelector('#motion-result').textContent='Context loss requested';}else document.querySelector('#motion-result').textContent='Context-loss extension unavailable';});
+document.querySelector('#restore').addEventListener('click',()=>{extension?.restoreContext();document.querySelector('#motion-result').textContent='Context restoration requested';});
+const response=await fetch('../dist/index.html',{cache:'no-store'}), html=new DOMParser().parseFromString(await response.text(),'text/html');
+for(const style of html.querySelectorAll('link[rel="stylesheet"]')){const link=document.createElement('link');link.rel='stylesheet';link.href=new URL(style.getAttribute('href'),response.url).href;document.head.append(link);}
+await import(new URL(html.querySelector('script[type="module"]').getAttribute('src'),response.url).href);
+</script></body></html>

@@ -6,7 +6,7 @@ React + TypeScript frontend built from the approved NARO prototype, now connecte
 
 Open http://127.0.0.1:4174/frontend/tests/local-demo.html?network=local#overview.
 
-Choose Connect wallet, then NARO Local Test Wallet, then close the connection dialog. Participant A already has a confirmed activation and 20 dNARO from the demonstration. Review demo claim submits another eligible claim. The bottom-right Local test wallet controls let you switch between two disposable participants and the root inviter, or advance the local cooldown. Participant B can activate with Participant A as inviter. These are real transactions on the isolated local EVM, chain 31337; the tokens and local gas have no monetary value.
+Choose Connect wallet, then NARO Local Test Wallet, then close the connection dialog. Participant A already has a confirmed activation and 30 dNARO from the demonstration. Review demo claim submits another eligible claim. The bottom-right Local test wallet controls let you switch between two disposable participants and the root inviter, or advance the local cooldown. Participant B can activate with Participant A as inviter. These are real transactions on the isolated local EVM, chain 31337; the tokens and local gas have no monetary value.
 
 The normal app is http://127.0.0.1:4174/frontend/dist/#overview. It targets BNB testnet, chain 97. Without a deployment it offers a wallet-confirmed demo deployment. A funded test wallet is required. No private key is entered in this app.
 
@@ -45,7 +45,7 @@ These are trial rules, not NARO's actual token economics. Account and inviter re
 
 ## Frontend behavior
 
-Five views share the approved dark/mint tokens, responsive navigation, typography, spacing and official wallet logos. My wallet reads verified demo deployment data; Sample dashboard retains the clearly labeled design fixtures. Disconnected users are prompted to connect before seeing personal metrics. Network statistics are public.
+Five views share the approved dark/mint tokens, responsive navigation, typography, spacing and official wallet logos. The app reads verified deployment data. Sample fixtures remain in the original prototype and source, but the public app no longer exposes sample-mode controls. Disconnected users are prompted to connect before seeing personal metrics. Network statistics are public.
 
 Transactions are simulated and estimated before a review dialog, require an explicit wallet submission, and finish with a mined receipt. Requests bind the intended chain ID, reject changed wallet contexts, handle cancelled/repriced transactions, and retain unknown confirmation status for retry. The local and BNB testnet modes are labeled separately.
 
@@ -68,8 +68,10 @@ See `demo-verification.md` for current coverage and limits, and `../docs/naro-de
 
 ## BNB testnet handoff
 
-Open the normal app, connect an EVM test wallet, switch to BNB testnet, obtain tBNB from the official faucet, and choose Review demo deployment. Review the network and gas estimate, then confirm in your wallet. The app checks the mined deployment and saves its public manifest in this browser. Export deployment creates a JSON record for review. To share a deployment across browsers, review and add its chain-97 record to `src/demo/deployments.json`, then rebuild. Importing arbitrary manifests through the UI is not implemented.
+Open the normal app, connect an EVM test wallet, switch to BNB testnet, obtain tBNB from the official faucet, and open Account → Network setup to choose Set up network. Review the network and gas estimate, then confirm in your wallet. The app checks the mined deployment and saves its public manifest in this browser. Export deployment creates a JSON record for review. To share a deployment across browsers, review and add its chain-97 record to `src/demo/deployments.json`, then rebuild. Importing arbitrary manifests through the UI is not implemented.
 
 Compiler settings and standard JSON input are in `contracts/artifacts/`. Verify both contracts on the testnet explorer after deployment; this has not been performed. WalletConnect QR still requires a project ID and connector implementation. No production deployment or security audit is claimed.
 
 Browser storage persists language and public deployment configuration, including the deployment wallet address and transaction hash. It does not store wallet secrets. Wallet logos and fonts retain their existing licenses and trademark ownership.
+
+See `../docs/naro-product-polish.md` for the 20 October product UI, Three.js asset, motion checks and current funding limits.
