@@ -13,6 +13,8 @@ Only `frontend/dist/` is published. The repository root is required at build tim
 
 Hosting the frontend does not deploy smart contracts. No public BNB deployment is configured yet. A visitor will see a deployment prompt until a shared chain-97 manifest is committed.
 
+Square and landscape social thumbnails and Open Graph/X metadata are included. Builds use Vercel's production domain, or an explicit `VITE_SITE_URL` override. See [social sharing setup](docs/naro-social-sharing.md).
+
 ## Create the shared BNB testnet demo
 
 1. Open the hosted website, connect a test wallet and switch to BNB testnet.
