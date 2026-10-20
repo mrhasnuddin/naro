@@ -2,7 +2,15 @@ import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { useI18n, type Locale } from "./context";
 import { Icon, Select } from "./components/ui";
 import { Modal } from "./components/Modal";
-import { Help } from "./components/Support";
+import { NaroHelp } from "./parity/BrandContent";
+import {
+  primaryViews,
+  currentView,
+  parentView,
+  titles,
+  type View,
+} from "./parity/routes";
+import { languages } from "./locales";
 import { WalletPicker } from "./features/wallet/WalletPicker";
 import { isLocalDemo } from "./demo/network";
 import { useWallet, shortAddress } from "./features/wallet/store";
@@ -10,24 +18,14 @@ import logo from "../../design-system/assets/naro-logo.png";
 const DemoDashboard = lazy(() =>
   import("./demo/DemoDashboard").then((m) => ({ default: m.DemoDashboard })),
 );
-const views = [
-  "overview",
-  "rewards",
-  "community",
-  "network",
-  "account",
-] as const;
-type View = (typeof views)[number];
-const isView = (value: string): value is View =>
-  views.some((view) => view === value);
+const NaroDashboard = lazy(() =>
+  import("./parity/NaroDashboard").then((m) => ({ default: m.NaroDashboard })),
+);
 export function App() {
   const { t, locale, setLocale } = useI18n(),
     wallet = useWallet();
-  const [view, setView] = useState<View>(() =>
-    isView(location.hash.slice(1))
-      ? (location.hash.slice(1) as View)
-      : "overview",
-  );
+  const [view, setView] = useState<View>(currentView);
+  const [labView, setLabView] = useState("overview");
   const [modal, setModal] = useState<"wallet" | "help" | null>(null),
     [toast, setToast] = useState("");
   const returnFocus = useRef<HTMLElement | null>(null),
@@ -38,33 +36,54 @@ export function App() {
   };
   useEffect(() => {
     const listener = () => {
-      const hash = location.hash.slice(1);
-      if (!isView(hash)) return;
-      setView(hash);
+      if (location.hash === "#main-content") return;
+      setView(currentView());
       requestAnimationFrame(() => {
         main.current?.focus({ preventScroll: true });
         window.scrollTo({ top: 0, behavior: "instant" });
       });
     };
     window.addEventListener("hashchange", listener);
-    return () => window.removeEventListener("hashchange", listener);
+    window.addEventListener("popstate", listener);
+    return () => {
+      window.removeEventListener("hashchange", listener);
+      window.removeEventListener("popstate", listener);
+    };
   }, []);
   useEffect(() => {
-    document.title = `NARO | ${t(`nav.${view}`)}`;
+    document.title = `NARO | ${t(titles[view])}`;
   }, [view, locale, t]);
   useEffect(() => {
     if (!toast) return;
     const timer = setTimeout(() => setToast(""), 4500);
     return () => clearTimeout(timer);
   }, [toast]);
-  const nav = views.map((target) => (
+  const nav = primaryViews.map((target) => (
     <a
       key={target}
       href={`#${target}`}
-      aria-current={target === view ? "page" : undefined}
+      onClick={() => {
+        if (view === target) {
+          main.current?.focus({ preventScroll: true });
+          window.scrollTo({ top: 0, behavior: "instant" });
+        }
+      }}
+      aria-current={target === parentView(view) ? "page" : undefined}
     >
       <Icon name={target} />
-      <span>{t(`nav.${target}`)}</span>
+      <span>
+        {t(
+          target === "overview"
+            ? "orig.nav.home"
+            : target === "rewards"
+              ? "orig.nav.mining"
+              : target === "network"
+                ? "orig.nav.data"
+                : target === "swap"
+                  ? "orig.nav.swap"
+                  : "orig.nav.mine",
+        )}
+      </span>
       <span className="nav-indicator" aria-hidden="true" />
     </a>
   ));
@@ -82,9 +101,17 @@ export function App() {
           >
             <img src={logo} alt="NARO" width="118" height="30" />
           </a>
-          <p className="sidebar-caption">{t("nav.workspace")}</p>
+          <p className="sidebar-caption">NARO</p>
           <nav id="desktop-nav" aria-label={t("nav.main")}>
             {nav}
+            <a
+              href="#community"
+              aria-current={view === "community" ? "page" : undefined}
+            >
+              <Icon name="community" />
+              <span>{t("orig.nav.team")}</span>
+              <span className="nav-indicator" aria-hidden="true" />
+            </a>
           </nav>
           <div className="sidebar-bottom">
             <a
@@ -114,7 +141,7 @@ export function App() {
             <div className="breadcrumb">
               <span className="breadcrumb-root">NARO</span>
               <span aria-hidden="true">/</span>
-              {t(`nav.${view}`)}
+              {t(titles[view])}
             </div>
             <div className="header-actions">
               <span className="naro-badge naro-badge--info chain-label">
@@ -123,19 +150,33 @@ export function App() {
               </span>
               <Select
                 id="locale"
-                label={t("language")}
+                label={t("orig.lang.title")}
                 value={locale}
+                displayValue={
+                  {
+                    en: "EN",
+                    "zh-Hans": "中文",
+                    "zh-Hant": "繁中",
+                    ko: "한국어",
+                    ja: "日本語",
+                    vi: "VI",
+                    hi: "HI",
+                    ur: "UR",
+                    id: "ID",
+                  }[locale]
+                }
                 onChange={(value) => {
                   setLocale(value as Locale);
                   setToast(
-                    value === "en"
-                      ? "Language changed to English."
-                      : "已切换为简体中文。",
+                    languages.find((l) => l.value === value)?.label ?? value,
                   );
                 }}
               >
-                <option value="en">EN</option>
-                <option value="zh-Hans">中文</option>
+                {languages.map((l) => (
+                  <option key={l.value} value={l.value}>
+                    {l.label}
+                  </option>
+                ))}
               </Select>
               <button
                 id="wallet-button"
@@ -146,7 +187,7 @@ export function App() {
                 <span>
                   {wallet.state.address
                     ? shortAddress(wallet.state.address)
-                    : t("wallet.connect")}
+                    : t("orig.common.connectWallet")}
                 </span>
               </button>
             </div>
@@ -159,8 +200,7 @@ export function App() {
           >
             <div className="page-heading">
               <div>
-                <p className="page-eyebrow">{t("product.workspace")}</p>
-                <h1>{t(`nav.${view}`)}</h1>
+                <h1>{t(titles[view])}</h1>
               </div>
               <span className="workspace-status">
                 <span className="network-dot" aria-hidden="true" />
@@ -170,11 +210,46 @@ export function App() {
             <Suspense
               fallback={
                 <div className="loading-surface" role="status">
-                  {t("demo.loading")}
+                  {t("orig.common.loading")}
                 </div>
               }
             >
-              <DemoDashboard view={view} openWallet={() => open("wallet")} />
+              {view === "test-lab" ? (
+                <>
+                  <a className="text-link" href="#account">
+                    ← {t("parity.closeTools")}
+                  </a>
+                  <p className="muted">{t("parity.testToolsNote")}</p>
+                  <div className="parity-tabs lab-tabs">
+                    {[
+                      "overview",
+                      "rewards",
+                      "community",
+                      "network",
+                      "account",
+                    ].map((v) => (
+                      <button
+                        key={v}
+                        aria-pressed={labView === v}
+                        onClick={() => setLabView(v)}
+                      >
+                        {t(`nav.${v}` as import("./context").Key)}
+                      </button>
+                    ))}
+                  </div>
+                  <DemoDashboard
+                    view={labView}
+                    openWallet={() => open("wallet")}
+                    onNavigate={(value) => {
+                      setLabView(value);
+                      main.current?.focus({ preventScroll: true });
+                      window.scrollTo({ top: 0, behavior: "instant" });
+                    }}
+                  />
+                </>
+              ) : (
+                <NaroDashboard view={view} openWallet={() => open("wallet")} />
+              )}
             </Suspense>
           </main>
           <footer className="app-footer">
@@ -197,7 +272,7 @@ export function App() {
           returnFocus={returnFocus.current}
           onDismiss={() => setModal(null)}
         >
-          {modal === "wallet" ? <WalletPicker /> : <Help />}
+          {modal === "wallet" ? <WalletPicker /> : <NaroHelp />}
         </Modal>
       )}
       {toast && (

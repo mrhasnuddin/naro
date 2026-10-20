@@ -51,15 +51,24 @@ export function Select({
   value,
   onChange,
   children,
+  displayValue,
 }: {
   id: string;
   label: string;
   value: string;
   onChange: (value: string) => void;
   children: ReactNode;
+  displayValue?: string;
 }) {
   return (
-    <span className="naro-select-wrap">
+    <span
+      className={`naro-select-wrap ${displayValue ? "naro-select-wrap--display" : ""}`}
+    >
+      {displayValue && (
+        <span className="naro-select-display" aria-hidden="true">
+          {displayValue}
+        </span>
+      )}
       <select
         id={id}
         className="naro-select"

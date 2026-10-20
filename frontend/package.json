@@ -7,19 +7,21 @@
     "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4175 --strictPort",
-    "test": "node --test src/data/*.test.ts src/demo/*.test.ts ../prototype/wallet.test.mjs && node ../prototype/check.mjs",
+    "test": "node --test src/data/*.test.ts src/demo/*.test.ts src/parity/*.test.ts ../prototype/wallet.test.mjs && node ../prototype/check.mjs",
     "check:design": "node ../design-system/build-tokens.mjs --check && node ../design-system/check-tokens.mjs",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\" vite.config.ts",
     "test:rpc": "node tests/rpc-smoke.mjs"
   },
   "dependencies": {
     "ethers": "^6.17.0",
+    "qrcode": "^1.5.4",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "three": "^0.186.1"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@types/three": "^0.186.0",

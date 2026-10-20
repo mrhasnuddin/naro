@@ -4,9 +4,11 @@ import { NaroSculpture } from "./NaroSculpture";
 export function WelcomeHero({
   openWallet,
   connected = false,
+  onNavigate,
 }: {
   openWallet: () => void;
   connected?: boolean;
+  onNavigate?: (view: string) => void;
 }) {
   const { t } = useI18n();
   return (
@@ -31,7 +33,14 @@ export function WelcomeHero({
             {t(connected ? "product.connectedWallet" : "wallet.connect")}
             <Icon name="arrow" />
           </button>
-          <a className="text-link" href="#network">
+          <a
+            className="text-link"
+            href="#test-lab"
+            onClick={(event) => {
+              event.preventDefault();
+              onNavigate?.("network");
+            }}
+          >
             {t("nav.network")}
             <Icon name="arrow" />
           </a>

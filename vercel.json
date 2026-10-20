@@ -3,5 +3,6 @@
   "framework": null,
   "installCommand": "cd frontend && npm ci --include=dev",
   "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/dist"
+  "outputDirectory": "frontend/dist",
+  "rewrites": [{"source":"/(.*)","destination":"/index.html"}]
 }

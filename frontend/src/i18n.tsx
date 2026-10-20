@@ -5,15 +5,15 @@ export type { Locale, Key } from "./locales";
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>(() => {
     try {
-      return localStorage.getItem("naro:locale") === "zh-Hans"
-        ? "zh-Hans"
-        : "en";
+      const saved = localStorage.getItem("naro:locale");
+      return saved && Object.hasOwn(catalogs, saved) ? (saved as Locale) : "en";
     } catch {
       return "en";
     }
   });
   useEffect(() => {
     document.documentElement.lang = locale;
+    document.documentElement.dir = locale === "ur" ? "rtl" : "ltr";
     try {
       localStorage.setItem("naro:locale", locale);
     } catch {

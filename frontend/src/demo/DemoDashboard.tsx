@@ -32,9 +32,11 @@ type Phase =
 export function DemoDashboard({
   view,
   openWallet,
+  onNavigate,
 }: {
   view: string;
   openWallet: () => void;
+  onNavigate?: (view: string) => void;
 }) {
   const { t, locale, number } = useI18n(),
     wallet = useWallet(),
@@ -156,7 +158,7 @@ export function DemoDashboard({
     url.searchParams.set("inviter", wallet.state.address);
     if (url.pathname.includes("/tests/"))
       url.pathname = url.pathname.replace(/\/tests\/.*$/, "/dist/");
-    url.hash = "overview";
+    url.hash = "test-lab";
     try {
       await navigator.clipboard.writeText(url.href);
       setNotice(t("demo.copied"));
@@ -280,6 +282,7 @@ export function DemoDashboard({
             <WelcomeHero
               openWallet={openWallet}
               connected={!!wallet.state.address}
+              onNavigate={onNavigate}
             />
           )}
           {(view === "overview" || view === "rewards") && (
@@ -318,7 +321,14 @@ export function DemoDashboard({
                     {t("wallet.connect")}
                   </button>
                 ) : (
-                  <a className="text-link" href="#account">
+                  <a
+                    className="text-link"
+                    href="#test-lab"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      onNavigate?.("account");
+                    }}
+                  >
                     {t("product.networkSetup")}
                     <Icon name="arrow" />
                   </a>
@@ -414,7 +424,7 @@ export function DemoDashboard({
           </button>
         </Panel>
       ) : !wallet.state.address && view !== "network" ? (
-        <WelcomeHero openWallet={openWallet} />
+        <WelcomeHero openWallet={openWallet} onNavigate={onNavigate} />
       ) : data ? (
         <>
           {(view === "overview" || view === "rewards") && (
@@ -449,7 +459,14 @@ export function DemoDashboard({
                     </p>
                     <div className="hero-actions naro-actions">
                       {primary()}
-                      <a className="text-link" href="#rewards">
+                      <a
+                        className="text-link"
+                        href="#test-lab"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          onNavigate?.("rewards");
+                        }}
+                      >
                         {t("product.viewRewards")}
                         <Icon name="arrow" />
                       </a>

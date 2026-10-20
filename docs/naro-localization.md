@@ -1,6 +1,10 @@
 # NARO localization
 
-19 October 2026
+Updated 20 October 2026
+
+The rebuilt frontend now includes all nine original published catalogs (746 keys each), recovered from the original client bundle. Urdu sets document RTL and uses logical layout rules. Original navigation, language selection and connection labels use those catalogs. Newly authored operational/error and trial-tool copy has English and draft simplified Chinese, with English fallback for the other locales. Native-language quality and complete translation of new copy remain review work.
+
+The historical prototype inventory below describes the earlier 19 October scope. See `naro-parity-audit.md` for the current feature mapping.
 
 ## Existing language inventory
 

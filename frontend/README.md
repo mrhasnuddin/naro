@@ -1,14 +1,25 @@
-# NARO learning demo
+# NARO rebuilt frontend
+
+## Current product: original-NARO UI parity
+
+The public app restores NARO's original product and content: mascot, five-panel promotional banner, ecosystem and partners, FAQs, official links, Static/Promo/Rank mining, community and invitations, poster design, earnings filters, activation, network mechanics, closed Swap/IEO screens and all nine original language catalogs. See [the comparison and integration boundaries](../docs/naro-parity-audit.md).
+
+Original-protocol settlement, activation payments and claims need a matching BNB testnet backend and verified contracts. They are not implemented by the educational dNARO contracts. Unknown figures remain unavailable, and the original mainnet ledger is never used for test-wallet account reads. Optional read-only testnet API configuration is documented in the comparison report.
+
+The existing trial is preserved at **Account → Testnet tools** (`#test-lab`). The sections below describe that separate contract exercise. Its tool views no longer replace NARO's original Mining, Data and community screens.
+
+## Separate dNARO contract trial
+
 
 React + TypeScript frontend built from the approved NARO prototype, now connected to two educational Solidity contracts. Local demo transactions work end to end. No public BNB testnet deployment has been made.
 
 ## Try it now
 
-Open http://127.0.0.1:4174/frontend/tests/local-demo.html?network=local#overview.
+Open http://127.0.0.1:4174/frontend/tests/local-demo.html?network=local#test-lab.
 
-Choose Connect wallet, then NARO Local Test Wallet, then close the connection dialog. Participant A already has a confirmed activation and 30 dNARO from the demonstration. Review demo claim submits another eligible claim. The bottom-right Local test wallet controls let you switch between two disposable participants and the root inviter, or advance the local cooldown. Participant B can activate with Participant A as inviter. These are real transactions on the isolated local EVM, chain 31337; the tokens and local gas have no monetary value.
+Choose Connect wallet, then NARO Local Test Wallet, then close the connection dialog. Participant A already has a confirmed activation and 40 dNARO from the local checks. Review demo claim submits another eligible claim. The bottom-right Local test wallet controls let you switch between two disposable participants and the root inviter, or advance the local cooldown. Participant B can activate with Participant A as inviter. These are real transactions on the isolated local EVM, chain 31337; the tokens and local gas have no monetary value.
 
-The normal app is http://127.0.0.1:4174/frontend/dist/#overview. It targets BNB testnet, chain 97. Without a deployment it offers a wallet-confirmed demo deployment. A funded test wallet is required. No private key is entered in this app.
+The normal app is http://127.0.0.1:4174/frontend/dist/#overview. It targets BNB testnet, chain 97. Account → Testnet tools → Account → Network setup offers wallet-confirmed trial deployment. A funded test wallet is required. No private key is entered in this app.
 
 ## Restart from source
 
@@ -45,11 +56,11 @@ These are trial rules, not NARO's actual token economics. Account and inviter re
 
 ## Frontend behavior
 
-Five views share the approved dark/mint tokens, responsive navigation, typography, spacing and official wallet logos. The app reads verified deployment data. Sample fixtures remain in the original prototype and source, but the public app no longer exposes sample-mode controls. Disconnected users are prompted to connect before seeing personal metrics. Network statistics are public.
+The five trial-tool views share the approved dark/mint tokens, responsive navigation, typography, spacing and official wallet logos. The app reads verified deployment data. Sample fixtures remain in the original prototype and source, but the public app no longer exposes sample-mode controls. Disconnected users are prompted to connect before seeing personal metrics. Network statistics are public.
 
 Transactions are simulated and estimated before a review dialog, require an explicit wallet submission, and finish with a mined receipt. Requests bind the intended chain ID, reject changed wallet contexts, handle cancelled/repriced transactions, and retain unknown confirmation status for retry. The local and BNB testnet modes are labeled separately.
 
-English and draft Simplified Chinese have matching translation keys and interpolation tokens. Chinese still needs native-language review. The existing 17.8 MB Chinese font asset loads only for its CJK Unicode range; font subsetting remains a production optimization.
+Original NARO content is available in nine recovered languages, including Urdu RTL. Newly authored trial and operational copy has English and draft Simplified Chinese, with English fallback elsewhere. Native-language review remains needed. The existing 17.8 MB Chinese font asset loads only for its CJK Unicode range; font subsetting remains a production optimization.
 
 `src/demo/` holds contract reads, transaction handling, deployment manifests and demo views. `../contracts/` holds Solidity, compilation, local deployment and contract tests. Shared fonts, tokens, layouts and wallet logos remain under `../design-system/` and `../prototype/`; Vite packages them into a self-contained `dist/`.
 
@@ -68,7 +79,7 @@ See `demo-verification.md` for current coverage and limits, and `../docs/naro-de
 
 ## BNB testnet handoff
 
-Open the normal app, connect an EVM test wallet, switch to BNB testnet, obtain tBNB from the official faucet, and open Account → Network setup to choose Set up network. Review the network and gas estimate, then confirm in your wallet. The app checks the mined deployment and saves its public manifest in this browser. Export deployment creates a JSON record for review. To share a deployment across browsers, review and add its chain-97 record to `src/demo/deployments.json`, then rebuild. Importing arbitrary manifests through the UI is not implemented.
+Open the normal app, connect an EVM test wallet, switch to BNB testnet, obtain tBNB from the official faucet, and open Account → Testnet tools → Account → Network setup to choose Set up network. Review the network and gas estimate, then confirm in your wallet. The app checks the mined deployment and saves its public manifest in this browser. Export deployment creates a JSON record for review. To share a deployment across browsers, review and add its chain-97 record to `src/demo/deployments.json`, then rebuild. Importing arbitrary manifests through the UI is not implemented.
 
 Compiler settings and standard JSON input are in `contracts/artifacts/`. Verify both contracts on the testnet explorer after deployment; this has not been performed. WalletConnect QR still requires a project ID and connector implementation. No production deployment or security audit is claimed.
 

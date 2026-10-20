@@ -1,0 +1,261 @@
+{
+  "evidence_id": "ev_e3dbe192d4de506f90ccba32c5e6c6e290dd7900f81483dab9cd78a0a7f2eaca",
+  "subject": null,
+  "provider": {
+    "id": "rea-playwright-browser-scenario",
+    "name": "REA Playwright browser scenario capture provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.browser-scenario-capture",
+  "operation": "capture_browser_scenario",
+  "parameters": {
+    "browser": {
+      "mode": "launch",
+      "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "headless": true
+    },
+    "start_url": {
+      "url": "https://naroradar.com/mine",
+      "query": []
+    },
+    "environment": {
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "device_scale_factor": 1
+      },
+      "locale": "en-US",
+      "timezone": "UTC",
+      "color_scheme": "light",
+      "reduced_motion": "reduce",
+      "service_workers": "block"
+    },
+    "actions": [
+      {
+        "step_id": "account-ready",
+        "action": "wait_for",
+        "locator": {
+          "kind": "css",
+          "selector": "#app"
+        },
+        "state": "visible"
+      }
+    ],
+    "storage": {
+      "cookies": [],
+      "local_storage": [],
+      "session_storage": []
+    },
+    "secrets": [],
+    "capture": {
+      "after_each_step": [],
+      "at_end": [
+        "dom",
+        "accessibility"
+      ],
+      "events": [],
+      "network": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "scenario_sha256": "4e7bd0e7e34bbafe554bf3f5b7b5145db45aee549bc7d7786f2a9bd53bf89f9f"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "browser": {
+      "mode": "launch",
+      "process_ownership": "provider-owned",
+      "cleanup": "terminated-owned-process",
+      "product": "Chromium",
+      "version": "155.0.8059.82"
+    },
+    "scenario": {
+      "start_origin": "https://naroradar.com",
+      "action_count": 1,
+      "secret_references": [],
+      "network_content": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "event_families": [],
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "duration_ms": 1227,
+    "steps": [
+      {
+        "step_index": 0,
+        "step_id": "scenario_start",
+        "action": "goto_start",
+        "elapsed_ms": 890,
+        "before_url": {
+          "url": "about:blank",
+          "origin": null,
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/mine",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "not_requested"
+          },
+          "accessibility": {
+            "state": "not_requested"
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      },
+      {
+        "step_index": 1,
+        "step_id": "account-ready",
+        "action": "wait_for",
+        "elapsed_ms": 127,
+        "before_url": {
+          "url": "https://naroradar.com/mine",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/mine",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "captured",
+            "value": {
+              "sha256": "48c0f358381194da6e6b5be35d726182c681d6665cd516d5d9839231cfdcfe9f",
+              "bytes": 16200,
+              "text": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"#080B0A\">\n    <title>NARO</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-yjsxLZcI.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/vue-i18n-VQlw7TPK.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/i18n-BKeFymkU.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ledger-D6yohPQA.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ethereumProvider-B-jgi9yh.js\">\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D0nfD4rR.css\">\n  <link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/MineView-pApmJxHj.js\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-Cflcc_5p.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-jj9Zap5_.css\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/motion-DZ6UqO5m.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/MineView-3uH1uG8n.css\"></head>\n  <body>\n    <div id=\"app\" data-v-app=\"\"><div data-v-f1c38819=\"\" class=\"app-shell\"><header data-v-bff5d462=\"\" data-v-f1c38819=\"\" class=\"site-header\" style=\"--header-solid: 0;\"><div data-v-bff5d462=\"\" class=\"header-inner\"><div data-v-bff5d462=\"\" class=\"app-header__brand-wrap\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active app-header__brand\"><img data-v-bff5d462=\"\" class=\"app-header__logo\" src=\"/naro-assets/logo.png\" alt=\"NARO\" width=\"102\" height=\"26\"></a></div><nav data-v-bff5d462=\"\" class=\"desktop-nav\" aria-label=\"Main navigation\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active\">Home</a><a data-v-bff5d462=\"\" href=\"/swap\" class=\"\">Swap</a><a data-v-bff5d462=\"\" href=\"/mining\" class=\"\">Mining</a><a data-v-bff5d462=\"\" href=\"/data\" class=\"\">Data</a><a data-v-bff5d462=\"\" aria-current=\"page\" href=\"/mine\" class=\"router-link-active router-link-exact-active is-active\">Me</a></nav><div data-v-bff5d462=\"\" class=\"header-actions app-header__right\"><button data-v-bff5d462=\"\" class=\"lang-btn\" type=\"button\" data-guide=\"lang\" aria-label=\"Language\"><span data-v-bff5d462=\"\" class=\"lang-btn__badge\">EN</span><img data-v-bff5d462=\"\" class=\"lang-btn__chev\" src=\"data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%204.5L6%207.5L9%204.5'%20stroke-width='1.1'%20stroke='%23C9D4CF'/%3e%3c/svg%3e\" alt=\"\" width=\"12\" height=\"12\"></button><button data-v-50586167=\"\" data-v-bff5d462=\"\" class=\"na-btn is-pill\" type=\"button\" data-guide=\"wallet\">Connect Wallet</button></div></div></header><main data-v-f1c38819=\"\" class=\"main-content\"><div data-v-f1c38819=\"\" class=\"content-shell\"><div data-v-f1c38819=\"\" id=\"main-content\" class=\"page-scroll\"><div data-v-aa487f30=\"\" data-v-cc7567b0=\"\" data-v-f1c38819=\"\" class=\"page-wrap mine\"><h1 data-v-cc7567b0=\"\" class=\"mine__title\">Me</h1><section data-v-cc7567b0=\"\" class=\"profile-card\"><div data-v-cc7567b0=\"\" class=\"profile-card__avatar\" aria-hidden=\"true\"><span data-v-1c27f600=\"\" data-v-cc7567b0=\"\" class=\"n3w mini-naro\" data-mood=\"sleep\"><svg data-v-1c27f600=\"\" class=\"nmini m-sleep\" viewBox=\"0 0 200 230\" width=\"100%\" height=\"100%\" aria-hidden=\"true\"><defs data-v-1c27f600=\"\"><linearGradient data-v-1c27f600=\"\" id=\"mnv0b\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop data-v-1c27f600=\"\" offset=\"0\" stop-color=\"#fff\"></stop><stop data-v-1c27f600=\"\" offset=\".55\" stop-color=\"#F2FBF7\"></stop><stop data-v-1c27f600=\"\" offset=\"1\" stop-color=\"#8DF5CD\"></stop></linearGradient><linearGradient data-v-1c27f600=\"\" id=\"mnv0m\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop data-v-1c27f600=\"\" offset=\"0\" stop-color=\"#A6FCDC\"></stop><stop data-v-1c27f600=\"\" offset=\"1\" stop-color=\"#1FD993\"></stop></linearGradient><linearGradient data-v-1c27f600=\"\" id=\"mnv0l\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop data-v-1c27f600=\"\" offset=\"0\" stop-color=\"#fff\"></stop><stop data-v-1c27f600=\"\" offset=\"1\" stop-color=\"#7EF2C4\"></stop></linearGradient></defs><ellipse data-v-1c27f600=\"\" cx=\"100\" cy=\"219\" rx=\"48\" ry=\"6\" fill=\"#000\" opacity=\".45\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"74\" cy=\"203\" rx=\"19\" ry=\"14\" fill=\"url(#mnv0m)\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"126\" cy=\"203\" rx=\"19\" ry=\"14\" fill=\"url(#mnv0m)\"></ellipse><g data-v-1c27f600=\"\" class=\"mb\"><ellipse data-v-1c27f600=\"\" cx=\"30\" cy=\"142\" rx=\"17\" ry=\"27\" transform=\"rotate(18 30 142)\" fill=\"url(#mnv0l)\"></ellipse><path data-v-1c27f600=\"\" d=\"M95 48 C88 30 98 12 122 6 C113 18 110 31 113 46 Z\" fill=\"url(#mnv0m)\"></path><ellipse data-v-1c27f600=\"\" cx=\"100\" cy=\"122\" rx=\"76\" ry=\"80\" fill=\"url(#mnv0b)\"></ellipse><circle data-v-1c27f600=\"\" cx=\"31\" cy=\"98\" r=\"14\" fill=\"#F4FBF8\" stroke=\"url(#mnv0m)\" stroke-width=\"5\"></circle><circle data-v-1c27f600=\"\" cx=\"174\" cy=\"98\" r=\"10\" fill=\"#F4FBF8\" stroke=\"url(#mnv0m)\" stroke-width=\"4.5\"></circle><path data-v-1c27f600=\"\" d=\"M112 37 L115.5 48.5 L127 52 L115.5 55.5 L112 67 L108.5 55.5 L97 52 L108.5 48.5 Z\" fill=\"url(#mnv0m)\"></path><path data-v-1c27f600=\"\" d=\"M73 103 Q80.5 110 88 103M112 103 Q119.5 110 127 103\" fill=\"none\" stroke=\"#0D1110\" stroke-width=\"3.4\" stroke-linecap=\"round\"></path><ellipse data-v-1c27f600=\"\" cx=\"66\" cy=\"117\" rx=\"10\" ry=\"6\" fill=\"#FF9DB0\" opacity=\".5\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"134\" cy=\"117\" rx=\"10\" ry=\"6\" fill=\"#FF9DB0\" opacity=\".5\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"100\" cy=\"117\" rx=\"3.5\" ry=\"4.5\" fill=\"#0D1110\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"102\" cy=\"162\" rx=\"44\" ry=\"29\" fill=\"#fff\" stroke=\"url(#mnv0m)\" stroke-width=\"4\"></ellipse><image data-v-1c27f600=\"\" href=\"/naro-assets/logo-dark.png\" x=\"69\" y=\"153.75\" width=\"66\" height=\"16.5\"></image><ellipse data-v-1c27f600=\"\" cx=\"171\" cy=\"138\" rx=\"15\" ry=\"25\" transform=\"rotate(-22 171 138)\" fill=\"url(#mnv0l)\"></ellipse></g><text data-v-1c27f600=\"\" class=\"zz\" x=\"140\" y=\"58\" font-family=\"Chakra Petch,sans-serif\" font-size=\"26\" font-weight=\"700\" fill=\"#A6FCDC\"> z </text><text data-v-1c27f600=\"\" class=\"zz b\" x=\"156\" y=\"42\" font-family=\"Chakra Petch,sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#A6FCDC\"> z </text></svg></span></div><div data-v-cc7567b0=\"\" class=\"profile-card__info\"><p data-v-cc7567b0=\"\" class=\"profile-card__addr\">Not connected</p><div data-v-cc7567b0=\"\" class=\"profile-card__tags\"><span data-v-cc7567b0=\"\" class=\"tag tag--bsc\">BSC</span><span data-v-cc7567b0=\"\" class=\"tag tag--warn\"><!---->Not connected</span></div></div><button data-v-cc7567b0=\"\" class=\"profile-card__copy profile-card__copy--connect\" type=\"button\">Connect Wallet</button></section><section data-v-cc7567b0=\"\" class=\"hold-card\"><p data-v-cc7567b0=\"\" class=\"hold-card__label\">Holdings (NARO)</p><p data-v-cc7567b0=\"\" class=\"hold-card__value\"><span data-v-cc7567b0=\"\">—</span></p><p data-v-cc7567b0=\"\" class=\"hold-card__hint\">Settled snapshot balance; — if none yet. Live balance differs. Claim rewards in Mining.</p><!----></section><nav data-v-cc7567b0=\"\" class=\"menu-card\"><a data-v-cc7567b0=\"\" href=\"/mine/earnings\" class=\"menu-card__item\"><span data-v-cc7567b0=\"\" class=\"menu-card__icon\"><img data-v-cc7567b0=\"\" src=\"data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%203.5h7.5a2%202%200%200%201%202%202V15H6a2%202%200%200%201-2-2V3.5Z'%20stroke='%2301FEA3'%20stroke-width='1.4'/%3e%3cpath%20d='M6.5%203.5V3A1.5%201.5%200%200%201%208%201.5h2A1.5%201.5%200%200%201%2011.5%203v.5'%20stroke='%2301FEA3'%20stroke-width='1.4'/%3e%3cpath%20d='M7%208.5h4M7%2011.5h4'%20stroke='%2301FEA3'%20stroke-width='1.4'%20stroke-linecap='round'/%3e%3c/svg%3e\" alt=\"\" width=\"18\" height=\"18\"></span><span data-v-cc7567b0=\"\" class=\"menu-card__label\">Earnings</span><!----><span data-v-cc7567b0=\"\" class=\"menu-card__chev\">›</span></a><a data-v-cc7567b0=\"\" href=\"/activate\" class=\"menu-card__item\"><span data-v-cc7567b0=\"\" class=\"menu-card__icon\"><img data-v-cc7567b0=\"\" src=\"data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M9%202.2%2014.5%204.5v4.2c0%203.4-2.3%205.9-5.5%206.9-3.2-1-5.5-3.5-5.5-6.9V4.5L9%202.2Z'%20stroke='%2301FEA3'%20stroke-width='1.4'%20stroke-linejoin='round'/%3e%3cpath%20d='M6.6%209.1%208.3%2010.8%2011.6%207.2'%20stroke='%2301FEA3'%20stroke-width='1.4'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e\" alt=\"\" width=\"18\" height=\"18\"></span><span data-v-cc7567b0=\"\" class=\"menu-card__label\">Register &amp; Activate</span><span data-v-cc7567b0=\"\" class=\"menu-card__status\">Not connected</span><span data-v-cc7567b0=\"\" class=\"menu-card__chev\">›</span></a><a data-v-cc7567b0=\"\" href=\"/?guide=1\" class=\"router-link-active menu-card__item\"><span data-v-cc7567b0=\"\" class=\"menu-card__icon\"><img data-v-cc7567b0=\"\" src=\"data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='9'%20cy='9'%20r='6.5'%20stroke='%2301FEA3'%20stroke-width='1.4'/%3e%3cpath%20d='M9%205.2v.2'%20stroke='%2301FEA3'%20stroke-width='1.6'%20stroke-linecap='round'/%3e%3cpath%20d='M7.2%207.6c.35-.9%201-1.35%201.85-1.35.95%200%201.7.55%201.7%201.4%200%20.75-.4%201.15-1.25%201.6-.75.4-.95.7-.95%201.35'%20stroke='%2301FEA3'%20stroke-width='1.4'%20stroke-linecap='round'/%3e%3ccircle%20cx='9'%20cy='13'%20r='0.9'%20fill='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"18\" height=\"18\"></span><span data-v-cc7567b0=\"\" class=\"menu-card__label\">Quick Tour</span><!----><span data-v-cc7567b0=\"\" class=\"menu-card__chev\">›</span></a><a data-v-cc7567b0=\"\" href=\"/mining/community\" class=\"menu-card__item\"><span data-v-cc7567b0=\"\" class=\"menu-card__icon\"><img data-v-cc7567b0=\"\" src=\"data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='7'%20cy='6'%20r='2.6'%20stroke='%2301FEA3'%20stroke-width='1.4'/%3e%3cpath%20d='M2.5%2014.5c.4-2.4%202.2-3.7%204.5-3.7s4.1%201.3%204.5%203.7'%20stroke='%2301FEA3'%20stroke-width='1.4'%20stroke-linecap='round'/%3e%3cpath%20d='M12.5%205.5v4M10.5%207.5h4'%20stroke='%2301FEA3'%20stroke-width='1.4'%20stroke-linecap='round'/%3e%3c/svg%3e\" alt=\"\" width=\"18\" height=\"18\"></span><span data-v-cc7567b0=\"\" class=\"menu-card__label\">Invite Friends</span><!----><span data-v-cc7567b0=\"\" class=\"menu-card__chev\">›</span></a></nav><button data-v-cc7567b0=\"\" class=\"mine__disconnect\" type=\"button\">Connect Wallet</button></div></div><nav data-v-4370f56f=\"\" data-v-f1c38819=\"\" class=\"bottom-nav tabbar\" aria-label=\"Main navigation\"><a data-v-4370f56f=\"\" href=\"/\" class=\"router-link-active tabbar__item\" data-guide=\"tab-home\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66602%209.62499L10.9993%203.66666L18.3327%209.62499V17.4167C18.3327%2017.6598%2018.2361%2017.8929%2018.0642%2018.0648C17.8923%2018.2367%2017.6591%2018.3333%2017.416%2018.3333H13.291V13.2917H8.70768V18.3333H4.58268C4.33957%2018.3333%204.10641%2018.2367%203.9345%2018.0648C3.76259%2017.8929%203.66602%2017.6598%203.66602%2017.4167V9.62499Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Home</b></a><a data-v-4370f56f=\"\" class=\"tabbar__item\" href=\"#\" role=\"button\" data-guide=\"tab-swap\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%207.33334H15.5846L12.8346%204.58334M18.3346%2014.6667H6.41797L9.16797%2017.4167'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Swap</b></a><a data-v-4370f56f=\"\" href=\"/mining\" class=\"tabbar__item\" data-guide=\"tab-mining\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%2017.4167H18.3346M6.41797%2013.75V11M11.0013%2013.75V6.41666M15.5846%2013.75V8.24999'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Mining</b></a><a data-v-4370f56f=\"\" href=\"/data\" class=\"tabbar__item\" data-guide=\"tab-data\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%202.75C9.36831%202.75%207.77325%203.23385%206.41655%204.14038C5.05984%205.0469%204.00242%206.33537%203.378%207.84286C2.75357%209.35035%202.5902%2011.0092%202.90853%2012.6095C3.22685%2014.2098%204.01259%2015.6798%205.16637%2016.8336C6.32016%2017.9874%207.79017%2018.7732%209.39051%2019.0915C10.9909%2019.4098%2012.6497%2019.2464%2014.1571%2018.622C15.6646%2017.9976%2016.9531%2016.9402%2017.8596%2015.5835C18.7662%2014.2267%2019.25%2012.6317%2019.25%2011H11V2.75Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M13.75%203.20834C14.9139%203.61817%2015.9711%204.28387%2016.8436%205.15641C17.7161%206.02895%2018.3818%207.0861%2018.7917%208.25001H13.75V3.20834Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Data</b></a><a data-v-4370f56f=\"\" aria-current=\"page\" href=\"/mine\" class=\"router-link-active router-link-exact-active tabbar__item is-active\" data-guide=\"tab-mine\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.6654%207.79167C14.6654%209.81671%2013.0237%2011.4583%2010.9987%2011.4583C8.97365%2011.4583%207.33203%209.81671%207.33203%207.79167C7.33203%205.76662%208.97365%204.125%2010.9987%204.125C13.0237%204.125%2014.6654%205.76662%2014.6654%207.79167Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M4.125%2018.3333C4.125%2016.51%204.84933%2014.7613%206.13864%2013.472C7.42795%2012.1827%209.17664%2011.4583%2011%2011.4583C12.8234%2011.4583%2014.572%2012.1827%2015.8614%2013.472C17.1507%2014.7613%2017.875%2016.51%2017.875%2018.3333'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Me</b></a></nav></div></main></div></div>\n  <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;1e3e15c86b8d4c589225e3e0f92ac2f2&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}\" crossorigin=\"anonymous\"></script>\n\n\n<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>"
+            }
+          },
+          "accessibility": {
+            "state": "captured",
+            "value": {
+              "sha256": "25b0324889e3ac1fb57c9817d965bf0cc640b2b387a929d7883f94b6b4dd3602",
+              "bytes": 968,
+              "text": "- document:\n  - banner:\n    - link \"NARO\":\n      - /url: /\n      - img \"NARO\"\n    - button \"Language\": EN\n    - button \"Connect Wallet\"\n  - main:\n    - heading \"Me\" [level=1]\n    - paragraph: Not connected\n    - text: BSC Not connected\n    - button \"Connect Wallet\"\n    - paragraph: Holdings (NARO)\n    - paragraph: —\n    - paragraph: Settled snapshot balance; — if none yet. Live balance differs. Claim rewards in Mining.\n    - navigation:\n      - link \"Earnings ›\":\n        - /url: /mine/earnings\n      - link \"Register & Activate Not connected ›\":\n        - /url: /activate\n      - link \"Quick Tour ›\":\n        - /url: /?guide=1\n      - link \"Invite Friends ›\":\n        - /url: /mining/community\n    - button \"Connect Wallet\"\n    - navigation \"Main navigation\":\n      - link \"Home\":\n        - /url: /\n      - button \"Swap\"\n      - link \"Mining\":\n        - /url: /mining\n      - link \"Data\":\n        - /url: /data\n      - link \"Me\":\n        - /url: /mine"
+            }
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      }
+    ],
+    "events": {
+      "retained": 0,
+      "dropped": 0,
+      "items": [],
+      "omissions": {
+        "by_kind": [],
+        "network_transactions": [],
+        "network_transaction_range": null
+      }
+    },
+    "completeness": {
+      "status": "complete",
+      "equality_eligible": true,
+      "missing_sections": [],
+      "truncated_sections": []
+    },
+    "limitations": [
+      "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+      "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+      "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+      "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+      "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+      "Storage values are hashed only after declared-secret redaction."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "controlled-replay",
+  "environment": {
+    "id": "Chromium@155.0.8059.82",
+    "platform": "unknown",
+    "architecture": "unknown",
+    "isolation": "process"
+  },
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Browser host platform and architecture were not observed."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

@@ -1,0 +1,410 @@
+{
+  "evidence_id": "ev_8a75c38186788b1c31017302ab76fb44aab117008c4812ed0b0d99e5888bc5d3",
+  "subject": null,
+  "provider": {
+    "id": "rea-playwright-browser-scenario",
+    "name": "REA Playwright browser scenario capture provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.browser-scenario-capture",
+  "operation": "capture_browser_scenario",
+  "parameters": {
+    "browser": {
+      "mode": "launch",
+      "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "headless": true
+    },
+    "start_url": {
+      "url": "https://naroradar.com/mining",
+      "query": []
+    },
+    "environment": {
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "device_scale_factor": 1
+      },
+      "locale": "en-US",
+      "timezone": "UTC",
+      "color_scheme": "light",
+      "reduced_motion": "reduce",
+      "service_workers": "block"
+    },
+    "actions": [
+      {
+        "step_id": "ready",
+        "action": "wait_for",
+        "locator": {
+          "kind": "css",
+          "selector": ".seg"
+        },
+        "state": "visible"
+      },
+      {
+        "step_id": "promo",
+        "action": "click",
+        "locator": {
+          "kind": "css",
+          "selector": ".seg button:nth-child(2)"
+        },
+        "button": "left",
+        "click_count": 1
+      },
+      {
+        "step_id": "rank",
+        "action": "click",
+        "locator": {
+          "kind": "css",
+          "selector": ".seg button:nth-child(3)"
+        },
+        "button": "left",
+        "click_count": 1
+      }
+    ],
+    "storage": {
+      "cookies": [],
+      "local_storage": [],
+      "session_storage": []
+    },
+    "secrets": [],
+    "capture": {
+      "after_each_step": [
+        "dom",
+        "accessibility"
+      ],
+      "at_end": [
+        "dom",
+        "accessibility"
+      ],
+      "events": [],
+      "network": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "scenario_sha256": "2a388714896e00b711b18c11a26cd462b8910c45234b4cb1472dd56ccad0b6bd"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "browser": {
+      "mode": "launch",
+      "process_ownership": "provider-owned",
+      "cleanup": "terminated-owned-process",
+      "product": "Chromium",
+      "version": "155.0.8059.82"
+    },
+    "scenario": {
+      "start_origin": "https://naroradar.com",
+      "action_count": 3,
+      "secret_references": [],
+      "network_content": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "event_families": [],
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "duration_ms": 6606,
+    "steps": [
+      {
+        "step_index": 0,
+        "step_id": "scenario_start",
+        "action": "goto_start",
+        "elapsed_ms": 5812,
+        "before_url": {
+          "url": "about:blank",
+          "origin": null,
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/mining",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "captured",
+            "value": {
+              "sha256": "a2208e00f20b939da21b567a3c0cf2e2a59614c1487b6f9177a65e1bf10c471e",
+              "bytes": 2234,
+              "text": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"#080B0A\">\n    <title>NARO</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-yjsxLZcI.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/vue-i18n-VQlw7TPK.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/i18n-BKeFymkU.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ledger-D6yohPQA.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ethereumProvider-B-jgi9yh.js\">\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D0nfD4rR.css\">\n  <link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-CPKKihEp.js\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-Cflcc_5p.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-jj9Zap5_.css\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/motion-DZ6UqO5m.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-BaBuW_K6.css\"></head>\n  <body>\n    <div id=\"app\" data-v-app=\"\"><!----></div>\n  <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;1e3e15c86b8d4c589225e3e0f92ac2f2&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}\" crossorigin=\"anonymous\"></script>\n\n\n<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>"
+            }
+          },
+          "accessibility": {
+            "state": "captured",
+            "value": {
+              "sha256": "88462aecf36d99c73545d18add18fe7ea8edc80ba21994984c1c0b9393173276",
+              "bytes": 973,
+              "text": "- document:\n  - banner:\n    - link \"NARO\":\n      - /url: /\n      - img \"NARO\"\n    - button \"Language\": EN\n    - button \"Connect Wallet\"\n  - main:\n    - heading \"Mining Rewards\" [level=1]\n    - paragraph: Pending claim (NARO)\n    - paragraph: \"0.00\"\n    - text: Static 0.00 Promo 0.00 Rank 0.00\n    - button \"Connect Wallet\"\n    - paragraph: Daily snapshot · claim manually\n    - tablist:\n      - tab \"Static —\" [selected]\n      - tab \"Promo —\"\n      - tab \"Rank —\"\n    - text: Today static pool — My rank weight —\n    - paragraph: Holding zone\n    - text: Mass Best Anti-monopoly No holdings yet\n    - paragraph: \"Jump ranking: best zone pays the highest per-token yield; oversized holdings enter anti-monopoly with lower unit yield.\"\n    - navigation \"Main navigation\":\n      - link \"Home\":\n        - /url: /\n      - button \"Swap\"\n      - link \"Mining\":\n        - /url: /mining\n      - link \"Data\":\n        - /url: /data\n      - link \"Me\":\n        - /url: /mine"
+            }
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      },
+      {
+        "step_index": 1,
+        "step_id": "ready",
+        "action": "wait_for",
+        "elapsed_ms": 36,
+        "before_url": {
+          "url": "https://naroradar.com/mining",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/mining",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "captured",
+            "value": {
+              "sha256": "a9c6467e19bd1f42b31399c591cd7a5a8052a2e8d3eb21796a2884cee05e148e",
+              "bytes": 11836,
+              "text": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"#080B0A\">\n    <title>NARO</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-yjsxLZcI.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/vue-i18n-VQlw7TPK.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/i18n-BKeFymkU.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ledger-D6yohPQA.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ethereumProvider-B-jgi9yh.js\">\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D0nfD4rR.css\">\n  <link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-CPKKihEp.js\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-Cflcc_5p.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-jj9Zap5_.css\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/motion-DZ6UqO5m.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-BaBuW_K6.css\"></head>\n  <body>\n    <div id=\"app\" data-v-app=\"\"><div data-v-f1c38819=\"\" class=\"app-shell\"><header data-v-bff5d462=\"\" data-v-f1c38819=\"\" class=\"site-header\" style=\"--header-solid: 0;\"><div data-v-bff5d462=\"\" class=\"header-inner\"><div data-v-bff5d462=\"\" class=\"app-header__brand-wrap\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active app-header__brand\"><img data-v-bff5d462=\"\" class=\"app-header__logo\" src=\"/naro-assets/logo.png\" alt=\"NARO\" width=\"102\" height=\"26\"></a></div><nav data-v-bff5d462=\"\" class=\"desktop-nav\" aria-label=\"Main navigation\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active\">Home</a><a data-v-bff5d462=\"\" href=\"/swap\" class=\"\">Swap</a><a data-v-bff5d462=\"\" aria-current=\"page\" href=\"/mining\" class=\"router-link-active router-link-exact-active is-active\">Mining</a><a data-v-bff5d462=\"\" href=\"/data\" class=\"\">Data</a><a data-v-bff5d462=\"\" href=\"/mine\" class=\"\">Me</a></nav><div data-v-bff5d462=\"\" class=\"header-actions app-header__right\"><button data-v-bff5d462=\"\" class=\"lang-btn\" type=\"button\" data-guide=\"lang\" aria-label=\"Language\"><span data-v-bff5d462=\"\" class=\"lang-btn__badge\">EN</span><img data-v-bff5d462=\"\" class=\"lang-btn__chev\" src=\"data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%204.5L6%207.5L9%204.5'%20stroke-width='1.1'%20stroke='%23C9D4CF'/%3e%3c/svg%3e\" alt=\"\" width=\"12\" height=\"12\"></button><button data-v-50586167=\"\" data-v-bff5d462=\"\" class=\"na-btn is-pill\" type=\"button\" data-guide=\"wallet\">Connect Wallet</button></div></div></header><main data-v-f1c38819=\"\" class=\"main-content\"><div data-v-f1c38819=\"\" class=\"content-shell\"><div data-v-f1c38819=\"\" id=\"main-content\" class=\"page-scroll\"><div data-v-aa487f30=\"\" data-v-bfbd0df2=\"\" data-v-f1c38819=\"\" class=\"page-wrap mining\"><h1 data-v-bfbd0df2=\"\" class=\"mining__title\">Mining Rewards</h1><section data-v-bfbd0df2=\"\" class=\"hero\"><p data-v-bfbd0df2=\"\" class=\"lbl\">Pending claim (NARO)</p><p data-v-bfbd0df2=\"\" class=\"hero-num\"><span data-v-bfbd0df2=\"\">0.00</span></p><div data-v-bfbd0df2=\"\" class=\"grid3\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Static</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Promo</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Rank</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div></div><div data-v-bfbd0df2=\"\" class=\"claim-wrap\"><button data-v-50586167=\"\" data-v-bfbd0df2=\"\" class=\"na-btn is-primary is-block\" type=\"button\">Connect Wallet</button></div><p data-v-bfbd0df2=\"\" class=\"hero-foot\">Daily snapshot · claim manually</p></section><div data-v-bfbd0df2=\"\" class=\"seg\" role=\"tablist\"><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"true\" class=\"is-on\">Static —</button><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"\">Promo —</button><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"\">Rank —</button></div><section data-v-bfbd0df2=\"\" class=\"panel-card\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today static pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My rank weight</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><p data-v-bfbd0df2=\"\" class=\"zone-lbl\">Holding zone</p><div data-v-bfbd0df2=\"\" class=\"zones\"><div data-v-bfbd0df2=\"\" class=\"z1\">Mass</div><div data-v-bfbd0df2=\"\" class=\"z2\">Best</div><div data-v-bfbd0df2=\"\" class=\"z3\">Anti-monopoly</div></div><div data-v-bfbd0df2=\"\" class=\"zmark-row\"><span data-v-bfbd0df2=\"\" class=\"zmark zmark--none\"><b data-v-bfbd0df2=\"\">No holdings yet</b></span></div><p data-v-bfbd0df2=\"\" class=\"panel-desc\">Jump ranking: best zone pays the highest per-token yield; oversized holdings enter anti-monopoly with lower unit yield.</p></section><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"display: none;\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today promo pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My network share</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><a data-v-bfbd0df2=\"\" href=\"/mining/community\" class=\"ghost-link\">Community &amp; invite ›</a></section><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"display: none;\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My dynamic rank</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today rank pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><p data-v-bfbd0df2=\"\" class=\"panel-desc\">Allocated to community builders by dynamic weighted rank, snapshot daily.</p></section></div></div><nav data-v-4370f56f=\"\" data-v-f1c38819=\"\" class=\"bottom-nav tabbar\" aria-label=\"Main navigation\"><a data-v-4370f56f=\"\" href=\"/\" class=\"router-link-active tabbar__item\" data-guide=\"tab-home\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66602%209.62499L10.9993%203.66666L18.3327%209.62499V17.4167C18.3327%2017.6598%2018.2361%2017.8929%2018.0642%2018.0648C17.8923%2018.2367%2017.6591%2018.3333%2017.416%2018.3333H13.291V13.2917H8.70768V18.3333H4.58268C4.33957%2018.3333%204.10641%2018.2367%203.9345%2018.0648C3.76259%2017.8929%203.66602%2017.6598%203.66602%2017.4167V9.62499Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Home</b></a><a data-v-4370f56f=\"\" class=\"tabbar__item\" href=\"#\" role=\"button\" data-guide=\"tab-swap\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%207.33334H15.5846L12.8346%204.58334M18.3346%2014.6667H6.41797L9.16797%2017.4167'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Swap</b></a><a data-v-4370f56f=\"\" aria-current=\"page\" href=\"/mining\" class=\"router-link-active router-link-exact-active tabbar__item is-active\" data-guide=\"tab-mining\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%2017.4167H18.3346M6.41797%2013.75V11M11.0013%2013.75V6.41666M15.5846%2013.75V8.24999'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Mining</b></a><a data-v-4370f56f=\"\" href=\"/data\" class=\"tabbar__item\" data-guide=\"tab-data\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%202.75C9.36831%202.75%207.77325%203.23385%206.41655%204.14038C5.05984%205.0469%204.00242%206.33537%203.378%207.84286C2.75357%209.35035%202.5902%2011.0092%202.90853%2012.6095C3.22685%2014.2098%204.01259%2015.6798%205.16637%2016.8336C6.32016%2017.9874%207.79017%2018.7732%209.39051%2019.0915C10.9909%2019.4098%2012.6497%2019.2464%2014.1571%2018.622C15.6646%2017.9976%2016.9531%2016.9402%2017.8596%2015.5835C18.7662%2014.2267%2019.25%2012.6317%2019.25%2011H11V2.75Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M13.75%203.20834C14.9139%203.61817%2015.9711%204.28387%2016.8436%205.15641C17.7161%206.02895%2018.3818%207.0861%2018.7917%208.25001H13.75V3.20834Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Data</b></a><a data-v-4370f56f=\"\" href=\"/mine\" class=\"tabbar__item\" data-guide=\"tab-mine\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.6654%207.79167C14.6654%209.81671%2013.0237%2011.4583%2010.9987%2011.4583C8.97365%2011.4583%207.33203%209.81671%207.33203%207.79167C7.33203%205.76662%208.97365%204.125%2010.9987%204.125C13.0237%204.125%2014.6654%205.76662%2014.6654%207.79167Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M4.125%2018.3333C4.125%2016.51%204.84933%2014.7613%206.13864%2013.472C7.42795%2012.1827%209.17664%2011.4583%2011%2011.4583C12.8234%2011.4583%2014.572%2012.1827%2015.8614%2013.472C17.1507%2014.7613%2017.875%2016.51%2017.875%2018.3333'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Me</b></a></nav></div></main></div></div>\n  <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;1e3e15c86b8d4c589225e3e0f92ac2f2&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}\" crossorigin=\"anonymous\"></script>\n\n\n<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>"
+            }
+          },
+          "accessibility": {
+            "state": "captured",
+            "value": {
+              "sha256": "88462aecf36d99c73545d18add18fe7ea8edc80ba21994984c1c0b9393173276",
+              "bytes": 973,
+              "text": "- document:\n  - banner:\n    - link \"NARO\":\n      - /url: /\n      - img \"NARO\"\n    - button \"Language\": EN\n    - button \"Connect Wallet\"\n  - main:\n    - heading \"Mining Rewards\" [level=1]\n    - paragraph: Pending claim (NARO)\n    - paragraph: \"0.00\"\n    - text: Static 0.00 Promo 0.00 Rank 0.00\n    - button \"Connect Wallet\"\n    - paragraph: Daily snapshot · claim manually\n    - tablist:\n      - tab \"Static —\" [selected]\n      - tab \"Promo —\"\n      - tab \"Rank —\"\n    - text: Today static pool — My rank weight —\n    - paragraph: Holding zone\n    - text: Mass Best Anti-monopoly No holdings yet\n    - paragraph: \"Jump ranking: best zone pays the highest per-token yield; oversized holdings enter anti-monopoly with lower unit yield.\"\n    - navigation \"Main navigation\":\n      - link \"Home\":\n        - /url: /\n      - button \"Swap\"\n      - link \"Mining\":\n        - /url: /mining\n      - link \"Data\":\n        - /url: /data\n      - link \"Me\":\n        - /url: /mine"
+            }
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      },
+      {
+        "step_index": 2,
+        "step_id": "promo",
+        "action": "click",
+        "elapsed_ms": 113,
+        "before_url": {
+          "url": "https://naroradar.com/mining",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/mining",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "captured",
+            "value": {
+              "sha256": "5246e9530b9c8ea77717feecf57c52f1887f43164aacfae1558a822210558fce",
+              "bytes": 11845,
+              "text": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"#080B0A\">\n    <title>NARO</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-yjsxLZcI.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/vue-i18n-VQlw7TPK.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/i18n-BKeFymkU.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ledger-D6yohPQA.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ethereumProvider-B-jgi9yh.js\">\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D0nfD4rR.css\">\n  <link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-CPKKihEp.js\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-Cflcc_5p.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-jj9Zap5_.css\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/motion-DZ6UqO5m.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-BaBuW_K6.css\"></head>\n  <body>\n    <div id=\"app\" data-v-app=\"\"><div data-v-f1c38819=\"\" class=\"app-shell\"><header data-v-bff5d462=\"\" data-v-f1c38819=\"\" class=\"site-header\" style=\"--header-solid: 0;\"><div data-v-bff5d462=\"\" class=\"header-inner\"><div data-v-bff5d462=\"\" class=\"app-header__brand-wrap\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active app-header__brand\"><img data-v-bff5d462=\"\" class=\"app-header__logo\" src=\"/naro-assets/logo.png\" alt=\"NARO\" width=\"102\" height=\"26\"></a></div><nav data-v-bff5d462=\"\" class=\"desktop-nav\" aria-label=\"Main navigation\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active\">Home</a><a data-v-bff5d462=\"\" href=\"/swap\" class=\"\">Swap</a><a data-v-bff5d462=\"\" aria-current=\"page\" href=\"/mining\" class=\"router-link-active router-link-exact-active is-active\">Mining</a><a data-v-bff5d462=\"\" href=\"/data\" class=\"\">Data</a><a data-v-bff5d462=\"\" href=\"/mine\" class=\"\">Me</a></nav><div data-v-bff5d462=\"\" class=\"header-actions app-header__right\"><button data-v-bff5d462=\"\" class=\"lang-btn\" type=\"button\" data-guide=\"lang\" aria-label=\"Language\"><span data-v-bff5d462=\"\" class=\"lang-btn__badge\">EN</span><img data-v-bff5d462=\"\" class=\"lang-btn__chev\" src=\"data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%204.5L6%207.5L9%204.5'%20stroke-width='1.1'%20stroke='%23C9D4CF'/%3e%3c/svg%3e\" alt=\"\" width=\"12\" height=\"12\"></button><button data-v-50586167=\"\" data-v-bff5d462=\"\" class=\"na-btn is-pill\" type=\"button\" data-guide=\"wallet\">Connect Wallet</button></div></div></header><main data-v-f1c38819=\"\" class=\"main-content\"><div data-v-f1c38819=\"\" class=\"content-shell\"><div data-v-f1c38819=\"\" id=\"main-content\" class=\"page-scroll\"><div data-v-aa487f30=\"\" data-v-bfbd0df2=\"\" data-v-f1c38819=\"\" class=\"page-wrap mining\"><h1 data-v-bfbd0df2=\"\" class=\"mining__title\">Mining Rewards</h1><section data-v-bfbd0df2=\"\" class=\"hero\"><p data-v-bfbd0df2=\"\" class=\"lbl\">Pending claim (NARO)</p><p data-v-bfbd0df2=\"\" class=\"hero-num\"><span data-v-bfbd0df2=\"\">0.00</span></p><div data-v-bfbd0df2=\"\" class=\"grid3\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Static</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Promo</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Rank</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div></div><div data-v-bfbd0df2=\"\" class=\"claim-wrap\"><button data-v-50586167=\"\" data-v-bfbd0df2=\"\" class=\"na-btn is-primary is-block\" type=\"button\">Connect Wallet</button></div><p data-v-bfbd0df2=\"\" class=\"hero-foot\">Daily snapshot · claim manually</p></section><div data-v-bfbd0df2=\"\" class=\"seg\" role=\"tablist\"><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"\">Static —</button><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"true\" class=\"is-on\">Promo —</button><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"\">Rank —</button></div><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"display: none;\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today static pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My rank weight</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><p data-v-bfbd0df2=\"\" class=\"zone-lbl\">Holding zone</p><div data-v-bfbd0df2=\"\" class=\"zones\"><div data-v-bfbd0df2=\"\" class=\"z1\">Mass</div><div data-v-bfbd0df2=\"\" class=\"z2\">Best</div><div data-v-bfbd0df2=\"\" class=\"z3\">Anti-monopoly</div></div><div data-v-bfbd0df2=\"\" class=\"zmark-row\"><span data-v-bfbd0df2=\"\" class=\"zmark zmark--none\"><b data-v-bfbd0df2=\"\">No holdings yet</b></span></div><p data-v-bfbd0df2=\"\" class=\"panel-desc\">Jump ranking: best zone pays the highest per-token yield; oversized holdings enter anti-monopoly with lower unit yield.</p></section><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today promo pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My network share</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><a data-v-bfbd0df2=\"\" href=\"/mining/community\" class=\"ghost-link\">Community &amp; invite ›</a></section><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"display: none;\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My dynamic rank</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today rank pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><p data-v-bfbd0df2=\"\" class=\"panel-desc\">Allocated to community builders by dynamic weighted rank, snapshot daily.</p></section></div></div><nav data-v-4370f56f=\"\" data-v-f1c38819=\"\" class=\"bottom-nav tabbar\" aria-label=\"Main navigation\"><a data-v-4370f56f=\"\" href=\"/\" class=\"router-link-active tabbar__item\" data-guide=\"tab-home\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66602%209.62499L10.9993%203.66666L18.3327%209.62499V17.4167C18.3327%2017.6598%2018.2361%2017.8929%2018.0642%2018.0648C17.8923%2018.2367%2017.6591%2018.3333%2017.416%2018.3333H13.291V13.2917H8.70768V18.3333H4.58268C4.33957%2018.3333%204.10641%2018.2367%203.9345%2018.0648C3.76259%2017.8929%203.66602%2017.6598%203.66602%2017.4167V9.62499Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Home</b></a><a data-v-4370f56f=\"\" class=\"tabbar__item\" href=\"#\" role=\"button\" data-guide=\"tab-swap\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%207.33334H15.5846L12.8346%204.58334M18.3346%2014.6667H6.41797L9.16797%2017.4167'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Swap</b></a><a data-v-4370f56f=\"\" aria-current=\"page\" href=\"/mining\" class=\"router-link-active router-link-exact-active tabbar__item is-active\" data-guide=\"tab-mining\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%2017.4167H18.3346M6.41797%2013.75V11M11.0013%2013.75V6.41666M15.5846%2013.75V8.24999'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Mining</b></a><a data-v-4370f56f=\"\" href=\"/data\" class=\"tabbar__item\" data-guide=\"tab-data\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%202.75C9.36831%202.75%207.77325%203.23385%206.41655%204.14038C5.05984%205.0469%204.00242%206.33537%203.378%207.84286C2.75357%209.35035%202.5902%2011.0092%202.90853%2012.6095C3.22685%2014.2098%204.01259%2015.6798%205.16637%2016.8336C6.32016%2017.9874%207.79017%2018.7732%209.39051%2019.0915C10.9909%2019.4098%2012.6497%2019.2464%2014.1571%2018.622C15.6646%2017.9976%2016.9531%2016.9402%2017.8596%2015.5835C18.7662%2014.2267%2019.25%2012.6317%2019.25%2011H11V2.75Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M13.75%203.20834C14.9139%203.61817%2015.9711%204.28387%2016.8436%205.15641C17.7161%206.02895%2018.3818%207.0861%2018.7917%208.25001H13.75V3.20834Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Data</b></a><a data-v-4370f56f=\"\" href=\"/mine\" class=\"tabbar__item\" data-guide=\"tab-mine\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.6654%207.79167C14.6654%209.81671%2013.0237%2011.4583%2010.9987%2011.4583C8.97365%2011.4583%207.33203%209.81671%207.33203%207.79167C7.33203%205.76662%208.97365%204.125%2010.9987%204.125C13.0237%204.125%2014.6654%205.76662%2014.6654%207.79167Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M4.125%2018.3333C4.125%2016.51%204.84933%2014.7613%206.13864%2013.472C7.42795%2012.1827%209.17664%2011.4583%2011%2011.4583C12.8234%2011.4583%2014.572%2012.1827%2015.8614%2013.472C17.1507%2014.7613%2017.875%2016.51%2017.875%2018.3333'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Me</b></a></nav></div></main></div></div>\n  <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;1e3e15c86b8d4c589225e3e0f92ac2f2&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}\" crossorigin=\"anonymous\"></script>\n\n\n<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>"
+            }
+          },
+          "accessibility": {
+            "state": "captured",
+            "value": {
+              "sha256": "a80fec239429fc8f367374a90a59cc7a8020b172d716f2bd993d93fb9394b6f9",
+              "bytes": 822,
+              "text": "- document:\n  - banner:\n    - link \"NARO\":\n      - /url: /\n      - img \"NARO\"\n    - button \"Language\": EN\n    - button \"Connect Wallet\"\n  - main:\n    - heading \"Mining Rewards\" [level=1]\n    - paragraph: Pending claim (NARO)\n    - paragraph: \"0.00\"\n    - text: Static 0.00 Promo 0.00 Rank 0.00\n    - button \"Connect Wallet\"\n    - paragraph: Daily snapshot · claim manually\n    - tablist:\n      - tab \"Static —\"\n      - tab \"Promo —\" [selected]\n      - tab \"Rank —\"\n    - text: Today promo pool — My network share —\n    - link \"Community & invite ›\":\n      - /url: /mining/community\n    - navigation \"Main navigation\":\n      - link \"Home\":\n        - /url: /\n      - button \"Swap\"\n      - link \"Mining\":\n        - /url: /mining\n      - link \"Data\":\n        - /url: /data\n      - link \"Me\":\n        - /url: /mine"
+            }
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      },
+      {
+        "step_index": 3,
+        "step_id": "rank",
+        "action": "click",
+        "elapsed_ms": 38,
+        "before_url": {
+          "url": "https://naroradar.com/mining",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/mining",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "captured",
+            "value": {
+              "sha256": "450cba41344e3f03b1f6e54d77e1c86956a4fef10aefee01bb8582c66e7540b0",
+              "bytes": 11845,
+              "text": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"#080B0A\">\n    <title>NARO</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-yjsxLZcI.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/vue-i18n-VQlw7TPK.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/i18n-BKeFymkU.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ledger-D6yohPQA.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ethereumProvider-B-jgi9yh.js\">\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D0nfD4rR.css\">\n  <link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-CPKKihEp.js\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-Cflcc_5p.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-jj9Zap5_.css\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/motion-DZ6UqO5m.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/MiningView-BaBuW_K6.css\"></head>\n  <body>\n    <div id=\"app\" data-v-app=\"\"><div data-v-f1c38819=\"\" class=\"app-shell\"><header data-v-bff5d462=\"\" data-v-f1c38819=\"\" class=\"site-header\" style=\"--header-solid: 0;\"><div data-v-bff5d462=\"\" class=\"header-inner\"><div data-v-bff5d462=\"\" class=\"app-header__brand-wrap\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active app-header__brand\"><img data-v-bff5d462=\"\" class=\"app-header__logo\" src=\"/naro-assets/logo.png\" alt=\"NARO\" width=\"102\" height=\"26\"></a></div><nav data-v-bff5d462=\"\" class=\"desktop-nav\" aria-label=\"Main navigation\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active\">Home</a><a data-v-bff5d462=\"\" href=\"/swap\" class=\"\">Swap</a><a data-v-bff5d462=\"\" aria-current=\"page\" href=\"/mining\" class=\"router-link-active router-link-exact-active is-active\">Mining</a><a data-v-bff5d462=\"\" href=\"/data\" class=\"\">Data</a><a data-v-bff5d462=\"\" href=\"/mine\" class=\"\">Me</a></nav><div data-v-bff5d462=\"\" class=\"header-actions app-header__right\"><button data-v-bff5d462=\"\" class=\"lang-btn\" type=\"button\" data-guide=\"lang\" aria-label=\"Language\"><span data-v-bff5d462=\"\" class=\"lang-btn__badge\">EN</span><img data-v-bff5d462=\"\" class=\"lang-btn__chev\" src=\"data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%204.5L6%207.5L9%204.5'%20stroke-width='1.1'%20stroke='%23C9D4CF'/%3e%3c/svg%3e\" alt=\"\" width=\"12\" height=\"12\"></button><button data-v-50586167=\"\" data-v-bff5d462=\"\" class=\"na-btn is-pill\" type=\"button\" data-guide=\"wallet\">Connect Wallet</button></div></div></header><main data-v-f1c38819=\"\" class=\"main-content\"><div data-v-f1c38819=\"\" class=\"content-shell\"><div data-v-f1c38819=\"\" id=\"main-content\" class=\"page-scroll\"><div data-v-aa487f30=\"\" data-v-bfbd0df2=\"\" data-v-f1c38819=\"\" class=\"page-wrap mining\"><h1 data-v-bfbd0df2=\"\" class=\"mining__title\">Mining Rewards</h1><section data-v-bfbd0df2=\"\" class=\"hero\"><p data-v-bfbd0df2=\"\" class=\"lbl\">Pending claim (NARO)</p><p data-v-bfbd0df2=\"\" class=\"hero-num\"><span data-v-bfbd0df2=\"\">0.00</span></p><div data-v-bfbd0df2=\"\" class=\"grid3\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Static</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Promo</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Rank</span><b data-v-bfbd0df2=\"\" class=\"num\">0.00</b></div></div><div data-v-bfbd0df2=\"\" class=\"claim-wrap\"><button data-v-50586167=\"\" data-v-bfbd0df2=\"\" class=\"na-btn is-primary is-block\" type=\"button\">Connect Wallet</button></div><p data-v-bfbd0df2=\"\" class=\"hero-foot\">Daily snapshot · claim manually</p></section><div data-v-bfbd0df2=\"\" class=\"seg\" role=\"tablist\"><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"\">Static —</button><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"false\" class=\"\">Promo —</button><button data-v-bfbd0df2=\"\" type=\"button\" role=\"tab\" aria-selected=\"true\" class=\"is-on\">Rank —</button></div><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"display: none;\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today static pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My rank weight</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><p data-v-bfbd0df2=\"\" class=\"zone-lbl\">Holding zone</p><div data-v-bfbd0df2=\"\" class=\"zones\"><div data-v-bfbd0df2=\"\" class=\"z1\">Mass</div><div data-v-bfbd0df2=\"\" class=\"z2\">Best</div><div data-v-bfbd0df2=\"\" class=\"z3\">Anti-monopoly</div></div><div data-v-bfbd0df2=\"\" class=\"zmark-row\"><span data-v-bfbd0df2=\"\" class=\"zmark zmark--none\"><b data-v-bfbd0df2=\"\">No holdings yet</b></span></div><p data-v-bfbd0df2=\"\" class=\"panel-desc\">Jump ranking: best zone pays the highest per-token yield; oversized holdings enter anti-monopoly with lower unit yield.</p></section><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"display: none;\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today promo pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My network share</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><a data-v-bfbd0df2=\"\" href=\"/mining/community\" class=\"ghost-link\">Community &amp; invite ›</a></section><section data-v-bfbd0df2=\"\" class=\"panel-card\" style=\"\"><div data-v-bfbd0df2=\"\" class=\"grid2\"><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">My dynamic rank</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div><div data-v-bfbd0df2=\"\"><span data-v-bfbd0df2=\"\" class=\"lbl\">Today rank pool</span><b data-v-bfbd0df2=\"\" class=\"num panel-num\">—</b></div></div><p data-v-bfbd0df2=\"\" class=\"panel-desc\">Allocated to community builders by dynamic weighted rank, snapshot daily.</p></section></div></div><nav data-v-4370f56f=\"\" data-v-f1c38819=\"\" class=\"bottom-nav tabbar\" aria-label=\"Main navigation\"><a data-v-4370f56f=\"\" href=\"/\" class=\"router-link-active tabbar__item\" data-guide=\"tab-home\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66602%209.62499L10.9993%203.66666L18.3327%209.62499V17.4167C18.3327%2017.6598%2018.2361%2017.8929%2018.0642%2018.0648C17.8923%2018.2367%2017.6591%2018.3333%2017.416%2018.3333H13.291V13.2917H8.70768V18.3333H4.58268C4.33957%2018.3333%204.10641%2018.2367%203.9345%2018.0648C3.76259%2017.8929%203.66602%2017.6598%203.66602%2017.4167V9.62499Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Home</b></a><a data-v-4370f56f=\"\" class=\"tabbar__item\" href=\"#\" role=\"button\" data-guide=\"tab-swap\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%207.33334H15.5846L12.8346%204.58334M18.3346%2014.6667H6.41797L9.16797%2017.4167'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Swap</b></a><a data-v-4370f56f=\"\" aria-current=\"page\" href=\"/mining\" class=\"router-link-active router-link-exact-active tabbar__item is-active\" data-guide=\"tab-mining\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%2017.4167H18.3346M6.41797%2013.75V11M11.0013%2013.75V6.41666M15.5846%2013.75V8.24999'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Mining</b></a><a data-v-4370f56f=\"\" href=\"/data\" class=\"tabbar__item\" data-guide=\"tab-data\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%202.75C9.36831%202.75%207.77325%203.23385%206.41655%204.14038C5.05984%205.0469%204.00242%206.33537%203.378%207.84286C2.75357%209.35035%202.5902%2011.0092%202.90853%2012.6095C3.22685%2014.2098%204.01259%2015.6798%205.16637%2016.8336C6.32016%2017.9874%207.79017%2018.7732%209.39051%2019.0915C10.9909%2019.4098%2012.6497%2019.2464%2014.1571%2018.622C15.6646%2017.9976%2016.9531%2016.9402%2017.8596%2015.5835C18.7662%2014.2267%2019.25%2012.6317%2019.25%2011H11V2.75Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M13.75%203.20834C14.9139%203.61817%2015.9711%204.28387%2016.8436%205.15641C17.7161%206.02895%2018.3818%207.0861%2018.7917%208.25001H13.75V3.20834Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Data</b></a><a data-v-4370f56f=\"\" href=\"/mine\" class=\"tabbar__item\" data-guide=\"tab-mine\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.6654%207.79167C14.6654%209.81671%2013.0237%2011.4583%2010.9987%2011.4583C8.97365%2011.4583%207.33203%209.81671%207.33203%207.79167C7.33203%205.76662%208.97365%204.125%2010.9987%204.125C13.0237%204.125%2014.6654%205.76662%2014.6654%207.79167Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M4.125%2018.3333C4.125%2016.51%204.84933%2014.7613%206.13864%2013.472C7.42795%2012.1827%209.17664%2011.4583%2011%2011.4583C12.8234%2011.4583%2014.572%2012.1827%2015.8614%2013.472C17.1507%2014.7613%2017.875%2016.51%2017.875%2018.3333'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Me</b></a></nav></div></main></div></div>\n  <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;1e3e15c86b8d4c589225e3e0f92ac2f2&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}\" crossorigin=\"anonymous\"></script>\n\n\n<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>"
+            }
+          },
+          "accessibility": {
+            "state": "captured",
+            "value": {
+              "sha256": "5955dad00d717de7d19427a4d619dfcfdb11f44f65852f3cdfc4828835225be1",
+              "bytes": 842,
+              "text": "- document:\n  - banner:\n    - link \"NARO\":\n      - /url: /\n      - img \"NARO\"\n    - button \"Language\": EN\n    - button \"Connect Wallet\"\n  - main:\n    - heading \"Mining Rewards\" [level=1]\n    - paragraph: Pending claim (NARO)\n    - paragraph: \"0.00\"\n    - text: Static 0.00 Promo 0.00 Rank 0.00\n    - button \"Connect Wallet\"\n    - paragraph: Daily snapshot · claim manually\n    - tablist:\n      - tab \"Static —\"\n      - tab \"Promo —\"\n      - tab \"Rank —\" [selected]\n    - text: My dynamic rank — Today rank pool —\n    - paragraph: Allocated to community builders by dynamic weighted rank, snapshot daily.\n    - navigation \"Main navigation\":\n      - link \"Home\":\n        - /url: /\n      - button \"Swap\"\n      - link \"Mining\":\n        - /url: /mining\n      - link \"Data\":\n        - /url: /data\n      - link \"Me\":\n        - /url: /mine"
+            }
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      }
+    ],
+    "events": {
+      "retained": 0,
+      "dropped": 0,
+      "items": [],
+      "omissions": {
+        "by_kind": [],
+        "network_transactions": [],
+        "network_transaction_range": null
+      }
+    },
+    "completeness": {
+      "status": "complete",
+      "equality_eligible": true,
+      "missing_sections": [],
+      "truncated_sections": []
+    },
+    "limitations": [
+      "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+      "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+      "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+      "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+      "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+      "Storage values are hashed only after declared-secret redaction."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "controlled-replay",
+  "environment": {
+    "id": "Chromium@155.0.8059.82",
+    "platform": "unknown",
+    "architecture": "unknown",
+    "isolation": "process"
+  },
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Browser host platform and architecture were not observed."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

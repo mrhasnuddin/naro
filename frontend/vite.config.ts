@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => {
   }
   const title = "NARO | Wallet, Rewards & Community";
   const description =
-    "Connect your wallet, claim dNARO rewards and explore your community on BNB Testnet.";
+    "Explore NARO mining, community power, token allocation and ecosystem updates on BNB Testnet.";
   const image = (name: string) => `${site || "."}/social/naro-${name}.png`;
   const meta = (
     key: string,
@@ -81,7 +81,7 @@ export default defineConfig(({ mode }) => {
       react(),
       { name: "naro-social-metadata", transformIndexHtml: () => tags },
     ],
-    base: "./",
+    base: site ? "/" : "./",
     server: { fs: { allow: [".."] } },
     build: { outDir: "dist", emptyOutDir: true },
   };

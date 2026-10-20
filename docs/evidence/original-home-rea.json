@@ -1,0 +1,261 @@
+{
+  "evidence_id": "ev_8ba3e54f140d7f3f516bfa6a90ecaf0f5db8ac110776cb161c3e72941fd7c8e4",
+  "subject": null,
+  "provider": {
+    "id": "rea-playwright-browser-scenario",
+    "name": "REA Playwright browser scenario capture provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.browser-scenario-capture",
+  "operation": "capture_browser_scenario",
+  "parameters": {
+    "browser": {
+      "mode": "launch",
+      "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "headless": true
+    },
+    "start_url": {
+      "url": "https://naroradar.com/",
+      "query": []
+    },
+    "environment": {
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "device_scale_factor": 1
+      },
+      "locale": "en-US",
+      "timezone": "UTC",
+      "color_scheme": "light",
+      "reduced_motion": "reduce",
+      "service_workers": "block"
+    },
+    "actions": [
+      {
+        "step_id": "home-ready",
+        "action": "wait_for",
+        "locator": {
+          "kind": "css",
+          "selector": "#app"
+        },
+        "state": "visible"
+      }
+    ],
+    "storage": {
+      "cookies": [],
+      "local_storage": [],
+      "session_storage": []
+    },
+    "secrets": [],
+    "capture": {
+      "after_each_step": [],
+      "at_end": [
+        "dom",
+        "accessibility"
+      ],
+      "events": [],
+      "network": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "scenario_sha256": "3ec64a413d293e75c492e4078ccc6d7e05a3d23122765db2bea525ea5e053df0"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "browser": {
+      "mode": "launch",
+      "process_ownership": "provider-owned",
+      "cleanup": "terminated-owned-process",
+      "product": "Chromium",
+      "version": "155.0.8059.82"
+    },
+    "scenario": {
+      "start_origin": "https://naroradar.com",
+      "action_count": 1,
+      "secret_references": [],
+      "network_content": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "event_families": [],
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "duration_ms": 1473,
+    "steps": [
+      {
+        "step_index": 0,
+        "step_id": "scenario_start",
+        "action": "goto_start",
+        "elapsed_ms": 1106,
+        "before_url": {
+          "url": "about:blank",
+          "origin": null,
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "not_requested"
+          },
+          "accessibility": {
+            "state": "not_requested"
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      },
+      {
+        "step_index": 1,
+        "step_id": "home-ready",
+        "action": "wait_for",
+        "elapsed_ms": 188,
+        "before_url": {
+          "url": "https://naroradar.com/",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "captured",
+            "value": {
+              "sha256": "d40b275e6c571c15136d939ecfd1f1a9c25281ea22fa1684ef54ced95a6fb16c",
+              "bytes": 31081,
+              "text": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"#080B0A\">\n    <title>NARO</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-yjsxLZcI.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/vue-i18n-VQlw7TPK.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/i18n-BKeFymkU.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ledger-D6yohPQA.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ethereumProvider-B-jgi9yh.js\">\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D0nfD4rR.css\">\n  <link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/HomeView-wu8vOjqN.js\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/motion-DZ6UqO5m.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/HomeView-C_U1kmJh.css\"></head>\n  <body>\n    <div id=\"app\" data-v-app=\"\"><div data-v-f1c38819=\"\" class=\"app-shell\"><header data-v-bff5d462=\"\" data-v-f1c38819=\"\" class=\"site-header\" style=\"--header-solid: 0;\"><div data-v-bff5d462=\"\" class=\"header-inner\"><div data-v-bff5d462=\"\" class=\"app-header__brand-wrap\"><a data-v-bff5d462=\"\" aria-current=\"page\" href=\"/\" class=\"router-link-active router-link-exact-active app-header__brand\"><img data-v-bff5d462=\"\" class=\"app-header__logo\" src=\"/naro-assets/logo.png\" alt=\"NARO\" width=\"102\" height=\"26\"></a></div><nav data-v-bff5d462=\"\" class=\"desktop-nav\" aria-label=\"Main navigation\"><a data-v-bff5d462=\"\" aria-current=\"page\" href=\"/\" class=\"router-link-active router-link-exact-active is-active\">Home</a><a data-v-bff5d462=\"\" href=\"/swap\" class=\"\">Swap</a><a data-v-bff5d462=\"\" href=\"/mining\" class=\"\">Mining</a><a data-v-bff5d462=\"\" href=\"/data\" class=\"\">Data</a><a data-v-bff5d462=\"\" href=\"/mine\" class=\"\">Me</a></nav><div data-v-bff5d462=\"\" class=\"header-actions app-header__right\"><button data-v-bff5d462=\"\" class=\"lang-btn\" type=\"button\" data-guide=\"lang\" aria-label=\"Language\"><span data-v-bff5d462=\"\" class=\"lang-btn__badge\">EN</span><img data-v-bff5d462=\"\" class=\"lang-btn__chev\" src=\"data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%204.5L6%207.5L9%204.5'%20stroke-width='1.1'%20stroke='%23C9D4CF'/%3e%3c/svg%3e\" alt=\"\" width=\"12\" height=\"12\"></button><button data-v-50586167=\"\" data-v-bff5d462=\"\" class=\"na-btn is-pill\" type=\"button\" data-guide=\"wallet\">Connect Wallet</button></div></div></header><main data-v-f1c38819=\"\" class=\"main-content\"><div data-v-f1c38819=\"\" class=\"content-shell\"><div data-v-f1c38819=\"\" id=\"main-content\" class=\"page-scroll\"><div data-v-7f1efba6=\"\" data-v-f1c38819=\"\" class=\"home\"><div data-v-d271a628=\"\" data-v-7f1efba6=\"\" class=\"buddy\" hidden=\"\" aria-hidden=\"true\"><div data-v-d271a628=\"\" class=\"bd-bub\"></div><span data-v-d271a628=\"\" class=\"bd-n\"><span data-v-1c27f600=\"\" data-v-d271a628=\"\" class=\"n3w mini-naro\" data-mood=\"idle\"><svg data-v-1c27f600=\"\" class=\"nmini m-load\" viewBox=\"0 0 200 230\" width=\"100%\" height=\"100%\" aria-hidden=\"true\"><defs data-v-1c27f600=\"\"><linearGradient data-v-1c27f600=\"\" id=\"mnv0b\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop data-v-1c27f600=\"\" offset=\"0\" stop-color=\"#fff\"></stop><stop data-v-1c27f600=\"\" offset=\".55\" stop-color=\"#F2FBF7\"></stop><stop data-v-1c27f600=\"\" offset=\"1\" stop-color=\"#8DF5CD\"></stop></linearGradient><linearGradient data-v-1c27f600=\"\" id=\"mnv0m\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop data-v-1c27f600=\"\" offset=\"0\" stop-color=\"#A6FCDC\"></stop><stop data-v-1c27f600=\"\" offset=\"1\" stop-color=\"#1FD993\"></stop></linearGradient><linearGradient data-v-1c27f600=\"\" id=\"mnv0l\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop data-v-1c27f600=\"\" offset=\"0\" stop-color=\"#fff\"></stop><stop data-v-1c27f600=\"\" offset=\"1\" stop-color=\"#7EF2C4\"></stop></linearGradient></defs><ellipse data-v-1c27f600=\"\" cx=\"100\" cy=\"219\" rx=\"48\" ry=\"6\" fill=\"#000\" opacity=\".45\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"74\" cy=\"203\" rx=\"19\" ry=\"14\" fill=\"url(#mnv0m)\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"126\" cy=\"203\" rx=\"19\" ry=\"14\" fill=\"url(#mnv0m)\"></ellipse><g data-v-1c27f600=\"\" class=\"mb\"><ellipse data-v-1c27f600=\"\" cx=\"30\" cy=\"142\" rx=\"17\" ry=\"27\" transform=\"rotate(18 30 142)\" fill=\"url(#mnv0l)\"></ellipse><path data-v-1c27f600=\"\" d=\"M95 48 C88 30 98 12 122 6 C113 18 110 31 113 46 Z\" fill=\"url(#mnv0m)\"></path><ellipse data-v-1c27f600=\"\" cx=\"100\" cy=\"122\" rx=\"76\" ry=\"80\" fill=\"url(#mnv0b)\"></ellipse><circle data-v-1c27f600=\"\" cx=\"31\" cy=\"98\" r=\"14\" fill=\"#F4FBF8\" stroke=\"url(#mnv0m)\" stroke-width=\"5\"></circle><circle data-v-1c27f600=\"\" cx=\"174\" cy=\"98\" r=\"10\" fill=\"#F4FBF8\" stroke=\"url(#mnv0m)\" stroke-width=\"4.5\"></circle><path data-v-1c27f600=\"\" d=\"M112 37 L115.5 48.5 L127 52 L115.5 55.5 L112 67 L108.5 55.5 L97 52 L108.5 48.5 Z\" fill=\"url(#mnv0m)\"></path><g data-v-1c27f600=\"\" class=\"ey\"><rect data-v-1c27f600=\"\" x=\"75\" y=\"90\" width=\"11\" height=\"20\" rx=\"5.5\" fill=\"#0D1110\"></rect><rect data-v-1c27f600=\"\" x=\"114\" y=\"90\" width=\"11\" height=\"20\" rx=\"5.5\" fill=\"#0D1110\"></rect></g><ellipse data-v-1c27f600=\"\" cx=\"66\" cy=\"117\" rx=\"10\" ry=\"6\" fill=\"#FF9DB0\" opacity=\".5\"></ellipse><ellipse data-v-1c27f600=\"\" cx=\"134\" cy=\"117\" rx=\"10\" ry=\"6\" fill=\"#FF9DB0\" opacity=\".5\"></ellipse><path data-v-1c27f600=\"\" d=\"M93 113 Q100 120 107 113\" fill=\"none\" stroke=\"#0D1110\" stroke-width=\"2.6\" stroke-linecap=\"round\"></path><ellipse data-v-1c27f600=\"\" cx=\"102\" cy=\"162\" rx=\"44\" ry=\"29\" fill=\"#fff\" stroke=\"url(#mnv0m)\" stroke-width=\"4\"></ellipse><image data-v-1c27f600=\"\" href=\"/naro-assets/logo-dark.png\" x=\"69\" y=\"153.75\" width=\"66\" height=\"16.5\"></image><ellipse data-v-1c27f600=\"\" cx=\"171\" cy=\"138\" rx=\"15\" ry=\"25\" transform=\"rotate(-22 171 138)\" fill=\"url(#mnv0l)\"></ellipse></g><!----></svg></span></span></div><section data-v-7f1efba6=\"\" class=\"hero\"><div data-v-7f1efba6=\"\" class=\"hero__top lay-right\"><div data-v-7f1efba6=\"\" class=\"banner-txt slide in\"><p data-v-7f1efba6=\"\" class=\"banner-txt__eye\">Quick tour · step 1</p><h1 data-v-7f1efba6=\"\" class=\"banner-txt__title\">Connect wallet<br>start with NARO</h1><p data-v-7f1efba6=\"\" class=\"banner-txt__sub\">Use a BSC-ready wallet</p></div><div data-v-5c111191=\"\" data-v-7f1efba6=\"\" class=\"mascot lay-right\" style=\"opacity: 1; visibility: visible; transform: translate(188px, 20px) scale(1);\"><div data-v-5c111191=\"\" class=\"bubble\" id=\"bubble\">Connect first~</div><div data-v-5c111191=\"\" class=\"glow\"></div><button data-v-5c111191=\"\" class=\"nr-btn\" id=\"naro\" type=\"button\" aria-label=\"Say hi to Naro\"><canvas class=\"nr nr3d\" id=\"naro3d\" width=\"300\" height=\"344\" aria-hidden=\"true\" data-v-5c111191=\"\"></canvas><svg class=\"nr nr2d\" viewBox=\"0 0 200 230\" width=\"150\" height=\"172\" aria-hidden=\"true\" data-v-5c111191=\"\"><defs data-v-5c111191=\"\"><linearGradient id=\"nrBody\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\" data-v-5c111191=\"\"><stop offset=\"0\" stop-color=\"#FFFFFF\" data-v-5c111191=\"\"></stop><stop offset=\".55\" stop-color=\"#F2FBF7\" data-v-5c111191=\"\"></stop><stop offset=\"1\" stop-color=\"#8DF5CD\" data-v-5c111191=\"\"></stop></linearGradient><linearGradient id=\"nrMint\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\" data-v-5c111191=\"\"><stop offset=\"0\" stop-color=\"#A6FCDC\" data-v-5c111191=\"\"></stop><stop offset=\"1\" stop-color=\"#1FD993\" data-v-5c111191=\"\"></stop></linearGradient><linearGradient id=\"nrLimb\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\" data-v-5c111191=\"\"><stop offset=\"0\" stop-color=\"#FFFFFF\" data-v-5c111191=\"\"></stop><stop offset=\"1\" stop-color=\"#7EF2C4\" data-v-5c111191=\"\"></stop></linearGradient></defs><ellipse class=\"nr-shadow\" cx=\"100\" cy=\"219\" rx=\"50\" ry=\"6\" fill=\"#000\" opacity=\".5\" data-v-5c111191=\"\"></ellipse><ellipse cx=\"74\" cy=\"203\" rx=\"19\" ry=\"14\" fill=\"url(#nrMint)\" data-v-5c111191=\"\"></ellipse><ellipse cx=\"126\" cy=\"203\" rx=\"19\" ry=\"14\" fill=\"url(#nrMint)\" data-v-5c111191=\"\"></ellipse><g class=\"nr-body\" data-v-5c111191=\"\"><g class=\"nr-larm\" data-v-5c111191=\"\"><ellipse cx=\"30\" cy=\"142\" rx=\"17\" ry=\"27\" transform=\"rotate(18 30 142)\" fill=\"url(#nrLimb)\" data-v-5c111191=\"\"></ellipse></g><g class=\"nr-horn\" data-v-5c111191=\"\"><path d=\"M95 48 C88 30 98 12 122 6 C113 18 110 31 113 46 Z\" fill=\"url(#nrMint)\" data-v-5c111191=\"\"></path></g><ellipse cx=\"100\" cy=\"122\" rx=\"76\" ry=\"80\" fill=\"url(#nrBody)\" data-v-5c111191=\"\"></ellipse><g class=\"nr-ear\" data-v-5c111191=\"\"><circle cx=\"31\" cy=\"98\" r=\"14\" fill=\"#F4FBF8\" stroke=\"url(#nrMint)\" stroke-width=\"5\" data-v-5c111191=\"\"></circle><circle cx=\"174\" cy=\"98\" r=\"10\" fill=\"#F4FBF8\" stroke=\"url(#nrMint)\" stroke-width=\"4.5\" data-v-5c111191=\"\"></circle></g><path class=\"nr-star\" d=\"M112 37 L115.5 48.5 L127 52 L115.5 55.5 L112 67 L108.5 55.5 L97 52 L108.5 48.5 Z\" fill=\"url(#nrMint)\" data-v-5c111191=\"\"></path><g class=\"nr-look\" data-v-5c111191=\"\"><g class=\"nr-eyes\" data-v-5c111191=\"\"><rect x=\"75\" y=\"90\" width=\"11\" height=\"20\" rx=\"5.5\" fill=\"#0D1110\" data-v-5c111191=\"\"></rect><rect x=\"114\" y=\"90\" width=\"11\" height=\"20\" rx=\"5.5\" fill=\"#0D1110\" data-v-5c111191=\"\"></rect><circle cx=\"79\" cy=\"95\" r=\"2\" fill=\"#fff\" data-v-5c111191=\"\"></circle><circle cx=\"118\" cy=\"95\" r=\"2\" fill=\"#fff\" data-v-5c111191=\"\"></circle></g><g class=\"acc acc-glasses\" data-v-5c111191=\"\"><rect x=\"64\" y=\"90\" width=\"31\" height=\"20\" rx=\"7\" fill=\"#0D1110\" data-v-5c111191=\"\"></rect><rect x=\"105\" y=\"90\" width=\"31\" height=\"20\" rx=\"7\" fill=\"#0D1110\" data-v-5c111191=\"\"></rect><path d=\"M95 98 h10\" stroke=\"#0D1110\" stroke-width=\"3\" data-v-5c111191=\"\"></path><path d=\"M69 95 l7 -2\" stroke=\"#5FF0BE\" stroke-width=\"2\" stroke-linecap=\"round\" data-v-5c111191=\"\"></path><path d=\"M110 95 l7 -2\" stroke=\"#5FF0BE\" stroke-width=\"2\" stroke-linecap=\"round\" data-v-5c111191=\"\"></path></g></g><ellipse class=\"nr-blush\" cx=\"66\" cy=\"117\" rx=\"10\" ry=\"6\" fill=\"#FF9DB0\" opacity=\".45\" data-v-5c111191=\"\"></ellipse><ellipse class=\"nr-blush\" cx=\"134\" cy=\"117\" rx=\"10\" ry=\"6\" fill=\"#FF9DB0\" opacity=\".45\" data-v-5c111191=\"\"></ellipse><path d=\"M93 113 Q100 120 107 113\" fill=\"none\" stroke=\"#0D1110\" stroke-width=\"2.6\" stroke-linecap=\"round\" data-v-5c111191=\"\"></path><ellipse cx=\"102\" cy=\"162\" rx=\"44\" ry=\"29\" fill=\"#FFFFFF\" stroke=\"url(#nrMint)\" stroke-width=\"4\" data-v-5c111191=\"\"></ellipse><image href=\"/naro-assets/logo-dark.png\" x=\"69\" y=\"153.75\" width=\"66\" height=\"16.5\" data-v-5c111191=\"\"></image><g class=\"acc acc-hat\" data-v-5c111191=\"\"><path d=\"M38 78 Q60 28 118 22 Q150 20 158 44 Q164 60 162 76 Q100 48 38 78 Z\" fill=\"#E5484D\" data-v-5c111191=\"\"></path><path d=\"M34 80 Q100 46 166 78 L164 90 Q100 60 36 92 Z\" fill=\"#FFFFFF\" data-v-5c111191=\"\"></path><circle cx=\"160\" cy=\"40\" r=\"10\" fill=\"#FFFFFF\" data-v-5c111191=\"\"></circle></g><g class=\"acc acc-crown\" data-v-5c111191=\"\"><path d=\"M56 50 L60 30 L70 41 L78 26 L86 41 L96 30 L98 50 Z\" fill=\"#F3BA2F\" stroke=\"#C98F10\" stroke-width=\"2\" stroke-linejoin=\"round\" transform=\"rotate(-14 77 40)\" data-v-5c111191=\"\"></path><circle cx=\"78\" cy=\"26\" r=\"3\" fill=\"#FFF3C4\" transform=\"rotate(-14 77 40)\" data-v-5c111191=\"\"></circle></g><g class=\"acc acc-sweat\" data-v-5c111191=\"\"><path d=\"M150 64 Q157 76 150 81 Q143 76 150 64 Z\" fill=\"#8FD8FF\" data-v-5c111191=\"\"></path><path d=\"M162 80 Q167 88 162 91 Q157 88 162 80 Z\" fill=\"#8FD8FF\" data-v-5c111191=\"\"></path></g><g class=\"acc acc-bag\" data-v-5c111191=\"\"><path d=\"M6 190 Q4 158 26 150 L40 150 Q62 158 58 190 Q58 204 32 204 Q6 204 6 190 Z\" fill=\"#C9A15A\" data-v-5c111191=\"\"></path><path d=\"M22 150 L18 140 L46 140 L42 150 Z\" fill=\"#A9813A\" data-v-5c111191=\"\"></path><text x=\"32\" y=\"186\" text-anchor=\"middle\" font-family=\"Chakra Petch,sans-serif\" font-size=\"22\" font-weight=\"700\" fill=\"#6B4E14\" data-v-5c111191=\"\"> N </text></g><g class=\"nr-arm\" data-v-5c111191=\"\"><ellipse cx=\"171\" cy=\"138\" rx=\"15\" ry=\"25\" transform=\"rotate(-22 171 138)\" fill=\"url(#nrLimb)\" data-v-5c111191=\"\"></ellipse><g class=\"acc acc-mega\" data-v-5c111191=\"\"><path d=\"M176 112 L200 98 L200 132 L178 122 Z\" fill=\"#01FEA3\" stroke=\"#0A7C52\" stroke-width=\"2\" stroke-linejoin=\"round\" data-v-5c111191=\"\"></path><rect x=\"170\" y=\"112\" width=\"10\" height=\"12\" rx=\"3\" fill=\"#0A7C52\" data-v-5c111191=\"\"></rect><path d=\"M204 106 q6 9 0 18\" stroke=\"#01FEA3\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\" data-v-5c111191=\"\"></path></g></g></g></svg></button><i data-v-5c111191=\"\" class=\"spark s1\"></i><i data-v-5c111191=\"\" class=\"spark s2\"></i><i data-v-5c111191=\"\" class=\"spark s3\"></i></div></div><div data-v-7f1efba6=\"\" class=\"hero__under\"><div data-v-7f1efba6=\"\" class=\"dots\"><button data-v-7f1efba6=\"\" class=\"dots__item is-on\" type=\"button\" aria-label=\"Slide 1\"></button><button data-v-7f1efba6=\"\" class=\"dots__item\" type=\"button\" aria-label=\"Slide 2\"></button><button data-v-7f1efba6=\"\" class=\"dots__item\" type=\"button\" aria-label=\"Slide 3\"></button><button data-v-7f1efba6=\"\" class=\"dots__item\" type=\"button\" aria-label=\"Slide 4\"></button><button data-v-7f1efba6=\"\" class=\"dots__item\" type=\"button\" aria-label=\"Slide 5\"></button></div><div data-v-7f1efba6=\"\" class=\"prog\"><div data-v-7f1efba6=\"\" class=\"prog__bar\"><i data-v-7f1efba6=\"\" class=\"cur\"></i><i data-v-7f1efba6=\"\" class=\"\"></i><i data-v-7f1efba6=\"\" class=\"\"></i></div><div data-v-7f1efba6=\"\" class=\"prog__t\"><span data-v-7f1efba6=\"\" class=\"num\">0 / 3</span><span data-v-7f1efba6=\"\" class=\"hint\">Next: connect wallet</span></div></div></div><button data-v-50586167=\"\" data-v-7f1efba6=\"\" class=\"na-btn is-primary is-block hero__cta\" type=\"button\" data-guide=\"heroCta\">Connect Wallet</button><!----></section><section data-v-7f1efba6=\"\" class=\"blk\"><p data-v-7f1efba6=\"\" class=\"eyebrow\" data-perch=\"about\">About NARO</p><div data-v-7f1efba6=\"\" class=\"card about\"><div data-v-7f1efba6=\"\" class=\"about__head\"><h2 data-v-7f1efba6=\"\">About NARO</h2><span data-v-7f1efba6=\"\" class=\"tag\">BSC</span></div><p data-v-7f1efba6=\"\" class=\"about__p\"><strong data-v-7f1efba6=\"\">An AI-driven on-chain asset launch platform by UXUY and Radar DAO.</strong><br data-v-7f1efba6=\"\"> From issuance and community growth to trading, liquidity, and AI alpha discovery — one stack from one-time launch to lasting growth.</p><div data-v-7f1efba6=\"\" class=\"eco\"><canvas data-v-7f1efba6=\"\" class=\"eco__mol\" width=\"220\" height=\"220\" aria-hidden=\"true\"></canvas><div data-v-7f1efba6=\"\" class=\"eco__cards\"><div data-v-7f1efba6=\"\" class=\"eco__c\"><b data-v-7f1efba6=\"\" class=\"eco__plogo\"><img data-v-7f1efba6=\"\" class=\"eco__plogo-img eco__plogo-img--uxuy\" src=\"/naro-assets/logo-uxuy.png\" alt=\"UXUY\"></b><span data-v-7f1efba6=\"\">Trade · infrastructure</span><span data-v-7f1efba6=\"\">Liquidity · asset intake</span></div><div data-v-7f1efba6=\"\" class=\"eco__c\"><b data-v-7f1efba6=\"\" class=\"eco__plogo\"><img data-v-7f1efba6=\"\" class=\"eco__plogo-img eco__plogo-img--radar\" src=\"/naro-assets/logo-radar-dao-en.png\" alt=\"Radar DAO\"></b><span data-v-7f1efba6=\"\">Community · users</span><span data-v-7f1efba6=\"\">Consensus · growth</span></div></div><svg class=\"eco__lines\" viewBox=\"0 0 300 64\" preserveAspectRatio=\"none\" aria-hidden=\"true\" data-v-7f1efba6=\"\"><path class=\"el-base\" d=\"M75 0 L150 60\" data-v-7f1efba6=\"\"></path><path class=\"el-base\" d=\"M225 0 L150 60\" data-v-7f1efba6=\"\"></path><path class=\"el-draw\" d=\"M75 0 L150 60\" data-v-7f1efba6=\"\"></path><path class=\"el-draw\" d=\"M225 0 L150 60\" data-v-7f1efba6=\"\"></path><path class=\"el-pulse\" d=\"M75 0 L150 60\" data-v-7f1efba6=\"\"></path><path class=\"el-pulse d2\" d=\"M225 0 L150 60\" data-v-7f1efba6=\"\"></path></svg><div class=\"eco__node\" data-v-7f1efba6=\"\"><i data-v-7f1efba6=\"\"></i></div><div class=\"eco__logo\" data-v-7f1efba6=\"\"><img src=\"/naro-assets/logo.png\" alt=\"NARO\" width=\"118\" height=\"30\" data-v-7f1efba6=\"\"></div><div data-v-7f1efba6=\"\" class=\"eco__tags\"><span data-v-7f1efba6=\"\">Issuance</span><i data-v-7f1efba6=\"\">|</i><span data-v-7f1efba6=\"\">Ecosystem links</span><i data-v-7f1efba6=\"\">|</i><span data-v-7f1efba6=\"\">Value loop</span></div></div><div data-v-7f1efba6=\"\" class=\"mq\"><div data-v-7f1efba6=\"\" class=\"mq__track\"><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">100% decentralized</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Fair launch</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Hyper deflation</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Anti-monopoly rank</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Hold to mine</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Circuit breaker</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">100% decentralized</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Fair launch</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Hyper deflation</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Anti-monopoly rank</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Hold to mine</span></span><span data-v-7f1efba6=\"\" class=\"mq__t\"><i data-v-7f1efba6=\"\"></i><span data-v-7f1efba6=\"\">Circuit breaker</span></span></div></div></div></section><section data-v-7f1efba6=\"\" class=\"blk\"><p data-v-7f1efba6=\"\" class=\"eyebrow\" data-perch=\"power\">Capabilities</p><div data-v-7f1efba6=\"\" class=\"card cap\"><div data-v-7f1efba6=\"\" class=\"cap__head\"><div data-v-7f1efba6=\"\"><h2 data-v-7f1efba6=\"\">Core capabilities</h2><p data-v-7f1efba6=\"\">Radar-powered asset issuance</p></div><div class=\"radar\" aria-hidden=\"true\" data-v-7f1efba6=\"\"><i class=\"rs\" data-v-7f1efba6=\"\"></i><i class=\"rb b1\" data-v-7f1efba6=\"\"></i><i class=\"rb b2\" data-v-7f1efba6=\"\"></i><i class=\"rb b3\" data-v-7f1efba6=\"\"></i></div></div><ul data-v-7f1efba6=\"\" class=\"cap__list\"><li data-v-7f1efba6=\"\" class=\"hot\" style=\"--i: 0;\"><b data-v-7f1efba6=\"\">Issue</b><span data-v-7f1efba6=\"\">Launch on-chain assets in one click</span></li><li data-v-7f1efba6=\"\" class=\"\" style=\"--i: 1;\"><b data-v-7f1efba6=\"\">Community</b><span data-v-7f1efba6=\"\">Radar DAO community launch</span></li><li data-v-7f1efba6=\"\" class=\"\" style=\"--i: 2;\"><b data-v-7f1efba6=\"\">Participate</b><span data-v-7f1efba6=\"\">Holdings and community contributions compound</span></li><li data-v-7f1efba6=\"\" class=\"\" style=\"--i: 3;\"><b data-v-7f1efba6=\"\">Trade</b><span data-v-7f1efba6=\"\">UXUY powers on-chain trading</span></li><li data-v-7f1efba6=\"\" class=\"\" style=\"--i: 4;\"><b data-v-7f1efba6=\"\">Liquidity</b><span data-v-7f1efba6=\"\">Ecosystem LP backs quality assets</span></li><li data-v-7f1efba6=\"\" class=\"\" style=\"--i: 5;\"><b data-v-7f1efba6=\"\">AI</b><span data-v-7f1efba6=\"\">Spot trends, smart money, and alpha</span></li></ul><div data-v-7f1efba6=\"\" class=\"cap__q\"><span data-v-7f1efba6=\"\" class=\"qm l\">“</span><p data-v-7f1efba6=\"\">From issuance to users, trading, and ecosystem value</p><span data-v-7f1efba6=\"\" class=\"qm r\">”</span></div></div></section><section data-v-7f1efba6=\"\" class=\"blk\"><p data-v-7f1efba6=\"\" class=\"eyebrow\" data-perch=\"faq\">FAQ</p><div data-v-7f1efba6=\"\" class=\"faq\"><details data-v-7f1efba6=\"\" class=\"faq__item\"><summary data-v-7f1efba6=\"\"><span data-v-7f1efba6=\"\">What is the “best holding zone”?</span></summary><p data-v-7f1efba6=\"\">Static yield uses jump ranking. Holdings in the best zone earn the highest per-token yield; oversized holdings enter anti-monopoly with lower unit yield.</p></details><details data-v-7f1efba6=\"\" class=\"faq__item\"><summary data-v-7f1efba6=\"\"><span data-v-7f1efba6=\"\">How often are rewards settled?</span></summary><p data-v-7f1efba6=\"\">Daily snapshot. Rewards are not auto-credited — claim them on the Mining page.</p></details><details data-v-7f1efba6=\"\" class=\"faq__item\"><summary data-v-7f1efba6=\"\"><span data-v-7f1efba6=\"\">Will mining last forever?</span></summary><p data-v-7f1efba6=\"\">No. Output steps down every 6 months and stops after 990M NARO are mined.</p></details><details data-v-7f1efba6=\"\" class=\"faq__item\"><summary data-v-7f1efba6=\"\"><span data-v-7f1efba6=\"\">Where do trading fees go?</span></summary><p data-v-7f1efba6=\"\">Buy 3% goes to the AI treasury; of sell 3%, 1.5% is burned and 1.5% funds the ecosystem.</p></details><details data-v-7f1efba6=\"\" class=\"faq__item\"><summary data-v-7f1efba6=\"\"><span data-v-7f1efba6=\"\">When does the circuit breaker trigger?</span></summary><p data-v-7f1efba6=\"\">When the drop exceeds 10%, a dynamic sell tax up to 30% applies — half burned, half to RBS buyback/burn.</p></details><details data-v-7f1efba6=\"\" class=\"faq__item\"><summary data-v-7f1efba6=\"\"><span data-v-7f1efba6=\"\">Can the invite relationship be changed?</span></summary><p data-v-7f1efba6=\"\">No. Once bound, the invite relationship cannot be changed. Double-check the invite code and inviter before confirming.</p></details></div></section><section data-v-7f1efba6=\"\" class=\"blk\"><p data-v-7f1efba6=\"\" class=\"eyebrow\" data-perch=\"social\">Official community</p><div data-v-7f1efba6=\"\" class=\"social\" data-guide=\"social\"><a data-v-7f1efba6=\"\" class=\"social__row\" href=\"https://x.com/Naro_Officials\" target=\"_blank\" rel=\"noopener noreferrer\"><span data-v-7f1efba6=\"\" class=\"social__icon is-black\"><img data-v-7f1efba6=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.2715%202.75H19.0857L12.944%209.77167L20.1673%2019.25H14.5115L10.084%2013.4567L5.01482%2019.25H2.20065L8.77315%2011.7333L1.83398%202.75H7.63648L11.6423%208.04833L16.2715%202.75ZM15.2815%2017.5725H16.8398L6.78398%204.33583H5.11565L15.2815%2017.5725Z'%20fill='white'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><span data-v-7f1efba6=\"\" class=\"social__meta\"><b data-v-7f1efba6=\"\">X</b><small data-v-7f1efba6=\"\">Announcements · updates</small></span><span data-v-7f1efba6=\"\" class=\"social__act\">Follow</span></a><a data-v-7f1efba6=\"\" class=\"social__row\" href=\"https://t.me/NARO_OFFICIALS\" target=\"_blank\" rel=\"noopener noreferrer\"><span data-v-7f1efba6=\"\" class=\"social__icon is-blue\"><img data-v-7f1efba6=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.21604%2010.45L16.9577%205.5C17.5994%205.27083%2018.1494%205.65583%2017.9385%206.6L15.766%2016.83C15.601%2017.5633%2015.1702%2017.7467%2014.556%2017.3983L11.2102%2014.9325L9.59688%2016.4908C9.41354%2016.6742%209.26688%2016.8208%208.91854%2016.8208L9.15688%2013.4017L15.3902%207.77333C15.6652%207.53499%2015.3352%207.40666%2014.9685%207.63583L7.26854%2012.485L3.95021%2011.4492C3.22604%2011.22%203.21688%2010.725%204.10604%2010.3767L4.21604%2010.45Z'%20fill='white'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><span data-v-7f1efba6=\"\" class=\"social__meta\"><b data-v-7f1efba6=\"\">Telegram</b><small data-v-7f1efba6=\"\">Community · events</small></span><span data-v-7f1efba6=\"\" class=\"social__act\">Join</span></a><a data-v-7f1efba6=\"\" class=\"social__row\" href=\"https://www.youtube.com/@NARO_Officials\" target=\"_blank\" rel=\"noopener noreferrer\"><span data-v-7f1efba6=\"\" class=\"social__icon is-red\"><img data-v-7f1efba6=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.80078%207.51667V14.4833L14.8508%2011L8.80078%207.51667Z'%20fill='white'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><span data-v-7f1efba6=\"\" class=\"social__meta\"><b data-v-7f1efba6=\"\">YouTube</b><small data-v-7f1efba6=\"\">Tutorials · AMA</small></span><span data-v-7f1efba6=\"\" class=\"social__act\">Subscribe</span></a><a data-v-7f1efba6=\"\" class=\"social__row\" href=\"https://naro-26smrol.gamma.site/\" target=\"_blank\" rel=\"noopener noreferrer\"><span data-v-7f1efba6=\"\" class=\"social__icon is-green\"><img data-v-7f1efba6=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.5%207.33333L13.2917%204.125H5.5V17.875H16.5V7.33333ZM13.2917%204.125V7.33333H16.5M8.25%2011H13.75M8.25%2014.2083H11.9167'%20stroke-width='1.74167'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2303140D'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><span data-v-7f1efba6=\"\" class=\"social__meta\"><b data-v-7f1efba6=\"\">Docs</b><small data-v-7f1efba6=\"\">Whitepaper · guides</small></span><span data-v-7f1efba6=\"\" class=\"social__act\">Open</span></a></div><p data-v-7f1efba6=\"\" class=\"safe\"><img data-v-7f1efba6=\"\" src=\"data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.0013%201.75L11.0846%203.5V6.41667C11.0846%209.04167%209.33464%2011.2583%207.0013%2012.25C4.66797%2011.2583%202.91797%209.04167%202.91797%206.41667V3.5L7.0013%201.75Z'%20stroke-width='1.16667'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3cpath%20d='M5.25%207L6.41667%208.16667L8.75%205.83334'%20stroke-width='1.16667'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"14\" height=\"14\"> Use official channels only — beware of impostors</p></section><footer data-v-7f1efba6=\"\" class=\"foot\"><p data-v-7f1efba6=\"\">Digital assets are volatile. Understand the rules and risks before joining.</p><p data-v-7f1efba6=\"\" class=\"copy\">© 2026 NARO</p></footer></div></div><nav data-v-4370f56f=\"\" data-v-f1c38819=\"\" class=\"bottom-nav tabbar\" aria-label=\"Main navigation\"><a data-v-4370f56f=\"\" aria-current=\"page\" href=\"/\" class=\"router-link-active router-link-exact-active tabbar__item is-active\" data-guide=\"tab-home\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66602%209.62499L10.9993%203.66666L18.3327%209.62499V17.4167C18.3327%2017.6598%2018.2361%2017.8929%2018.0642%2018.0648C17.8923%2018.2367%2017.6591%2018.3333%2017.416%2018.3333H13.291V13.2917H8.70768V18.3333H4.58268C4.33957%2018.3333%204.10641%2018.2367%203.9345%2018.0648C3.76259%2017.8929%203.66602%2017.6598%203.66602%2017.4167V9.62499Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Home</b></a><a data-v-4370f56f=\"\" class=\"tabbar__item\" href=\"#\" role=\"button\" data-guide=\"tab-swap\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%207.33334H15.5846L12.8346%204.58334M18.3346%2014.6667H6.41797L9.16797%2017.4167'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Swap</b></a><a data-v-4370f56f=\"\" href=\"/mining\" class=\"tabbar__item\" data-guide=\"tab-mining\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%2017.4167H18.3346M6.41797%2013.75V11M11.0013%2013.75V6.41666M15.5846%2013.75V8.24999'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Mining</b></a><a data-v-4370f56f=\"\" href=\"/data\" class=\"tabbar__item\" data-guide=\"tab-data\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%202.75C9.36831%202.75%207.77325%203.23385%206.41655%204.14038C5.05984%205.0469%204.00242%206.33537%203.378%207.84286C2.75357%209.35035%202.5902%2011.0092%202.90853%2012.6095C3.22685%2014.2098%204.01259%2015.6798%205.16637%2016.8336C6.32016%2017.9874%207.79017%2018.7732%209.39051%2019.0915C10.9909%2019.4098%2012.6497%2019.2464%2014.1571%2018.622C15.6646%2017.9976%2016.9531%2016.9402%2017.8596%2015.5835C18.7662%2014.2267%2019.25%2012.6317%2019.25%2011H11V2.75Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M13.75%203.20834C14.9139%203.61817%2015.9711%204.28387%2016.8436%205.15641C17.7161%206.02895%2018.3818%207.0861%2018.7917%208.25001H13.75V3.20834Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Data</b></a><a data-v-4370f56f=\"\" href=\"/mine\" class=\"tabbar__item\" data-guide=\"tab-mine\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.6654%207.79167C14.6654%209.81671%2013.0237%2011.4583%2010.9987%2011.4583C8.97365%2011.4583%207.33203%209.81671%207.33203%207.79167C7.33203%205.76662%208.97365%204.125%2010.9987%204.125C13.0237%204.125%2014.6654%205.76662%2014.6654%207.79167Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M4.125%2018.3333C4.125%2016.51%204.84933%2014.7613%206.13864%2013.472C7.42795%2012.1827%209.17664%2011.4583%2011%2011.4583C12.8234%2011.4583%2014.572%2012.1827%2015.8614%2013.472C17.1507%2014.7613%2017.875%2016.51%2017.875%2018.3333'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Me</b></a></nav></div></main></div></div>\n  <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;1e3e15c86b8d4c589225e3e0f92ac2f2&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}\" crossorigin=\"anonymous\"></script>\n\n\n<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>"
+            }
+          },
+          "accessibility": {
+            "state": "captured",
+            "value": {
+              "sha256": "a13cbadbbf7afc54cab3bf18e0f554395a0540b21ae7c89b9678ecfb6e2831f4",
+              "bytes": 3002,
+              "text": "- document:\n  - banner:\n    - link \"NARO\":\n      - /url: /\n      - img \"NARO\"\n    - button \"Language\": EN\n    - button \"Connect Wallet\"\n  - main:\n    - paragraph: Quick tour · step 1\n    - heading \"Connect wallet start with NARO\" [level=1]\n    - paragraph: Use a BSC-ready wallet\n    - text: Connect first~\n    - button \"Say hi to Naro\"\n    - button \"Slide 1\"\n    - button \"Slide 2\"\n    - button \"Slide 3\"\n    - button \"Slide 4\"\n    - button \"Slide 5\"\n    - text: \"0 / 3 Next: connect wallet\"\n    - button \"Connect Wallet\"\n    - paragraph: About NARO\n    - heading \"About NARO\" [level=2]\n    - text: BSC\n    - paragraph:\n      - strong: An AI-driven on-chain asset launch platform by UXUY and Radar DAO.\n      - text: From issuance and community growth to trading, liquidity, and AI alpha discovery — one stack from one-time launch to lasting growth.\n    - img \"UXUY\"\n    - text: Trade · infrastructure Liquidity · asset intake\n    - img \"Radar DAO\"\n    - text: Community · users Consensus · growth\n    - img \"NARO\"\n    - text: Issuance | Ecosystem links | Value loop 100% decentralized Fair launch Hyper deflation Anti-monopoly rank Hold to mine Circuit breaker 100% decentralized Fair launch Hyper deflation Anti-monopoly rank Hold to mine Circuit breaker\n    - paragraph: Capabilities\n    - heading \"Core capabilities\" [level=2]\n    - paragraph: Radar-powered asset issuance\n    - list:\n      - listitem: Issue Launch on-chain assets in one click\n      - listitem: Community Radar DAO community launch\n      - listitem: Participate Holdings and community contributions compound\n      - listitem: Trade UXUY powers on-chain trading\n      - listitem: Liquidity Ecosystem LP backs quality assets\n      - listitem: AI Spot trends, smart money, and alpha\n    - text: “\n    - paragraph: From issuance to users, trading, and ecosystem value\n    - text: ”\n    - paragraph: FAQ\n    - group: What is the “best holding zone”? +\n    - group: How often are rewards settled? +\n    - group: Will mining last forever? +\n    - group: Where do trading fees go? +\n    - group: When does the circuit breaker trigger? +\n    - group: Can the invite relationship be changed? +\n    - paragraph: Official community\n    - link \"X Announcements · updates Follow\":\n      - /url: https://x.com/Naro_Officials\n    - link \"Telegram Community · events Join\":\n      - /url: https://t.me/NARO_OFFICIALS\n    - link \"YouTube Tutorials · AMA Subscribe\":\n      - /url: https://www.youtube.com/@NARO_Officials\n    - link \"Docs Whitepaper · guides Open\":\n      - /url: https://naro-26smrol.gamma.site/\n    - paragraph: Use official channels only — beware of impostors\n    - paragraph: Digital assets are volatile. Understand the rules and risks before joining.\n    - paragraph: © 2026 NARO\n    - navigation \"Main navigation\":\n      - link \"Home\":\n        - /url: /\n      - button \"Swap\"\n      - link \"Mining\":\n        - /url: /mining\n      - link \"Data\":\n        - /url: /data\n      - link \"Me\":\n        - /url: /mine"
+            }
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      }
+    ],
+    "events": {
+      "retained": 0,
+      "dropped": 0,
+      "items": [],
+      "omissions": {
+        "by_kind": [],
+        "network_transactions": [],
+        "network_transaction_range": null
+      }
+    },
+    "completeness": {
+      "status": "complete",
+      "equality_eligible": true,
+      "missing_sections": [],
+      "truncated_sections": []
+    },
+    "limitations": [
+      "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+      "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+      "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+      "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+      "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+      "Storage values are hashed only after declared-secret redaction."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "controlled-replay",
+  "environment": {
+    "id": "Chromium@155.0.8059.82",
+    "platform": "unknown",
+    "architecture": "unknown",
+    "isolation": "process"
+  },
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Browser host platform and architecture were not observed."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

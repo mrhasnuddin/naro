@@ -1,0 +1,261 @@
+{
+  "evidence_id": "ev_29402f0ece6f050cb0892c52e8acf52df17e74c3e0431a68bae7917ae205e2ae",
+  "subject": null,
+  "provider": {
+    "id": "rea-playwright-browser-scenario",
+    "name": "REA Playwright browser scenario capture provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.browser-scenario-capture",
+  "operation": "capture_browser_scenario",
+  "parameters": {
+    "browser": {
+      "mode": "launch",
+      "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "headless": true
+    },
+    "start_url": {
+      "url": "https://naroradar.com/activate",
+      "query": []
+    },
+    "environment": {
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "device_scale_factor": 1
+      },
+      "locale": "en-US",
+      "timezone": "UTC",
+      "color_scheme": "light",
+      "reduced_motion": "reduce",
+      "service_workers": "block"
+    },
+    "actions": [
+      {
+        "step_id": "activation-ready",
+        "action": "wait_for",
+        "locator": {
+          "kind": "css",
+          "selector": "#app"
+        },
+        "state": "visible"
+      }
+    ],
+    "storage": {
+      "cookies": [],
+      "local_storage": [],
+      "session_storage": []
+    },
+    "secrets": [],
+    "capture": {
+      "after_each_step": [],
+      "at_end": [
+        "dom",
+        "accessibility"
+      ],
+      "events": [],
+      "network": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "scenario_sha256": "944b80c14fcd0cbff61077456189dca9e31822d0f6985a999a4c15cc8992f675"
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "browser": {
+      "mode": "launch",
+      "process_ownership": "provider-owned",
+      "cleanup": "terminated-owned-process",
+      "product": "Chromium",
+      "version": "155.0.8059.82"
+    },
+    "scenario": {
+      "start_origin": "https://naroradar.com",
+      "action_count": 1,
+      "secret_references": [],
+      "network_content": {
+        "request_body": false,
+        "response_body": false,
+        "header_values": false
+      },
+      "event_families": [],
+      "limits": {
+        "max_events": 10000,
+        "max_event_allocation_bytes": 4194304,
+        "max_total_event_allocation_bytes": 16777216,
+        "max_network_transactions": 1024,
+        "max_network_body_bytes": 65536,
+        "max_network_body_allocation_bytes": 1048576,
+        "max_network_header_allocation_bytes": 1048576,
+        "max_network_metadata_allocation_bytes": 1048576
+      }
+    },
+    "duration_ms": 1452,
+    "steps": [
+      {
+        "step_index": 0,
+        "step_id": "scenario_start",
+        "action": "goto_start",
+        "elapsed_ms": 1107,
+        "before_url": {
+          "url": "about:blank",
+          "origin": null,
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/activate",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "not_requested"
+          },
+          "accessibility": {
+            "state": "not_requested"
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      },
+      {
+        "step_index": 1,
+        "step_id": "activation-ready",
+        "action": "wait_for",
+        "elapsed_ms": 139,
+        "before_url": {
+          "url": "https://naroradar.com/activate",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "after_url": {
+          "url": "https://naroradar.com/activate",
+          "origin": "https://naroradar.com",
+          "query_parameter_names": [],
+          "redacted": false
+        },
+        "event_sequence_start": 1,
+        "event_sequence_end": 0,
+        "artifacts": {
+          "screenshot": {
+            "state": "not_requested"
+          },
+          "dom": {
+            "state": "captured",
+            "value": {
+              "sha256": "95f4452832c092117bc2e99c6a99b5ca608be433e97194af8cf6df18e076acc0",
+              "bytes": 11689,
+              "text": "<!DOCTYPE html><html lang=\"en\"><head>\n    <meta charset=\"UTF-8\">\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover\">\n    <meta name=\"theme-color\" content=\"#080B0A\">\n    <title>NARO</title>\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin=\"\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-yjsxLZcI.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/vue-i18n-VQlw7TPK.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/i18n-BKeFymkU.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ledger-D6yohPQA.js\">\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/ethereumProvider-B-jgi9yh.js\">\n    <link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-D0nfD4rR.css\">\n  <link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/ActivateView-BX06Pjpf.js\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-Cflcc_5p.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/PageWrap-jj9Zap5_.css\"><link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://naroradar.com/assets/SubNavBar-C_YnCQlX.js\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/SubNavBar-Pkzh7nh9.css\"><link rel=\"stylesheet\" crossorigin=\"\" href=\"https://naroradar.com/assets/ActivateView-zIljB2NL.css\"></head>\n  <body>\n    <div id=\"app\" data-v-app=\"\"><div data-v-f1c38819=\"\" class=\"app-shell\"><header data-v-bff5d462=\"\" data-v-f1c38819=\"\" class=\"site-header\" style=\"--header-solid: 0;\"><div data-v-bff5d462=\"\" class=\"header-inner\"><div data-v-bff5d462=\"\" class=\"app-header__brand-wrap\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active app-header__brand\"><img data-v-bff5d462=\"\" class=\"app-header__logo\" src=\"/naro-assets/logo.png\" alt=\"NARO\" width=\"102\" height=\"26\"></a></div><nav data-v-bff5d462=\"\" class=\"desktop-nav\" aria-label=\"Main navigation\"><a data-v-bff5d462=\"\" href=\"/\" class=\"router-link-active\">Home</a><a data-v-bff5d462=\"\" href=\"/swap\" class=\"\">Swap</a><a data-v-bff5d462=\"\" href=\"/mining\" class=\"\">Mining</a><a data-v-bff5d462=\"\" href=\"/data\" class=\"\">Data</a><a data-v-bff5d462=\"\" href=\"/mine\" class=\"\">Me</a></nav><div data-v-bff5d462=\"\" class=\"header-actions app-header__right\"><button data-v-bff5d462=\"\" class=\"lang-btn\" type=\"button\" data-guide=\"lang\" aria-label=\"Language\"><span data-v-bff5d462=\"\" class=\"lang-btn__badge\">EN</span><img data-v-bff5d462=\"\" class=\"lang-btn__chev\" src=\"data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%204.5L6%207.5L9%204.5'%20stroke-width='1.1'%20stroke='%23C9D4CF'/%3e%3c/svg%3e\" alt=\"\" width=\"12\" height=\"12\"></button><button data-v-50586167=\"\" data-v-bff5d462=\"\" class=\"na-btn is-pill\" type=\"button\" data-guide=\"wallet\">Connect Wallet</button></div></div></header><main data-v-f1c38819=\"\" class=\"main-content\"><div data-v-f1c38819=\"\" class=\"content-shell\"><div data-v-f1c38819=\"\" id=\"main-content\" class=\"page-scroll\"><div data-v-aa487f30=\"\" data-v-161c070c=\"\" data-v-f1c38819=\"\" class=\"page-wrap activate\"><div data-v-a5a4201b=\"\" data-v-161c070c=\"\" class=\"sub-nav\"><button data-v-a5a4201b=\"\" class=\"sub-nav__back\" type=\"button\" aria-label=\"Back\"><svg data-v-a5a4201b=\"\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path data-v-a5a4201b=\"\" d=\"M15 5l-7 7 7 7\"></path></svg></button><h1 data-v-a5a4201b=\"\" class=\"sub-nav__title\">Register &amp; Activate</h1><div data-v-a5a4201b=\"\" class=\"sub-nav__extra\"></div></div><ol data-v-161c070c=\"\" class=\"steps\"><li data-v-161c070c=\"\" class=\"is-active\"><span data-v-161c070c=\"\" class=\"steps__dot\">1</span><span data-v-161c070c=\"\" class=\"steps__label\">Connect wallet</span></li><i data-v-161c070c=\"\" class=\"steps__line\"></i><li data-v-161c070c=\"\" class=\"\"><span data-v-161c070c=\"\" class=\"steps__dot\">2</span><span data-v-161c070c=\"\" class=\"steps__label\">Bind invite</span></li><i data-v-161c070c=\"\" class=\"steps__line\"></i><li data-v-161c070c=\"\" class=\"\"><span data-v-161c070c=\"\" class=\"steps__dot\">3</span><span data-v-161c070c=\"\" class=\"steps__label\">Activate</span></li></ol><section data-v-161c070c=\"\" class=\"hero\"><h2 data-v-161c070c=\"\">Join the NARO community</h2><p data-v-161c070c=\"\">Bind an inviter to join holding mining, promo power, and daily ranking.</p></section><form data-v-161c070c=\"\" class=\"reg-form\" novalidate=\"\"><label data-v-161c070c=\"\" class=\"lbl\" for=\"codeInput\">Invite code</label><div data-v-161c070c=\"\" class=\"field\"><input data-v-161c070c=\"\" id=\"codeInput\" type=\"text\" maxlength=\"16\" autocomplete=\"off\" spellcheck=\"false\" placeholder=\"Enter invite code\"><!----><!----></div><p data-v-161c070c=\"\" class=\"hint\">Invite code is 4–16 letters or digits</p><section data-v-161c070c=\"\" class=\"info-card\"><div data-v-161c070c=\"\" class=\"info-card__row\"><span data-v-161c070c=\"\">Network</span><b data-v-161c070c=\"\">BNB Smart Chain</b></div><div data-v-161c070c=\"\" class=\"info-card__row\"><span data-v-161c070c=\"\">Status</span><b data-v-161c070c=\"\" class=\"pending\">Pending</b></div><div data-v-161c070c=\"\" class=\"info-card__row\"><span data-v-161c070c=\"\">Activation fee</span><b data-v-161c070c=\"\" class=\"fee fee-with-refresh\"><span data-v-161c070c=\"\" class=\"num\">0.00002 BNB</span><button data-v-161c070c=\"\" type=\"button\" class=\"fee-refresh\" disabled=\"\" title=\"Refresh quote\" aria-label=\"Refresh quote\"><svg data-v-161c070c=\"\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path data-v-161c070c=\"\" d=\"M21 12a9 9 0 1 1-2.6-6.4\"></path><polyline data-v-161c070c=\"\" points=\"21 3 21 9 15 9\"></polyline></svg></button></b></div><!----><div data-v-161c070c=\"\" class=\"info-card__row\"><span data-v-161c070c=\"\">Activation tx</span><b data-v-161c070c=\"\" class=\"addr\">Shown after activation</b></div></section><button data-v-50586167=\"\" data-v-161c070c=\"\" class=\"na-btn is-primary is-block reg-btn\" type=\"button\">Connect wallet first</button><p data-v-161c070c=\"\" class=\"foot\">Pay on-chain gas in BNB to bind the invite, verify the inviter, and confirm the relationship.</p></form><!----></div></div><nav data-v-4370f56f=\"\" data-v-f1c38819=\"\" class=\"bottom-nav tabbar\" aria-label=\"Main navigation\"><a data-v-4370f56f=\"\" href=\"/\" class=\"router-link-active tabbar__item\" data-guide=\"tab-home\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66602%209.62499L10.9993%203.66666L18.3327%209.62499V17.4167C18.3327%2017.6598%2018.2361%2017.8929%2018.0642%2018.0648C17.8923%2018.2367%2017.6591%2018.3333%2017.416%2018.3333H13.291V13.2917H8.70768V18.3333H4.58268C4.33957%2018.3333%204.10641%2018.2367%203.9345%2018.0648C3.76259%2017.8929%203.66602%2017.6598%203.66602%2017.4167V9.62499Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%2301FEA3'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Home</b></a><a data-v-4370f56f=\"\" class=\"tabbar__item\" href=\"#\" role=\"button\" data-guide=\"tab-swap\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%207.33334H15.5846L12.8346%204.58334M18.3346%2014.6667H6.41797L9.16797%2017.4167'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Swap</b></a><a data-v-4370f56f=\"\" href=\"/mining\" class=\"tabbar__item\" data-guide=\"tab-mining\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.66797%2017.4167H18.3346M6.41797%2013.75V11M11.0013%2013.75V6.41666M15.5846%2013.75V8.24999'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Mining</b></a><a data-v-4370f56f=\"\" href=\"/data\" class=\"tabbar__item\" data-guide=\"tab-data\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%202.75C9.36831%202.75%207.77325%203.23385%206.41655%204.14038C5.05984%205.0469%204.00242%206.33537%203.378%207.84286C2.75357%209.35035%202.5902%2011.0092%202.90853%2012.6095C3.22685%2014.2098%204.01259%2015.6798%205.16637%2016.8336C6.32016%2017.9874%207.79017%2018.7732%209.39051%2019.0915C10.9909%2019.4098%2012.6497%2019.2464%2014.1571%2018.622C15.6646%2017.9976%2016.9531%2016.9402%2017.8596%2015.5835C18.7662%2014.2267%2019.25%2012.6317%2019.25%2011H11V2.75Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M13.75%203.20834C14.9139%203.61817%2015.9711%204.28387%2016.8436%205.15641C17.7161%206.02895%2018.3818%207.0861%2018.7917%208.25001H13.75V3.20834Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Data</b></a><a data-v-4370f56f=\"\" href=\"/mine\" class=\"tabbar__item is-active\" data-guide=\"tab-mine\"><span data-v-4370f56f=\"\" class=\"tabbar__icon\"><img data-v-4370f56f=\"\" src=\"data:image/svg+xml,%3csvg%20width='22'%20height='22'%20viewBox='0%200%2022%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.6654%207.79167C14.6654%209.81671%2013.0237%2011.4583%2010.9987%2011.4583C8.97365%2011.4583%207.33203%209.81671%207.33203%207.79167C7.33203%205.76662%208.97365%204.125%2010.9987%204.125C13.0237%204.125%2014.6654%205.76662%2014.6654%207.79167Z'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3cpath%20d='M4.125%2018.3333C4.125%2016.51%204.84933%2014.7613%206.13864%2013.472C7.42795%2012.1827%209.17664%2011.4583%2011%2011.4583C12.8234%2011.4583%2014.572%2012.1827%2015.8614%2013.472C17.1507%2014.7613%2017.875%2016.51%2017.875%2018.3333'%20stroke-width='1.65'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke='%237E8E87'/%3e%3c/svg%3e\" alt=\"\" width=\"22\" height=\"22\"></span><b data-v-4370f56f=\"\" class=\"tabbar__label\">Me</b></a></nav></div></main></div></div>\n  <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092\" integrity=\"sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;1e3e15c86b8d4c589225e3e0f92ac2f2&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}\" crossorigin=\"anonymous\"></script>\n\n\n<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></body></html>"
+            }
+          },
+          "accessibility": {
+            "state": "captured",
+            "value": {
+              "sha256": "31c172a3698948778c8282cc01517b8c735eb8e9e4912d5d1b0a3f4ca1018873",
+              "bytes": 1150,
+              "text": "- document:\n  - banner:\n    - link \"NARO\":\n      - /url: /\n      - img \"NARO\"\n    - button \"Language\": EN\n    - button \"Connect Wallet\"\n  - main:\n    - button \"Back\"\n    - heading \"Register & Activate\" [level=1]\n    - list:\n      - listitem: 1 Connect wallet\n      - listitem: 2 Bind invite\n      - listitem: 3 Activate\n    - heading \"Join the NARO community\" [level=2]\n    - paragraph: Bind an inviter to join holding mining, promo power, and daily ranking.\n    - text: Invite code\n    - textbox \"Invite code\":\n      - /placeholder: Enter invite code\n    - paragraph: Invite code is 4–16 letters or digits\n    - text: Network BNB Smart Chain Status Pending Activation fee 0.00002 BNB\n    - button \"Refresh quote\" [disabled]\n    - text: Activation tx Shown after activation\n    - button \"Connect wallet first\"\n    - paragraph: Pay on-chain gas in BNB to bind the invite, verify the inviter, and confirm the relationship.\n    - navigation \"Main navigation\":\n      - link \"Home\":\n        - /url: /\n      - button \"Swap\"\n      - link \"Mining\":\n        - /url: /mining\n      - link \"Data\":\n        - /url: /data\n      - link \"Me\":\n        - /url: /mine"
+            }
+          },
+          "url": {
+            "state": "not_requested"
+          },
+          "history": {
+            "state": "not_requested"
+          },
+          "storage": {
+            "state": "not_requested"
+          }
+        },
+        "completeness": {
+          "status": "complete",
+          "equality_eligible": true,
+          "missing_sections": [],
+          "truncated_sections": []
+        },
+        "status": "completed",
+        "error": null
+      }
+    ],
+    "events": {
+      "retained": 0,
+      "dropped": 0,
+      "items": [],
+      "omissions": {
+        "by_kind": [],
+        "network_transactions": [],
+        "network_transaction_range": null
+      }
+    },
+    "completeness": {
+      "status": "complete",
+      "equality_eligible": true,
+      "missing_sections": [],
+      "truncated_sections": []
+    },
+    "limitations": [
+      "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+      "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+      "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+      "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+      "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+      "Storage values are hashed only after declared-secret redaction."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "controlled-replay",
+  "environment": {
+    "id": "Chromium@155.0.8059.82",
+    "platform": "unknown",
+    "architecture": "unknown",
+    "isolation": "process"
+  },
+  "limitations": [
+    "Artifact identity is unavailable for this observation.",
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Browser host platform and architecture were not observed."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": []
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "source": "https://naroradar.com/naro-assets/logo.png",
+    "file": "/brand/logo.png",
+    "sha256": "0050a59f6f0ba00bec5cea16c3ecc9d4a50418d2fbf10851ffe47046dfa4e670"
+  },
+  {
+    "source": "https://naroradar.com/naro-assets/logo-dark.png",
+    "file": "/brand/logo-dark.png",
+    "sha256": "8cf04d9753a288012e701493ab7109358bcd0dc7ad2fb01069e351202b192745"
+  },
+  {
+    "source": "https://naroradar.com/naro-assets/logo-uxuy.png",
+    "file": "/brand/logo-uxuy.png",
+    "sha256": "87502855193953f078d2bf944d054ac75e9430d75d597398ce19fdde9ab5bccd"
+  },
+  {
+    "source": "https://naroradar.com/naro-assets/logo-radar-dao.png",
+    "file": "/brand/logo-radar-dao.png",
+    "sha256": "70535eb4d709c74ee9e9df89554f4ee38ee6013deaa929701110f87c70eed090"
+  },
+  {
+    "source": "https://naroradar.com/naro-assets/logo-radar-dao-en.png",
+    "file": "/brand/logo-radar-dao-en.png",
+    "sha256": "c2d03ac447c3fd658d21ccbe7968f0ccd7c82bbc868e5c605a8fdef7bc302b2a"
+  },
+  {
+    "source": "https://naroradar.com/naro-assets/partners-uxuy-radar.png",
+    "file": "/brand/partners-uxuy-radar.png",
+    "sha256": "5ec463fd4d8f5f45e2b71891f01224fc1d4c73315051fb5c8d6d70344db1af33"
+  },
+  {
+    "source": "https://naroradar.com/assets/HomeView-wu8vOjqN.js",
+    "evidence": "ev_8ba3e54f140d7f3f516bfa6a90ecaf0f5db8ac110776cb161c3e72941fd7c8e4",
+    "file": "/brand/naro-mascot.svg",
+    "notes": "Original SVG geometry; Vue scope attributes removed, hidden accessories preserved, chest logo embedded."
+  }
+]

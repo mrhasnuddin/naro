@@ -1,0 +1,2586 @@
+{
+  "date": "2026-10-20",
+  "scope": "243 disconnected layout checks plus isolated-local-chain dNARO claim and trial navigation. No original-protocol or public BNB-testnet transaction; no physical mobile wallet tested.",
+  "checks": [
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "en",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hans",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "zh-Hant",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ko",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "ja",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "vi",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "hi",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "rtl",
+      "locale": "ur",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#rewards",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#community",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#earnings",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#activate",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#network",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#swap",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#account",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#ieo",
+      "unresolved": [],
+      "width": 1280
+    },
+    {
+      "brokenImages": [],
+      "dir": "ltr",
+      "locale": "id",
+      "overflow": false,
+      "ready": true,
+      "route": "#overview",
+      "unresolved": [],
+      "width": 1280
+    }
+  ],
+  "interactions": [
+    {
+      "bubble": "Connect first~",
+      "kind": "banner",
+      "selected": "Slide 1",
+      "title": "Connect walletstart with NARO"
+    },
+    {
+      "bubble": "Hi, I am Naro",
+      "kind": "banner",
+      "selected": "Slide 2",
+      "title": "AI-powered next-genon-chain asset launchpad"
+    },
+    {
+      "bubble": "Who stands right!",
+      "kind": "banner",
+      "selected": "Slide 3",
+      "title": "Hold 1 moreearn 9×"
+    },
+    {
+      "bubble": "The pool shrank again~",
+      "kind": "banner",
+      "selected": "Slide 4",
+      "title": "0.13% pool buyback & burn"
+    },
+    {
+      "bubble": "Spread out wins",
+      "kind": "banner",
+      "selected": "Slide 5",
+      "title": "Balance branchesfor higher power"
+    },
+    {
+      "content": "Today static pool—NAROMy rank weight—Holding zoneMassBestAnti-monopolyNo verified balanceJump ranking: best zone pays the highest per-token yield; oversized holdings enter anti-monopoly with lower unit yield.",
+      "kind": "mining-tab",
+      "selected": "Static—"
+    },
+    {
+      "content": "Today promo pool—NAROMy network share—Daily promo output is 45% of total, shared by community power share.Invite Friends",
+      "kind": "mining-tab",
+      "selected": "Promo—"
+    },
+    {
+      "content": "My dynamic rank—Today rank pool—NAROAllocated to community builders by dynamic weighted rank, snapshot daily.",
+      "kind": "mining-tab",
+      "selected": "Rank—"
+    },
+    {
+      "disabled": true,
+      "kind": "swap-buy-estimate",
+      "quote": "Price1 NARO = 0.1 USDTBuy fee 3%30 NAROMinimum received960.3 NARORouteNARO / USDT pool",
+      "receive": "970NARO"
+    },
+    {
+      "kind": "swap-sell-estimate",
+      "quote": "Price1 NARO = 0.1 USDTSell fee 3%0.3 USDTMinimum received9.6515 USDTRouteNARO / USDT pool",
+      "receive": "9.7USDT"
+    },
+    {
+      "hint": "Invalid format",
+      "invalid": "true",
+      "kind": "invite-invalid",
+      "locked": false,
+      "query": ""
+    },
+    {
+      "copyDisabled": true,
+      "kind": "poster",
+      "pose": "invitation-poster pose-happy",
+      "qrImages": 0
+    },
+    {
+      "dialogOpen": false,
+      "focused": "View poster design",
+      "kind": "poster-focus-return"
+    },
+    {
+      "kind": "tour",
+      "step": "Step 1 of 6",
+      "tip": "This is your wallet — open Me to see holdings and activation."
+    },
+    {
+      "kind": "tour",
+      "step": "Step 2 of 6",
+      "tip": "This button shows your next step, then becomes Claim rewards."
+    },
+    {
+      "kind": "tour",
+      "step": "Step 3 of 6",
+      "tip": "IEO sale lives here — sold progress and time left."
+    },
+    {
+      "kind": "tour",
+      "step": "Step 4 of 6",
+      "tip": "Trade NARO in Swap."
+    },
+    {
+      "kind": "tour",
+      "step": "Step 5 of 6",
+      "tip": "Claim daily mining rewards in Mining."
+    },
+    {
+      "kind": "tour",
+      "step": "Step 6 of 6",
+      "tip": "Output, burns, and allocation live in Data."
+    },
+    {
+      "kind": "wallet-logos",
+      "logos": [
+        {
+          "loaded": true,
+          "src": "bundled official logo (data URL)"
+        },
+        {
+          "loaded": true,
+          "src": "bundled official logo (data URL)"
+        },
+        {
+          "loaded": true,
+          "src": "bundled official logo (data URL)"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4174/frontend/dist/assets/coinbase-wallet-BiuPyHYQ.png"
+        }
+      ]
+    },
+    {
+      "hint": "Invite code locked — unlock to edit before payment",
+      "kind": "invite-prefill-verified",
+      "locked": true,
+      "value": "Naro2026"
+    },
+    {
+      "chainId": 31337,
+      "kind": "local-chain-claim",
+      "metrics": [
+        "40 dNARO",
+        "40 dNARO",
+        "999,960 dNARO"
+      ],
+      "status": "Transaction confirmed.Transaction hash0xb9502bb400e3393f156de813c82fcf5e66ba70f3336adcc7c9ccb96f9b07fe02",
+      "transactionLog": "eth_sendTransaction: 0xb9502bb400e3393f156de813c82fcf5e66ba70f3336adcc7c9ccb96f9b07fe02\n"
+    },
+    {
+      "hash": "#test-lab",
+      "historyVisible": true,
+      "kind": "lab-navigation",
+      "selectedLabView": "Rewards"
+    }
+  ]
+}

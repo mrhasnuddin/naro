@@ -1,5 +1,5 @@
 // Local-only development wallet. Not imported or bundled by the production frontend.
-if(new URLSearchParams(location.search).get('network')!=='local')location.replace(location.pathname+'?network=local#overview');
+if(new URLSearchParams(location.search).get('network')!=='local')location.replace(location.pathname+'?network=local#test-lab');
 const rpc='http://127.0.0.1:8545',log=document.querySelector('#local-log');
 let sequence=0;
 async function send(method,params=[]){const response=await fetch(rpc,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:++sequence,method,params}),signal:AbortSignal.timeout(15000)});const result=await response.json();if(result.error)throw Object.assign(new Error(result.error.message),result.error);return result.result;}

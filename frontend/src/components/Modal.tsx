@@ -44,7 +44,7 @@ export function Modal({
           ref={closeRef}
           className="icon-button"
           onClick={onDismiss}
-          aria-label={t("close")}
+          aria-label={t("orig.common.close")}
         >
           <Icon name="close" />
         </button>

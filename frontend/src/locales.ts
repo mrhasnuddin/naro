@@ -1,7 +1,20 @@
 import { demoCopy } from "./demo/copy.ts";
 import en from "../../prototype/locales/en.js";
 import zh from "../../prototype/locales/zh-Hans.js";
-export type Locale = "en" | "zh-Hans";
+import original from "./parity/original-catalogs.json" with { type: "json" };
+import { parityCopy } from "./parity/copy.ts";
+export type Locale = keyof typeof original;
+export const languages: { value: Locale; label: string }[] = [
+  { value: "en", label: "EN" },
+  { value: "zh-Hans", label: "简体中文" },
+  { value: "zh-Hant", label: "繁體中文" },
+  { value: "ko", label: "한국어" },
+  { value: "ja", label: "日本語" },
+  { value: "vi", label: "Tiếng Việt" },
+  { value: "hi", label: "हिन्दी" },
+  { value: "ur", label: "اردو" },
+  { value: "id", label: "Indonesia" },
+];
 export type CopyKey = keyof typeof en;
 const extra = {
   en: {
@@ -50,8 +63,26 @@ const extra = {
     "app.reload": "刷新页面",
   },
 };
-export type Key = CopyKey | keyof typeof extra.en | keyof typeof demoCopy.en;
-export const catalogs: Record<Locale, Record<string, string>> = {
-  en: { ...en, ...extra.en, ...demoCopy.en },
-  "zh-Hans": { ...zh, ...extra["zh-Hans"], ...demoCopy["zh-Hans"] },
-};
+export type Key =
+  | CopyKey
+  | keyof typeof extra.en
+  | keyof typeof demoCopy.en
+  | keyof typeof parityCopy.en
+  | `orig.${string}`;
+export const catalogs: Record<Locale, Record<string, string>> = { ...original };
+for (const lang of Object.keys(original) as Locale[])
+  catalogs[lang] = {
+    ...en,
+    ...extra.en,
+    ...demoCopy.en,
+    ...parityCopy.en,
+    ...(lang === "zh-Hans" || lang === "zh-Hant"
+      ? {
+          ...zh,
+          ...extra["zh-Hans"],
+          ...demoCopy["zh-Hans"],
+          ...parityCopy["zh-Hans"],
+        }
+      : {}),
+    ...original[lang],
+  };

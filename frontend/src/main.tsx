@@ -6,6 +6,7 @@ import "../../design-system/tokens.css";
 import "../../design-system/components.css";
 import "../../prototype/styles.css";
 import "./styles.css";
+import "./parity/parity.css";
 createRoot(document.getElementById("root")!).render(
   <I18nProvider>
     <ErrorBoundary>
