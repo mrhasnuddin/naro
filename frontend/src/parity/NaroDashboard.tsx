@@ -11,6 +11,8 @@ import { NaroMascot } from "./NaroMascot";
 import { brandAsset } from "./assets";
 import { inviteFromSearch, validInvite, type View } from "./routes";
 import { useNaroRecords, type RewardRecord, type Branch } from "./records";
+import { SwapPanel } from "./SwapPanel";
+import { TEST_ADDRESS, testRewardTotals, type DataMode } from "./test-data";
 
 function Section({
   title,
@@ -60,13 +62,15 @@ function Back({ to = "account" }: { to?: string }) {
 export function NaroDashboard({
   view,
   openWallet,
+  dataMode,
 }: {
   view: View;
   openWallet: () => void;
+  dataMode: DataMode;
 }) {
   const { t, locale } = useI18n(),
     wallet = useWallet();
-  const records = useNaroRecords(wallet.state.address, view),
+  const records = useNaroRecords(wallet.state.address, view, dataMode),
     d = records.dashboard,
     n = records.network,
     m = d?.mining;
@@ -82,9 +86,6 @@ export function NaroDashboard({
     [attempted, setAttempted] = useState(false);
   const focus = useRef<HTMLElement | null>(null),
     guideSeen = useRef(false);
-  const [reverse, setReverse] = useState(false),
-    [input, setInput] = useState(""),
-    [slippage, setSlippage] = useState("1");
   const active =
       typeof d?.ledgerRegistered === "boolean" ? d.ledgerRegistered : null,
     connected = !!wallet.state.address;
@@ -121,6 +122,7 @@ export function NaroDashboard({
     ? (() => {
         const u = new URL("/", location.origin);
         u.searchParams.set("ref", inviteCode);
+        if (dataMode === "test") u.searchParams.set("data", "test");
         u.hash = "activate";
         return u.href;
       })()
@@ -245,8 +247,8 @@ export function NaroDashboard({
           <Highlights
             openWallet={openWallet}
             connected={connected}
-            active={active}
-            completed={d?.ieoCompleted === true}
+            active={dataMode === "test" ? null : active}
+            completed={dataMode === "live" && d?.ieoCompleted === true}
             onTour={() => open("tour")}
           />
           {miniLinks}
@@ -433,7 +435,11 @@ export function NaroDashboard({
               />
               <Metric
                 label="orig.team.communityHolding"
-                value={amount(sumDecimals(branches.map((b) => b.holding)))}
+                value={amount(
+                  sumDecimals(
+                    branches.map((b) => b.communityHolding ?? b.holding),
+                  ),
+                )}
                 unit="NARO"
               />
             </dl>
@@ -443,7 +449,7 @@ export function NaroDashboard({
             <Section title="orig.team.inviteFriends">
               <p className="muted">
                 {t(
-                  connected
+                  dataMode === "test" || connected
                     ? active === null
                       ? "parity.recordUnavailable"
                       : active
@@ -478,7 +484,7 @@ export function NaroDashboard({
                 </label>
               </div>
               <div className="naro-actions">
-                {!connected ? (
+                {!connected && dataMode !== "test" ? (
                   connectAction()
                 ) : active === null ? (
                   <button
@@ -843,14 +849,26 @@ export function NaroDashboard({
               .filter((f) => Number(record[f.field] ?? 0) > 0)
               .map((f) => ({ record, field: f, id: `${i}-${f.key}` })),
           )
-          .reverse() ?? [];
+          .sort((a, b) =>
+            b.record.business_date.localeCompare(a.record.business_date),
+          ) ?? [];
       return (
         <>
           <Back to="rewards" />
           <section className="naro-panel">
             <dl className="metric-trio">
-              <Metric label="orig.earnings.totalLabel" value="—" />
-              <Metric label="orig.earnings.claimed" value="—" />
+              <Metric
+                label="orig.earnings.totalLabel"
+                value={
+                  dataMode === "test" ? amount(testRewardTotals.earned) : "—"
+                }
+              />
+              <Metric
+                label="orig.earnings.claimed"
+                value={
+                  dataMode === "test" ? amount(testRewardTotals.claimed) : "—"
+                }
+              />
               <Metric
                 label="orig.earnings.toClaim"
                 value={amount(d?.accrued)}
@@ -1092,7 +1110,11 @@ export function NaroDashboard({
                 <div>
                   <dt>{t("orig.activate.wallet")}</dt>
                   <dd>
-                    <bdi className="address">{wallet.state.address ?? "—"}</bdi>
+                    <bdi className="address">
+                      {dataMode === "test"
+                        ? TEST_ADDRESS
+                        : (wallet.state.address ?? "—")}
+                    </bdi>
                   </dd>
                 </div>
                 <div>
@@ -1160,137 +1182,25 @@ export function NaroDashboard({
           </section>
         </>
       );
-    if (view === "swap") {
-      const numeric = /^(?:\d+\.?\d*|\.\d+)$/.test(input) ? Number(input) : 0;
-      const raw = reverse ? numeric * 0.1 : numeric / 0.1,
-        fee = raw * 0.03,
-        out = raw - fee,
-        min = out * (1 - Number(slippage) / 100),
-        unit = reverse ? "USDT" : "NARO";
-      const estimate = (v: number) =>
-        v > 0 && Number.isFinite(v)
-          ? v.toLocaleString(locale, { maximumFractionDigits: 4 })
-          : "—";
-      return (
-        <div className="swap-layout">
-          <section className="naro-panel parity-swap">
-            <div className="section-title">
-              <span className="naro-badge">{t("orig.closed.title")}</span>
-              <label className="slippage-label" htmlFor="slippage">
-                {t("orig.swap.slip")}
-                <select
-                  id="slippage"
-                  value={slippage}
-                  onChange={(e) => setSlippage(e.target.value)}
-                >
-                  {["0.5", "1", "3"].map((v) => (
-                    <option key={v} value={v}>
-                      {v}%
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
-            <div className="swap-token-box">
-              <div className="section-title">
-                <label htmlFor="swap-amount">{t("orig.swap.pay")}</label>
-                <span className="muted small">{t("orig.swap.balance")} —</span>
-              </div>
-              <div className="swap-amount-row">
-                <input
-                  id="swap-amount"
-                  aria-describedby="swap-availability"
-                  placeholder="0.00"
-                  inputMode="decimal"
-                  value={input}
-                  onChange={(e) => {
-                    if (/^\d*\.?\d{0,18}$/.test(e.target.value))
-                      setInput(e.target.value);
-                  }}
-                />
-                <b>{reverse ? "NARO" : "USDT"}</b>
-              </div>
-              <div className="swap-percentages">
-                {["25%", "50%", "75%", t("orig.swap.max")].map((v) => (
-                  <button
-                    key={v}
-                    disabled
-                    title={t("parity.percentUnavailable")}
-                  >
-                    {v}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <button
-              className="swap-reverse icon-button"
-              aria-label={t("parity.switchPair")}
-              onClick={() => {
-                setReverse(!reverse);
-                setInput("");
-              }}
-            >
-              ⇅
-            </button>
-            <div className="swap-token-box">
-              <span className="small muted">{t("orig.swap.receive")}</span>
-              <p className="swap-estimate naro-number">
-                {estimate(out)}
-                <span className="unit">{unit}</span>
-              </p>
-            </div>
-            <dl className="swap-quote">
-              <div>
-                <dt>{t("orig.swap.price")}</dt>
-                <dd>1 NARO = 0.1 USDT</dd>
-              </div>
-              <div>
-                <dt>{t(reverse ? "orig.swap.sellFee" : "orig.swap.buyFee")}</dt>
-                <dd>
-                  {estimate(fee)} {unit}
-                </dd>
-              </div>
-              <div>
-                <dt>{t("orig.swap.minReceive")}</dt>
-                <dd>
-                  {estimate(min)} {unit}
-                </dd>
-              </div>
-              <div>
-                <dt>{t("orig.swap.route")}</dt>
-                <dd>{t("orig.swap.routeValue")}</dd>
-              </div>
-            </dl>
-            <button
-              className="naro-button naro-button--primary swap-submit"
-              disabled
-            >
-              {t(reverse ? "orig.swap.sellAction" : "orig.swap.buyAction")}
-            </button>
-            <p className="small muted" id="swap-availability">
-              {t("parity.swapUnavailable")}. {t("parity.reference")}
-            </p>
-          </section>
-          <div className="swap-notes">
-            <NaroMascot bubble={t("orig.mascot.hi")} />
-            <h2>{t("orig.mining.holdZone")}</h2>
-            <p className="muted">
-              {t(reverse ? "orig.swap.sellNote" : "orig.swap.buyNote")}
-            </p>
-            <a className="text-link" href="#rewards">
-              {t("orig.nav.mining")}
-              <Icon name="arrow" />
-            </a>
-          </div>
-        </div>
-      );
-    }
+    if (view === "swap")
+      return <SwapPanel dataMode={dataMode} openWallet={openWallet} />;
     return null;
   };
   const guideTips = ["tip1", "tip2", "tip3", "tip4", "tip5", "tip6"],
     guideTargets = ["account", "activate", "ieo", "swap", "rewards", "network"];
   return (
     <div className="naro-parity">
+      {dataMode === "test" && !["overview", "swap", "ieo"].includes(view) && (
+        <div className="test-profile">
+          <span>
+            {t("mobile.profile")} <bdi>0x1111…1111</bdi>
+          </span>
+          <details>
+            <summary aria-label={t("mobile.test")}>ⓘ</summary>
+            <p>{t("mobile.testNote")}</p>
+          </details>
+        </div>
+      )}
       {body()}
       {notice && (
         <p className="parity-notice" role="status">

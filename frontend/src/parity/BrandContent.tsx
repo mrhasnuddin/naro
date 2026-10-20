@@ -56,7 +56,7 @@ export function Highlights({
   completed?: boolean;
   onTour: () => void;
 }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [index, setIndex] = useState(1),
     [paused, setPaused] = useState(
       () => matchMedia("(prefers-reduced-motion: reduce)").matches,
@@ -103,7 +103,7 @@ export function Highlights({
   return (
     <section
       ref={root}
-      className="naro-highlights"
+      className={`naro-highlights campaign-carousel ${index === 0 ? "campaign-guide" : "campaign-artwork"}`}
       aria-label={t("parity.banners")}
       aria-roledescription="carousel"
       onMouseEnter={() => setHover(true)}
@@ -117,13 +117,28 @@ export function Highlights({
         <div className="highlight-copy" key={key}>
           <p className="hero-kicker">
             {index === 1 ? (
-              <img
-                className="partner-combined"
-                src={brandAsset("partners-uxuy-radar.png")}
-                width="211"
-                height="30"
-                alt={t("orig.home.partnerAlt")}
-              />
+              <span
+                className="campaign-partners"
+                aria-label={t("orig.home.partnerAlt")}
+              >
+                <img
+                  src={brandAsset("logo-uxuy.png")}
+                  alt="UXUY"
+                  width="73"
+                  height="24"
+                />
+                <span aria-hidden="true">×</span>
+                <img
+                  src={brandAsset(
+                    locale === "zh-Hans" || locale === "zh-Hant"
+                      ? "logo-radar-dao.png"
+                      : "logo-radar-dao-en.png",
+                  )}
+                  alt="Radar DAO"
+                  width="104"
+                  height="24"
+                />
+              </span>
             ) : (
               t(key === "account" ? "orig.mine.title" : `orig.home.${key}Eye`)
             )}
@@ -185,12 +200,31 @@ export function Highlights({
             </button>
           </div>
         </div>
-        <NaroMascot
-          bubble={t(
-            key === "account" ? "orig.mascot.hi" : `orig.home.${key}Bubble`,
-          )}
-          paused={paused || hover || !visible}
-        />
+        {index === 0 ? (
+          <NaroMascot
+            bubble={t(
+              key === "account" ? "orig.mascot.hi" : `orig.home.${key}Bubble`,
+            )}
+            paused={paused || hover || !visible}
+          />
+        ) : (
+          <div className="campaign-visual" key={index}>
+            <img
+              src={`${import.meta.env.BASE_URL}banners/${["", "launchpad", "holding", "burn", "community"][index]}.webp`}
+              alt=""
+              width="800"
+              height="800"
+              style={{
+                animationPlayState:
+                  paused || hover || !visible ? "paused" : "running",
+              }}
+              fetchPriority={index === 1 ? "high" : "auto"}
+            />
+            <span className="campaign-caption">
+              {t(`orig.home.${key}Bubble`)}
+            </span>
+          </div>
+        )}
       </div>
       <div className="highlight-controls">
         <div

@@ -1,0 +1,827 @@
+{
+  "date": "2026-10-20",
+  "mobile": [
+    {
+      "requestedWidth": 320,
+      "route": "overview",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "Home",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "swap",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "Swap",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "rewards",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "Mining Rewards",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "community",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "My Team",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "network",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "Network data",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "earnings",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "Earnings",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "activate",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "Register & Activate",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "account",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "Me",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 320,
+      "route": "ieo",
+      "brokenImages": [],
+      "client": 305,
+      "heading": "IEO",
+      "outside": [],
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "requestedWidth": 390,
+      "route": "overview",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "Home",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "swap",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "Swap",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "rewards",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "Mining Rewards",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "community",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "My Team",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "network",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "Network data",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "earnings",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "Earnings",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "activate",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "Register & Activate",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "account",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "Me",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 390,
+      "route": "ieo",
+      "brokenImages": [],
+      "client": 375,
+      "heading": "IEO",
+      "outside": [],
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "requestedWidth": 360,
+      "route": "overview",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "Home",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "swap",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "Swap",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "rewards",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "Mining Rewards",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "community",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "My Team",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "network",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "Network data",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "earnings",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "Earnings",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "activate",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "Register & Activate",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "account",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "Me",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 360,
+      "route": "ieo",
+      "brokenImages": [],
+      "client": 345,
+      "heading": "IEO",
+      "outside": [],
+      "scrollWidth": 345,
+      "width": 360
+    },
+    {
+      "requestedWidth": 430,
+      "route": "overview",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "Home",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "swap",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "Swap",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "rewards",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "Mining Rewards",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "community",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "My Team",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "network",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "Network data",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "earnings",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "Earnings",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "activate",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "Register & Activate",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "account",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "Me",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    },
+    {
+      "requestedWidth": 430,
+      "route": "ieo",
+      "brokenImages": [],
+      "client": 415,
+      "heading": "IEO",
+      "outside": [],
+      "scrollWidth": 415,
+      "width": 430
+    }
+  ],
+  "desktop": [
+    {
+      "requestedWidth": 768,
+      "route": "overview",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "swap",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "rewards",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "community",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "network",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "earnings",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "activate",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "account",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 768,
+      "route": "ieo",
+      "broken": [],
+      "client": 753,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "overview",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "swap",
+      "broken": [],
+      "client": 1024,
+      "scrollWidth": 1024,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "rewards",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "community",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "network",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "earnings",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "activate",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "account",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1024,
+      "route": "ieo",
+      "broken": [],
+      "client": 1009,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "overview",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "swap",
+      "broken": [],
+      "client": 1280,
+      "scrollWidth": 1280,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "rewards",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "community",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "network",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "earnings",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "activate",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "account",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1280,
+      "route": "ieo",
+      "broken": [],
+      "client": 1265,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "overview",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "swap",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "rewards",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "community",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "network",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "earnings",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "activate",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "account",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "requestedWidth": 1440,
+      "route": "ieo",
+      "broken": [],
+      "client": 1425,
+      "scrollWidth": 1425,
+      "width": 1440
+    }
+  ],
+  "swapLocales": [
+    {
+      "locale": "en",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "zh-Hans",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "zh-Hant",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "ko",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "ja",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "vi",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "hi",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "ur",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    },
+    {
+      "locale": "id",
+      "actionAboveNav": true,
+      "heights": [
+        150,
+        150
+      ],
+      "labelsFit": true,
+      "overflow": false,
+      "selectSizes": [
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "width": 320
+    }
+  ],
+  "walletIsolation": {
+    "test": {
+      "actualWallet": "Connected walletWallet address0x1234567890123456789012345678901234567890NetworkBNB Smart Chain TestnettBNB balance1.25 tBNBGet tBNBRefresh balanceView on BscScanWallet connected",
+      "holdings": [
+        "12,500"
+      ],
+      "requests": "BUILD ./assets/index-5q-NNSnD.js\neth_requestAccounts\neth_chainId\neth_getBalance\n",
+      "testProfile": "Test account 0x1111…1111ⓘSeeded records. Your connected wallet and onchain balance are separate."
+    },
+    "live": {
+      "actualWallet": "Connected walletWallet address0x1234567890123456789012345678901234567890NetworkBNB Smart Chain TestnettBNB balance1.25 tBNBGet tBNBRefresh balanceView on BscScanWallet connected",
+      "holdings": [
+        "—"
+      ],
+      "requests": "BUILD ./assets/index-5q-NNSnD.js\neth_requestAccounts\neth_chainId\neth_getBalance\neth_getBalance\n"
+    }
+  },
+  "history": {
+    "filter": "Rank",
+    "rows": 14,
+    "latestReward": "80",
+    "total": "15898",
+    "claimed": "14657.5",
+    "pending": "1240.5"
+  },
+  "unitTests": 33
+}

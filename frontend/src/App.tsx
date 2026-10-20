@@ -15,6 +15,7 @@ import { WalletPicker } from "./features/wallet/WalletPicker";
 import { isLocalDemo } from "./demo/network";
 import { useWallet, shortAddress } from "./features/wallet/store";
 import logo from "../../design-system/assets/naro-logo.png";
+import { initialDataMode, type DataMode } from "./parity/test-data";
 const DemoDashboard = lazy(() =>
   import("./demo/DemoDashboard").then((m) => ({ default: m.DemoDashboard })),
 );
@@ -25,6 +26,16 @@ export function App() {
   const { t, locale, setLocale } = useI18n(),
     wallet = useWallet();
   const [view, setView] = useState<View>(currentView);
+  const [dataMode, setDataMode] = useState<DataMode>(() => {
+    try {
+      return initialDataMode(
+        location.search,
+        localStorage.getItem("naro:data-mode"),
+      );
+    } catch {
+      return initialDataMode(location.search, null);
+    }
+  });
   const [labView, setLabView] = useState("overview");
   const [modal, setModal] = useState<"wallet" | "help" | null>(null),
     [toast, setToast] = useState("");
@@ -195,17 +206,42 @@ export function App() {
           <main
             ref={main}
             id="main-content"
-            className="page-content"
+            className={`page-content page-${view}`}
             tabIndex={-1}
           >
             <div className="page-heading">
               <div>
                 <h1>{t(titles[view])}</h1>
               </div>
-              <span className="workspace-status">
-                <span className="network-dot" aria-hidden="true" />
-                {t(isLocalDemo ? "demo.local" : "demo.testnet")}
-              </span>
+              {view !== "test-lab" ? (
+                <label className="data-source">
+                  <span className="sr-only">{t("mobile.source")}</span>
+                  <select
+                    aria-label={t("mobile.source")}
+                    value={dataMode}
+                    onChange={(e) => {
+                      const next = e.target.value as DataMode;
+                      setDataMode(next);
+                      try {
+                        localStorage.setItem("naro:data-mode", next);
+                      } catch {
+                        /* optional persistence */
+                      }
+                      const url = new URL(location.href);
+                      url.searchParams.set("data", next);
+                      history.replaceState(null, "", url);
+                    }}
+                  >
+                    <option value="test">{t("mobile.test")}</option>
+                    <option value="live">{t("mobile.live")}</option>
+                  </select>
+                </label>
+              ) : (
+                <span className="workspace-status">
+                  <span className="network-dot" aria-hidden="true" />
+                  {t(isLocalDemo ? "demo.local" : "demo.testnet")}
+                </span>
+              )}
             </div>
             <Suspense
               fallback={
@@ -248,7 +284,12 @@ export function App() {
                   />
                 </>
               ) : (
-                <NaroDashboard view={view} openWallet={() => open("wallet")} />
+                <NaroDashboard
+                  key={dataMode}
+                  view={view}
+                  dataMode={dataMode}
+                  openWallet={() => open("wallet")}
+                />
               )}
             </Suspense>
           </main>

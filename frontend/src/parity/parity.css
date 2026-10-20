@@ -188,9 +188,6 @@ html[dir="rtl"] .naro-select-display {
   padding: var(--naro-space-10) var(--naro-space-10) var(--naro-space-8);
   min-height: 350px;
 }
-.highlight-copy {
-  animation: naro-copy-enter 240ms ease-out;
-}
 .highlight-copy .hero-kicker {
   min-height: 30px;
   margin: 0 0 var(--naro-space-5);
@@ -1144,129 +1141,6 @@ html[dir="rtl"] .naro-select-display {
 .ieo-closed .naro-character {
   margin-bottom: var(--naro-space-4);
 }
-.swap-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(230px, 1fr);
-  gap: var(--naro-space-10);
-  align-items: center;
-}
-.parity-swap {
-  display: grid;
-  gap: var(--naro-space-5);
-  position: relative;
-}
-.slippage-label {
-  display: flex;
-  gap: var(--naro-space-2);
-  align-items: center;
-  font-size: var(--naro-text-caption);
-  color: var(--naro-color-secondary);
-}
-.slippage-label select {
-  color: var(--naro-color-text);
-  background: var(--naro-color-inset);
-  border: 1px solid var(--naro-color-border-control);
-  border-radius: var(--naro-radius-small);
-  min-height: 44px;
-  padding: 0 var(--naro-space-2);
-  font: inherit;
-}
-.swap-token-box {
-  padding: var(--naro-space-5);
-  background: var(--naro-color-inset);
-  border: 1px solid var(--naro-color-border-subtle);
-  border-radius: var(--naro-radius-control);
-}
-.swap-token-box label {
-  font-size: var(--naro-text-small);
-}
-.swap-amount-row {
-  display: flex;
-  align-items: center;
-  gap: var(--naro-space-3);
-  margin: var(--naro-space-4) 0;
-}
-.swap-amount-row input {
-  font-family: var(--naro-font-numeric);
-  font-size: 32px;
-  background: transparent;
-  border: 0;
-  color: var(--naro-color-text);
-  width: 100%;
-  min-width: 0;
-  padding: var(--naro-space-1) 0;
-}
-.swap-amount-row input::placeholder {
-  color: var(--naro-color-muted);
-}
-.swap-amount-row b {
-  font-size: var(--naro-text-small);
-  font-weight: 500;
-}
-.swap-percentages {
-  display: flex;
-  gap: var(--naro-space-2);
-}
-.swap-percentages button {
-  flex: 1;
-  min-height: 40px;
-  background: var(--naro-color-surface);
-  border: 1px solid var(--naro-color-border-subtle);
-  border-radius: var(--naro-radius-small);
-  font-size: var(--naro-text-caption);
-  color: var(--naro-color-disabled);
-}
-.parity-swap .swap-reverse {
-  justify-self: center;
-  border: 1px solid var(--naro-color-border-control);
-  background: var(--naro-color-surface);
-  margin: -34px 0;
-  z-index: 1;
-}
-.swap-estimate {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--naro-space-4);
-  font-size: 32px;
-  margin: var(--naro-space-4) 0 0;
-  overflow-wrap: anywhere;
-}
-.swap-estimate .unit {
-  font-size: var(--naro-text-small);
-}
-.swap-quote > div {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--naro-space-4);
-  padding: var(--naro-space-2) 0;
-  font-size: var(--naro-text-caption);
-}
-.swap-quote dt {
-  color: var(--naro-color-secondary);
-}
-.swap-quote dd {
-  text-align: end;
-  overflow-wrap: anywhere;
-}
-.parity-swap > p {
-  margin: 0;
-}
-.swap-submit {
-  width: 100%;
-}
-.swap-notes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--naro-space-4);
-}
-.swap-notes > p {
-  margin: 0;
-  max-width: 30ch;
-  font-size: var(--naro-text-small);
-}
 .naro-tour,
 .poster-dialog {
   display: grid;
@@ -1483,9 +1357,6 @@ html[dir="rtl"] .naro-select-wrap:after {
   .parity-shortcuts a > .icon:first-child {
     display: none;
   }
-  .swap-layout {
-    gap: var(--naro-space-6);
-  }
 }
 @media (max-width: 767px) {
   .product-shell .header-actions {
@@ -1620,8 +1491,7 @@ html[dir="rtl"] .naro-select-wrap:after {
     gap: var(--naro-space-3);
   }
   .parity-two-col,
-  .supply-panel,
-  .swap-layout {
+  .supply-panel {
     grid-template-columns: 1fr;
     gap: var(--naro-space-5);
   }
@@ -1772,15 +1642,6 @@ html[dir="rtl"] .naro-select-wrap:after {
     padding-inline: var(--naro-space-2);
     font-size: var(--naro-text-caption);
     min-width: 0;
-  }
-  .swap-notes {
-    display: none;
-  }
-  .parity-swap {
-    padding: var(--naro-space-5);
-  }
-  .swap-token-box {
-    padding: var(--naro-space-4);
   }
   .record-status {
     font-size: var(--naro-text-caption);

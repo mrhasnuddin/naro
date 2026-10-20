@@ -3,6 +3,7 @@ import en from "../../prototype/locales/en.js";
 import zh from "../../prototype/locales/zh-Hans.js";
 import original from "./parity/original-catalogs.json" with { type: "json" };
 import { parityCopy } from "./parity/copy.ts";
+import { mobileCopy } from "./parity/mobile-copy.ts";
 export type Locale = keyof typeof original;
 export const languages: { value: Locale; label: string }[] = [
   { value: "en", label: "EN" },
@@ -68,6 +69,7 @@ export type Key =
   | keyof typeof extra.en
   | keyof typeof demoCopy.en
   | keyof typeof parityCopy.en
+  | keyof typeof mobileCopy.en
   | `orig.${string}`;
 export const catalogs: Record<Locale, Record<string, string>> = { ...original };
 for (const lang of Object.keys(original) as Locale[])
@@ -85,4 +87,5 @@ for (const lang of Object.keys(original) as Locale[])
         }
       : {}),
     ...original[lang],
+    ...mobileCopy[lang],
   };

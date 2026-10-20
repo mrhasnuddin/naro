@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { testnetApiUrl } from "./api-config";
+import { testRecords, type DataMode } from "./test-data";
 export type Branch = {
   address?: string;
   walletAddress?: string;
@@ -101,12 +102,14 @@ const base = testnetApiUrl(
 export function useNaroRecords(
   address: string | null | undefined,
   view: string,
+  mode: DataMode = "live",
 ) {
   const [records, setRecords] = useState<Records>(empty),
     [revision, setRevision] = useState(0);
   const identity = `${address?.toLowerCase() ?? ""}:${view}:${revision}`;
   useEffect(() => {
     const controller = new AbortController();
+    if (mode === "test") return () => controller.abort();
     setRecords({ ...empty, identity, loading: !!base });
     if (!base) return () => controller.abort();
     const get = async <T extends { chainId: number }>(
@@ -193,11 +196,13 @@ export function useNaroRecords(
         });
     })();
     return () => controller.abort();
-  }, [address, view, revision, identity]);
+  }, [address, view, revision, identity, mode]);
   return {
-    ...(records.identity === identity
-      ? records
-      : { ...empty, loading: !!base }),
+    ...(mode === "test"
+      ? testRecords
+      : records.identity === identity
+        ? records
+        : { ...empty, loading: !!base }),
     configured: !!base,
     refresh: () => setRevision((n) => n + 1),
   };
